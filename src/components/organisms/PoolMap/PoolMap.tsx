@@ -30,11 +30,16 @@ const defaultMarkerIcon = new L.DivIcon({
   iconAnchor: [10, 10],
 });
 
-const getFocusedCenter = (map: L.Map, pool: PoolViewModel, isDrawerExpanded: boolean) => {
-  const markerPoint = map.project([pool.latitude, pool.longitude], map.getZoom());
+const getFocusedCenter = (
+  map: L.Map,
+  pool: PoolViewModel,
+  zoomLevel: number,
+  isDrawerExpanded: boolean,
+) => {
+  const markerPoint = map.project([pool.latitude, pool.longitude], zoomLevel);
   const verticalOffset = isDrawerExpanded ? map.getSize().y * 0.22 : 0;
 
-  return map.unproject(markerPoint.add([0, verticalOffset]), map.getZoom());
+  return map.unproject(markerPoint.add([0, verticalOffset]), zoomLevel);
 };
 
 const MapEffects = ({
@@ -78,14 +83,14 @@ const MapEffects = ({
 
     if (selectedPoolChanged) {
       const nextZoom = FOCUSED_POOL_ZOOM;
-      const nextCenter = getFocusedCenter(map, selectedPool, isDrawerExpanded);
+      const nextCenter = getFocusedCenter(map, selectedPool, nextZoom, isDrawerExpanded);
 
       map.flyTo(nextCenter, nextZoom, {
         animate: true,
         duration: 0.45,
       });
     } else if (drawerJustOpened) {
-      const nextCenter = getFocusedCenter(map, selectedPool, true);
+      const nextCenter = getFocusedCenter(map, selectedPool, FOCUSED_POOL_ZOOM, true);
 
       map.flyTo(nextCenter, FOCUSED_POOL_ZOOM, {
         animate: true,
