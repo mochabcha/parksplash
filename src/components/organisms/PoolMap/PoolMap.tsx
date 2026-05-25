@@ -1,5 +1,5 @@
 import L from 'leaflet';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { MapContainer, Marker, TileLayer, Tooltip, useMap } from 'react-leaflet';
 import { MapCanvas } from '../../atoms/MapCanvas/MapCanvas';
 import { OUTDOOR_POOL_CENTER } from '../../../domain/pools/poolSeason';
@@ -11,6 +11,7 @@ interface PoolMapProps {
   selectedPoolId?: string;
   onSelectPool: (poolId: string) => void;
   recenterSignal: number;
+  isDrawerExpanded: boolean;
 }
 
 const activeMarkerIcon = new L.DivIcon({
@@ -27,16 +28,27 @@ const defaultMarkerIcon = new L.DivIcon({
   iconAnchor: [10, 10],
 });
 
+const getFocusedCenter = (map: L.Map, pool: PoolViewModel, isDrawerExpanded: boolean) => {
+  const markerPoint = map.project([pool.latitude, pool.longitude], map.getZoom());
+  const verticalOffset = isDrawerExpanded ? map.getSize().y * 0.22 : 0;
+
+  return map.unproject(markerPoint.add([0, verticalOffset]), map.getZoom());
+};
+
 const MapEffects = ({
   pools,
   selectedPoolId,
   recenterSignal,
+  isDrawerExpanded,
 }: {
   pools: PoolViewModel[];
   selectedPoolId?: string;
   recenterSignal: number;
+  isDrawerExpanded: boolean;
 }) => {
   const map = useMap();
+  const previousSelectedPoolId = useRef<string>();
+  const previousDrawerExpanded = useRef(isDrawerExpanded);
 
   useEffect(() => {
     if (pools.length === 0) {
@@ -59,23 +71,56 @@ const MapEffects = ({
       return;
     }
 
-    map.flyTo([selectedPool.latitude, selectedPool.longitude], Math.max(map.getZoom(), 13), {
-      animate: true,
-      duration: 0.45,
-    });
-  }, [map, pools, selectedPoolId]);
+    const selectedPoolChanged = previousSelectedPoolId.current !== selectedPoolId;
+    const drawerJustOpened = !previousDrawerExpanded.current && isDrawerExpanded;
+
+    if (selectedPoolChanged) {
+      const nextZoom = Math.max(map.getZoom(), 15);
+      const nextCenter = getFocusedCenter(map, selectedPool, isDrawerExpanded);
+
+      map.flyTo(nextCenter, nextZoom, {
+        animate: true,
+        duration: 0.45,
+      });
+    } else if (drawerJustOpened) {
+      const nextCenter = getFocusedCenter(map, selectedPool, true);
+
+      map.panTo(nextCenter, {
+        animate: true,
+        duration: 0.35,
+      });
+    }
+
+    previousSelectedPoolId.current = selectedPoolId;
+    previousDrawerExpanded.current = isDrawerExpanded;
+  }, [isDrawerExpanded, map, pools, selectedPoolId]);
+
+  useEffect(() => {
+    previousDrawerExpanded.current = isDrawerExpanded;
+  }, [isDrawerExpanded]);
 
   return null;
 };
 
-export const PoolMap = ({ pools, selectedPoolId, onSelectPool, recenterSignal }: PoolMapProps) => (
+export const PoolMap = ({
+  pools,
+  selectedPoolId,
+  onSelectPool,
+  recenterSignal,
+  isDrawerExpanded,
+}: PoolMapProps) => (
   <MapCanvas>
     <MapContainer center={OUTDOOR_POOL_CENTER} className={styles.map} zoom={11} zoomControl={false}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <MapEffects pools={pools} recenterSignal={recenterSignal} selectedPoolId={selectedPoolId} />
+      <MapEffects
+        isDrawerExpanded={isDrawerExpanded}
+        pools={pools}
+        recenterSignal={recenterSignal}
+        selectedPoolId={selectedPoolId}
+      />
       {pools.map((pool) => (
         <Marker
           eventHandlers={{ click: () => onSelectPool(pool.id) }}

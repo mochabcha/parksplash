@@ -71,6 +71,7 @@ export const PoolsExplorerTemplate = ({
     <main className={styles.screen}>
       <div className={styles.mapLayer}>
         <PoolMap
+          isDrawerExpanded={isDrawerExpanded}
           onSelectPool={openPoolFromMap}
           pools={filteredPools}
           recenterSignal={recenterSignal}
