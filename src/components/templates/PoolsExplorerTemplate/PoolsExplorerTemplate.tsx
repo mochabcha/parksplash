@@ -8,6 +8,7 @@ import { PoolMap } from '../../organisms/PoolMap/PoolMap';
 import { PoolSidePanel } from '../../organisms/PoolSidePanel/PoolSidePanel';
 import { seasonGuideSections } from '../../../content/pools/guideContent';
 import type { AppDialog as AppDialogType, PoolFilter } from '../../../features/pool-explorer/usePoolExplorer';
+import type { ThemeMode } from '../../../features/theme/useThemeMode';
 import type { PoolViewModel } from '../../../domain/pools/pool.types';
 import styles from './PoolsExplorerTemplate.module.css';
 
@@ -17,8 +18,9 @@ interface PoolsExplorerTemplateProps {
   selectedPool?: PoolViewModel;
   activeFilter: PoolFilter;
   setActiveFilter: (filter: PoolFilter) => void;
+  openPoolFromMap: (poolId: string) => void;
   setSelectedPoolId: (poolId: string) => void;
-  toggleDrawer: () => void;
+  openDrawer: () => void;
   closeDrawer: () => void;
   isDrawerExpanded: boolean;
   isSidePanelOpen: boolean;
@@ -33,6 +35,8 @@ interface PoolsExplorerTemplateProps {
   } | null;
   recenterSignal: number;
   recenterMap: () => void;
+  themeMode: ThemeMode;
+  toggleTheme: () => void;
   metrics: {
     totalPools: number;
     openNow: number;
@@ -45,8 +49,9 @@ export const PoolsExplorerTemplate = ({
   selectedPool,
   activeFilter,
   setActiveFilter,
+  openPoolFromMap,
   setSelectedPoolId,
-  toggleDrawer,
+  openDrawer,
   closeDrawer,
   isDrawerExpanded,
   isSidePanelOpen,
@@ -58,13 +63,15 @@ export const PoolsExplorerTemplate = ({
   toast,
   recenterSignal,
   recenterMap,
+  themeMode,
+  toggleTheme,
   metrics,
 }: PoolsExplorerTemplateProps) => (
   <AppShell>
     <main className={styles.screen}>
       <div className={styles.mapLayer}>
         <PoolMap
-          onSelectPool={setSelectedPoolId}
+          onSelectPool={openPoolFromMap}
           pools={filteredPools}
           recenterSignal={recenterSignal}
           selectedPoolId={selectedPool?.id}
@@ -87,14 +94,14 @@ export const PoolsExplorerTemplate = ({
         selectedPoolId={selectedPool?.id}
       />
       <MapActionDock
-        onCenterMap={recenterMap}
         onOpenGuide={() => openDialog('season-guide')}
-        onToggleDrawer={toggleDrawer}
+        onToggleTheme={toggleTheme}
+        themeMode={themeMode}
       />
       <PoolDrawer
         isExpanded={isDrawerExpanded}
         onClose={closeDrawer}
-        onToggle={toggleDrawer}
+        onOpen={openDrawer}
         pool={selectedPool}
       />
       <AppToast toast={toast} />

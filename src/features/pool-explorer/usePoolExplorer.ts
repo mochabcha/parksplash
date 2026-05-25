@@ -77,15 +77,18 @@ export const usePoolExplorer = (pools: PoolViewModel[]) => {
     );
   };
 
-  const handlePoolSelect = (poolId: string) => {
+  const handlePoolSelectFromMap = (poolId: string) => {
     setSelectedPoolId(poolId);
     setIsDrawerExpanded(true);
     setIsSidePanelOpen(false);
   };
 
-  const handleDrawerToggle = () => {
-    setIsDrawerExpanded((value) => !value);
+  const handlePoolSelectFromBrowser = (poolId: string) => {
+    setSelectedPoolId(poolId);
+    setIsSidePanelOpen(false);
   };
+
+  const openDrawer = () => setIsDrawerExpanded(true);
 
   const handleDrawerClose = () => {
     setIsDrawerExpanded(false);
@@ -111,8 +114,9 @@ export const usePoolExplorer = (pools: PoolViewModel[]) => {
     toast,
     recenterSignal,
     setActiveFilter: handleFilterChange,
-    setSelectedPoolId: handlePoolSelect,
-    toggleDrawer: handleDrawerToggle,
+    openPoolFromMap: handlePoolSelectFromMap,
+    setSelectedPoolId: handlePoolSelectFromBrowser,
+    openDrawer,
     closeDrawer: handleDrawerClose,
     toggleSidePanel: handleSidePanelToggle,
     closeSidePanel: () => setIsSidePanelOpen(false),

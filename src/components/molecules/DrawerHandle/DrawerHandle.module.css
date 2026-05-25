@@ -2,6 +2,6 @@
   width: 3.5rem;
   height: 0.3rem;
   border-radius: 999px;
-  background: color-mix(in oklab, var(--color-ink) 16%, transparent);
+  background: color-mix(in oklab, var(--color-aqua) 65%, var(--color-pink) 35%);
   margin: 0 auto;
 }

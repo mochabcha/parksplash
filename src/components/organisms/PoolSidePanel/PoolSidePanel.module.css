@@ -1,7 +1,7 @@
 .scrim {
   position: absolute;
   inset: 0;
-  z-index: 640;
+  z-index: 620;
   background: rgb(16 25 36 / 0);
   border: 0;
   opacity: 0;
@@ -22,11 +22,12 @@
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 650;
+  z-index: 630;
   width: min(24rem, 86vw);
   padding: calc(env(safe-area-inset-top) + 0.75rem) 0.9rem calc(env(safe-area-inset-bottom) + 0.9rem);
   background: color-mix(in oklab, var(--color-app-surface) 97%, var(--color-page) 3%);
   border-left: 1px solid var(--color-line);
+  box-shadow: var(--shadow-side-drawer);
   transform: translateX(100%);
   transition: transform 220ms ease;
   display: grid;

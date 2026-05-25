@@ -21,7 +21,7 @@
 }
 
 .selected {
-  background: var(--color-overlay-strong);
-  border-color: var(--color-ink-strong);
+  background: color-mix(in oklab, var(--color-aqua) 10%, var(--color-overlay-strong));
+  border-color: color-mix(in oklab, var(--color-aqua) 68%, var(--color-line-strong));
   color: var(--color-ink-strong);
 }

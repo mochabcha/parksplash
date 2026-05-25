@@ -2,7 +2,7 @@
   position: absolute;
   right: 0.75rem;
   bottom: calc(env(safe-area-inset-bottom) + 5.2rem);
-  z-index: 620;
+  z-index: 410;
   display: grid;
   gap: 0.55rem;
 }

@@ -1,7 +1,7 @@
 .bar {
   position: absolute;
   inset: 0 0 auto;
-  z-index: 620;
+  z-index: 400;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,6 +48,7 @@
   border: 1px solid var(--color-line-strong);
   border-radius: 0.85rem;
   background: var(--color-overlay);
+  box-shadow: var(--shadow-overlay);
   backdrop-filter: blur(14px);
   color: var(--color-ink-strong);
   font-size: 0.78rem;

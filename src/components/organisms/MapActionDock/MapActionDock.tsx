@@ -1,23 +1,25 @@
-import { ChevronUp, Info, Layers3 } from 'lucide-react';
+import { Info, MoonStar, SunMedium } from 'lucide-react';
 import { IconButton } from '../../atoms/IconButton/IconButton';
+import type { ThemeMode } from '../../../features/theme/useThemeMode';
 import styles from './MapActionDock.module.css';
 
 interface MapActionDockProps {
-  onToggleDrawer: () => void;
   onOpenGuide: () => void;
-  onCenterMap: () => void;
+  onToggleTheme: () => void;
+  themeMode: ThemeMode;
 }
 
-export const MapActionDock = ({ onToggleDrawer, onOpenGuide, onCenterMap }: MapActionDockProps) => (
+export const MapActionDock = ({ onOpenGuide, onToggleTheme, themeMode }: MapActionDockProps) => (
   <div className={styles.dock}>
     <IconButton label="Open season guide" onClick={onOpenGuide}>
       <Info size={18} />
     </IconButton>
-    <IconButton label="Center map" onClick={onCenterMap}>
-      <Layers3 size={18} />
-    </IconButton>
-    <IconButton label="Toggle pool drawer" onClick={onToggleDrawer}>
-      <ChevronUp size={18} />
+    <IconButton
+      active={themeMode === 'dark'}
+      label={themeMode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      onClick={onToggleTheme}
+    >
+      {themeMode === 'dark' ? <SunMedium size={18} /> : <MoonStar size={18} />}
     </IconButton>
   </div>
 );

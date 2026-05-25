@@ -8,6 +8,7 @@
   border-radius: 0.85rem;
   background: var(--color-overlay);
   color: var(--color-ink-strong);
+  box-shadow: var(--shadow-overlay);
   backdrop-filter: blur(14px);
   cursor: pointer;
   transition:
@@ -21,6 +22,6 @@
 }
 
 .active {
-  background: var(--color-overlay-strong);
-  border-color: var(--color-ink-strong);
+  background: color-mix(in oklab, var(--color-pink) 12%, var(--color-overlay-strong));
+  border-color: color-mix(in oklab, var(--color-pink) 65%, var(--color-line-strong));
 }

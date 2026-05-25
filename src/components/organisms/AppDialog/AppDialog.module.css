@@ -1,7 +1,7 @@
 .scrim {
   position: absolute;
   inset: 0;
-  z-index: 700;
+  z-index: 720;
   border: 0;
   opacity: 0;
   pointer-events: none;
@@ -16,12 +16,13 @@
   left: 0.75rem;
   right: 0.75rem;
   top: 50%;
-  z-index: 710;
+  z-index: 730;
   max-height: min(34rem, calc(100dvh - 2rem));
   padding: 0.95rem;
   border: 1px solid var(--color-line-strong);
   border-radius: 1rem;
   background: var(--color-app-surface);
+  box-shadow: var(--shadow-dialog);
   transform: translateY(-46%) scale(0.98);
   opacity: 0;
   pointer-events: none;
