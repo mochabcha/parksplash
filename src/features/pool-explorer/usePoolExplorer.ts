@@ -3,7 +3,6 @@ import type { PoolViewModel } from '../../domain/pools/pool.types';
 
 export type PoolFilter = 'all' | 'open-now' | 'lessons' | 'july';
 export type AppDialog = 'season-guide' | null;
-const FOCUSED_POOL_ZOOM_MODE_TOAST = 'Pool focus active.';
 
 interface ToastState {
   id: number;
@@ -92,8 +91,8 @@ export const usePoolExplorer = (pools: PoolViewModel[]) => {
 
   const handlePoolSelectFromBrowser = (poolId: string) => {
     setSelectedPoolId(poolId);
+    setIsDrawerExpanded(true);
     setIsSidePanelOpen(false);
-    pushToast(FOCUSED_POOL_ZOOM_MODE_TOAST);
   };
 
   const openDrawer = () => {
