@@ -1,0 +1,281 @@
+[
+  {
+    "id": "andrew-jackson-high-school",
+    "name": "Andrew Jackson High School",
+    "address": "128 W. 30th St., Jacksonville, FL 32206",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "baldwin-middle-high-school",
+    "name": "Baldwin Middle/High School",
+    "address": "345 Chestnut St., Baldwin, FL 32234",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "blue-cypress-park",
+    "name": "Blue Cypress Park",
+    "address": "4012 University Blvd. N., Jacksonville, FL 32277",
+    "siteType": "park",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "carvill-park",
+    "name": "Carvill Park",
+    "address": "1302 Carvill Ave., Jacksonville, FL 32208",
+    "siteType": "park",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "cecil-aquatic-center",
+    "name": "Cecil Aquatic Center",
+    "address": "13611 Normandy Blvd., Jacksonville, FL 32221",
+    "siteType": "aquatic-center",
+    "openingPlan": "preseason",
+    "lessons": "onsite",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "charles-clark-pool",
+    "name": "Charles Clark Pool",
+    "address": "8739 Sibbald Rd., Jacksonville, FL 32208",
+    "siteType": "park",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "emmett-reed-park",
+    "name": "Emmett Reed Park",
+    "address": "1093 W. 6th St., Jacksonville, FL 32209",
+    "siteType": "park",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "englewood-high-school",
+    "name": "Englewood High School",
+    "address": "4412 Barnes Rd., Jacksonville, FL 32207",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "eugene-butler-pool",
+    "name": "Eugene Butler Pool",
+    "address": "900 Acorn St., Jacksonville, FL 32209",
+    "siteType": "park",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "fletcher-high-school",
+    "name": "Fletcher High School",
+    "address": "700 Seagate Ave., Neptune Beach, FL 32266",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "fort-caroline-pool",
+    "name": "Fort Caroline Pool",
+    "address": "14131 Ferber Rd., Jacksonville, FL 32277",
+    "siteType": "park",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "golfair-park-pool",
+    "name": "Golfair Park Pool (C.T. Brown)",
+    "address": "4415 Moncrief Rd., Jacksonville, FL 32209",
+    "siteType": "park",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "grand-johnnie-walker-park",
+    "name": "Grand/Johnnie Walker Park",
+    "address": "2740 Division St., Jacksonville, FL 32209",
+    "siteType": "park",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "highlands-middle-school",
+    "name": "Highlands Middle School",
+    "address": "10913 Pine Estates Rd., Jacksonville, FL 32218",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "julius-guinyard-park",
+    "name": "Julius Guinyard Park",
+    "address": "1358 Jefferson St., Jacksonville, FL 32209",
+    "siteType": "park",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "lake-shore-middle-school-pool",
+    "name": "Lake Shore Middle School Pool",
+    "address": "2519 Bayview Rd., Jacksonville, FL 32210",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "mandarin-high-school",
+    "name": "Mandarin High School",
+    "address": "4831 Greenland Rd., Jacksonville, FL 32258",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "oceanway-park",
+    "name": "Oceanway Park",
+    "address": "12215 Sago Ave. W., Jacksonville, FL 32218",
+    "siteType": "park",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "paxon-high-school",
+    "name": "Paxon High School",
+    "address": "3413 W. 5th St., Jacksonville, FL 32254",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "pine-forest-henry-t-jones-park",
+    "name": "Pine Forest (Henry T. Jones Park)",
+    "address": "2335 Gattis Ln., Jacksonville, FL 32207",
+    "siteType": "park",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "raines-high-school",
+    "name": "Raines High School",
+    "address": "3663 Raines Ave., Jacksonville, FL 32209",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "ribault-high-school",
+    "name": "Ribault High School",
+    "address": "5820 Van Gundy St., Jacksonville, FL 32208",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "riverside-high-school",
+    "name": "Riverside High School",
+    "address": "1200 S. McDuff Ave., Jacksonville, FL 32205",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "robert-f-kennedy-pool",
+    "name": "Robert F. Kennedy Pool",
+    "address": "1139 Ionia St., Jacksonville, FL 32206",
+    "siteType": "park",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "sandalwood-high-school",
+    "name": "Sandalwood High School",
+    "address": "2750 John Promenade Blvd., Jacksonville, FL 32246",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "samuel-wolfson-high-school",
+    "name": "Samuel Wolfson High School",
+    "address": "7000 Powers Ave., Jacksonville, FL 32217",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "terry-parker-high-school",
+    "name": "Terry Parker High School",
+    "address": "7301 Parker School Rd., Jacksonville, FL 32211",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "thomas-jefferson-park",
+    "name": "Thomas Jefferson Park",
+    "address": "390 N. Jackson Ave., Jacksonville, FL 32220",
+    "siteType": "park",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "westside-high-school",
+    "name": "Westside High School",
+    "address": "5530 Firestone Rd., Jacksonville, FL 32244",
+    "siteType": "school",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "woodland-acres-warrington-park",
+    "name": "Woodland Acres/Warrington Park",
+    "address": "8200 Kona Ave., Jacksonville, FL 32211",
+    "siteType": "park",
+    "openingPlan": "preseason",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  },
+  {
+    "id": "mallison-park-pool",
+    "name": "Mallison Park Pool",
+    "address": "3133 Lenox Ave., Jacksonville, FL 32254",
+    "siteType": "park",
+    "openingPlan": "july",
+    "lessons": "citywide",
+    "splashPad": "not-listed"
+  }
+]

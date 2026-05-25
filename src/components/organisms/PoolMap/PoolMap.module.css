@@ -1,0 +1,24 @@
+.map {
+  min-height: 100%;
+}
+
+.markerShell {
+  background: transparent;
+  border: 0;
+}
+
+.markerShell :global(.marker) {
+  display: block;
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 999px;
+  background: var(--color-marker);
+  border: 2px solid var(--color-marker-ring);
+}
+
+.markerShell :global(.markerActive) {
+  width: 1.1rem;
+  height: 1.1rem;
+  background: var(--color-marker-active);
+  border-color: var(--color-marker-active-ring);
+}

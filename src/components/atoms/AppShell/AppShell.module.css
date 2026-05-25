@@ -1,0 +1,11 @@
+.viewport {
+  min-height: 100dvh;
+  background: var(--color-page);
+}
+
+.device {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  background: var(--color-app-surface);
+}

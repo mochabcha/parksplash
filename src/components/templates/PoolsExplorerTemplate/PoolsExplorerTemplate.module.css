@@ -1,0 +1,10 @@
+.screen {
+  position: relative;
+  min-height: 100dvh;
+  background: var(--color-page);
+  overflow: clip;
+}
+
+.mapLayer {
+  min-height: 100dvh;
+}

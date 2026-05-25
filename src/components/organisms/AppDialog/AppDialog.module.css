@@ -1,0 +1,116 @@
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 700;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: rgb(16 25 36 / 0);
+  transition:
+    opacity 180ms ease,
+    background-color 180ms ease;
+}
+
+.dialog {
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  top: 50%;
+  z-index: 710;
+  max-height: min(34rem, calc(100dvh - 2rem));
+  padding: 0.95rem;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 1rem;
+  background: var(--color-app-surface);
+  transform: translateY(-46%) scale(0.98);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+}
+
+.scrimVisible {
+  opacity: 1;
+  pointer-events: auto;
+  background: rgb(16 25 36 / 0.24);
+}
+
+.dialogVisible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) scale(1);
+}
+
+.header,
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.header h2,
+.section h3,
+.section ul {
+  margin: 0;
+}
+
+.header h2 {
+  color: var(--color-ink-strong);
+  font-size: 1.05rem;
+}
+
+.body {
+  overflow: auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.section + .section {
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.section h3 {
+  color: var(--color-ink-strong);
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.section ul {
+  margin-top: 0.55rem;
+  padding-left: 1rem;
+  color: var(--color-ink);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.action {
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 0.85rem;
+  background: transparent;
+  color: var(--color-ink-strong);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (min-width: 48rem) {
+  .dialog {
+    left: 50%;
+    right: auto;
+    width: min(30rem, calc(100vw - 2rem));
+    transform: translate(-50%, -46%) scale(0.98);
+  }
+
+  .dialogVisible {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

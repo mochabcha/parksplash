@@ -1,0 +1,29 @@
+.toast {
+  position: absolute;
+  left: 50%;
+  bottom: calc(env(safe-area-inset-bottom) + 5.5rem);
+  z-index: 610;
+  width: min(22rem, calc(100% - 1.5rem));
+  padding: 0.8rem 0.95rem;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 0.85rem;
+  background: var(--color-overlay-strong);
+  color: var(--color-ink-strong);
+  opacity: 0;
+  transform: translate(-50%, 0.5rem);
+  pointer-events: none;
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.toast p {
+  margin: 0;
+  font-size: 0.84rem;
+  text-align: center;
+}
+
+.visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}

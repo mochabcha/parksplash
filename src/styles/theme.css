@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --font-display: 'Instrument Sans', sans-serif;
+  --font-body: 'Instrument Sans', sans-serif;
+  --color-page: oklch(0.95 0.01 235);
+  --color-app-surface: oklch(0.985 0.003 240);
+  --color-overlay: oklch(0.985 0.003 240 / 0.8);
+  --color-overlay-strong: oklch(0.985 0.003 240 / 0.95);
+  --color-ink-strong: oklch(0.23 0.02 245);
+  --color-ink: oklch(0.4 0.02 245);
+  --color-ink-muted: oklch(0.54 0.015 245);
+  --color-line: oklch(0.86 0.01 245 / 0.9);
+  --color-line-strong: oklch(0.76 0.014 245 / 0.95);
+  --color-water: oklch(0.72 0.08 232);
+  --color-sun: oklch(0.86 0.09 95);
+  --color-marker: oklch(0.54 0.09 232);
+  --color-marker-ring: oklch(0.98 0.004 240);
+  --color-marker-active: oklch(0.64 0.14 48);
+  --color-marker-active-ring: oklch(0.98 0.004 240);
+  --color-accent: oklch(0.46 0.09 232);
+}
