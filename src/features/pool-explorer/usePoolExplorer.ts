@@ -3,6 +3,7 @@ import type { PoolViewModel } from '../../domain/pools/pool.types';
 
 export type PoolFilter = 'all' | 'open-now' | 'lessons' | 'july';
 export type AppDialog = 'season-guide' | null;
+const FOCUSED_POOL_ZOOM_MODE_TOAST = 'Pool focus active.';
 
 interface ToastState {
   id: number;
@@ -44,6 +45,11 @@ export const usePoolExplorer = (pools: PoolViewModel[]) => {
     });
   };
 
+  const clearFocusedPool = () => {
+    setSelectedPoolId('');
+    setIsDrawerExpanded(false);
+  };
+
   useEffect(() => {
     if (selectedPool && !filteredPools.some((pool) => pool.id === selectedPool.id)) {
       setSelectedPoolId('');
@@ -64,6 +70,7 @@ export const usePoolExplorer = (pools: PoolViewModel[]) => {
   }, [toast]);
 
   const handleFilterChange = (filter: PoolFilter) => {
+    clearFocusedPool();
     setActiveFilter(filter);
     setRecenterSignal((value) => value + 1);
     pushToast(
@@ -86,9 +93,16 @@ export const usePoolExplorer = (pools: PoolViewModel[]) => {
   const handlePoolSelectFromBrowser = (poolId: string) => {
     setSelectedPoolId(poolId);
     setIsSidePanelOpen(false);
+    pushToast(FOCUSED_POOL_ZOOM_MODE_TOAST);
   };
 
-  const openDrawer = () => setIsDrawerExpanded(true);
+  const openDrawer = () => {
+    if (!selectedPoolId) {
+      return;
+    }
+
+    setIsDrawerExpanded(true);
+  };
 
   const handleDrawerClose = () => {
     setIsDrawerExpanded(false);
@@ -99,6 +113,7 @@ export const usePoolExplorer = (pools: PoolViewModel[]) => {
   };
 
   const handleRecenter = () => {
+    clearFocusedPool();
     setRecenterSignal((value) => value + 1);
     pushToast('Map recentered to all visible pools.');
   };

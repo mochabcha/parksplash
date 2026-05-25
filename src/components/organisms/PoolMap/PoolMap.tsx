@@ -6,6 +6,8 @@ import { OUTDOOR_POOL_CENTER } from '../../../domain/pools/poolSeason';
 import type { PoolViewModel } from '../../../domain/pools/pool.types';
 import styles from './PoolMap.module.css';
 
+const FOCUSED_POOL_ZOOM = 15;
+
 interface PoolMapProps {
   pools: PoolViewModel[];
   selectedPoolId?: string;
@@ -75,7 +77,7 @@ const MapEffects = ({
     const drawerJustOpened = !previousDrawerExpanded.current && isDrawerExpanded;
 
     if (selectedPoolChanged) {
-      const nextZoom = Math.max(map.getZoom(), 15);
+      const nextZoom = FOCUSED_POOL_ZOOM;
       const nextCenter = getFocusedCenter(map, selectedPool, isDrawerExpanded);
 
       map.flyTo(nextCenter, nextZoom, {
@@ -85,7 +87,7 @@ const MapEffects = ({
     } else if (drawerJustOpened) {
       const nextCenter = getFocusedCenter(map, selectedPool, true);
 
-      map.panTo(nextCenter, {
+      map.flyTo(nextCenter, FOCUSED_POOL_ZOOM, {
         animate: true,
         duration: 0.35,
       });
@@ -96,8 +98,12 @@ const MapEffects = ({
   }, [isDrawerExpanded, map, pools, selectedPoolId]);
 
   useEffect(() => {
+    if (!selectedPoolId) {
+      previousSelectedPoolId.current = undefined;
+    }
+
     previousDrawerExpanded.current = isDrawerExpanded;
-  }, [isDrawerExpanded]);
+  }, [isDrawerExpanded, selectedPoolId]);
 
   return null;
 };
