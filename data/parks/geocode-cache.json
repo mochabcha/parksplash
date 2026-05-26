@@ -1,8 +1,8 @@
 {
   "riverfront-music-garden": {
-    "latitude": 42.3288589,
-    "longitude": -83.0357663,
-    "geocodeLabel": "Riverfront Garden Rooms, Detroit, Michigan"
+    "latitude": 30.3249919,
+    "longitude": -81.6623711,
+    "geocodeLabel": "Water Street, Jacksonville, FL"
   },
   "fort-george-island-state-cultural-site": {
     "latitude": 30.4029879,
@@ -320,9 +320,9 @@
     "geocodeLabel": "Halsema Road North, Jacksonville, Florida"
   },
   "cardinal-park": {
-    "latitude": 28.4866275,
-    "longitude": -81.3173749,
-    "geocodeLabel": "Cardinal Park, Conway, Florida"
+    "latitude": 30.4605798,
+    "longitude": -81.6071549,
+    "geocodeLabel": "Cardinal Creek Drive, Jacksonville, Florida"
   },
   "castaway-island-preserve": {
     "latitude": 30.2960061,
@@ -590,9 +590,9 @@
     "geocodeLabel": "Hogan-Spring Glen Elementary School, Beach Boulevard, Jacksonville, Florida"
   },
   "fletcher-park": {
-    "latitude": 39.7834016,
-    "longitude": -86.13374,
-    "geocodeLabel": "Fletcher Park, Indianapolis, Indiana"
+    "latitude": 30.3044139,
+    "longitude": -81.6549548,
+    "geocodeLabel": "Atlantic Boulevard, Jacksonville, Florida"
   },
   "florida-c-dwight-memorial-playground": {
     "latitude": 30.333671,
@@ -1130,9 +1130,9 @@
     "geocodeLabel": "Barnes Road South, Jacksonville, Florida"
   },
   "lynn-park": {
-    "latitude": 42.4588987,
-    "longitude": -70.9437041,
-    "geocodeLabel": "Lynn Heritage State Park, Lynn, MA"
+    "latitude": 30.2484066,
+    "longitude": -81.76126,
+    "geocodeLabel": "Jacksonville Heights Road, Jacksonville, Florida"
   },
   "main-street-park": {
     "latitude": 30.3225828,
@@ -1300,14 +1300,14 @@
     "geocodeLabel": "Arlington Road, Jacksonville, Florida"
   },
   "normandy-boulevard-sports-complex": {
-    "latitude": 26.6277955,
-    "longitude": -82.0214601,
-    "geocodeLabel": "Cape Coral Sports Complex, Sports Boulevard, Cape Coral, FL"
+    "latitude": 30.2850706,
+    "longitude": -81.8235942,
+    "geocodeLabel": "Normandy Cove Street, Jacksonville, Florida"
   },
   "normandy-center": {
-    "latitude": 39.6289645,
-    "longitude": -84.1732821,
-    "geocodeLabel": "Normandy Banquet & Event Center, Miamisburg Centerville Road, Washington Township, Ohio"
+    "latitude": 30.2946616,
+    "longitude": -81.849701,
+    "geocodeLabel": "Jacksonville Word of Faith Church, Chaffee Road South, Jacksonville, Florida"
   },
   "normandy-park": {
     "latitude": 30.3448635,
@@ -1595,9 +1595,9 @@
     "geocodeLabel": "John Prom Boulevard, Jacksonville, Florida"
   },
   "saratoga-lake-park": {
-    "latitude": 26.6430061,
-    "longitude": -81.9692446,
-    "geocodeLabel": "Saratoga Lake Park, SE 4th Terrace, Cape Coral, Florida"
+    "latitude": 30.3356663,
+    "longitude": -81.6026803,
+    "geocodeLabel": "University Boulevard North, Jacksonville, Florida"
   },
   "scott-park": {
     "latitude": 30.3675681,
@@ -1610,9 +1610,9 @@
     "geocodeLabel": "Gold Star Family Parkway, Jacksonville, Florida"
   },
   "seminole-park": {
-    "latitude": 26.606529,
-    "longitude": -81.8852252,
-    "geocodeLabel": "Seminole Park Historic District, Fort Myers, Florida"
+    "latitude": 30.2529559,
+    "longitude": -81.6992143,
+    "geocodeLabel": "Roosevelt Blvd + Long Bow Ln, Roosevelt Boulevard, Jacksonville, Florida"
   },
   "sidney-j-gefen-riverwalk-park": {
     "latitude": 30.3198955,
@@ -1680,9 +1680,9 @@
     "geocodeLabel": "Saint Nicholas Playground, Spring Park Road, Jacksonville, FL"
   },
   "st-nicholas-train-station-park": {
-    "latitude": 42.1660397,
-    "longitude": -87.7834651,
-    "geocodeLabel": "Ravinia Train Station North parking lot, St Johns Avenue, Highland Park, IL"
+    "latitude": 30.3044139,
+    "longitude": -81.6549548,
+    "geocodeLabel": "Atlantic Boulevard, Jacksonville, Florida"
   },
   "stinson-park": {
     "latitude": 30.282079,
@@ -1690,19 +1690,19 @@
     "geocodeLabel": "San Juan Avenue, Jacksonville, Florida"
   },
   "stockton-park": {
-    "latitude": 42.3538034,
-    "longitude": -82.9807666,
-    "geocodeLabel": "Stockton Park, Detroit, Michigan"
+    "latitude": 30.2616286,
+    "longitude": -81.7106522,
+    "geocodeLabel": "Ortega Forest, Jacksonville, Florida"
   },
   "stone-park": {
-    "latitude": 33.8069694,
-    "longitude": -84.1423193,
-    "geocodeLabel": "Stone Mountain Park, Stone Mountain, Georgia"
+    "latitude": 30.2982753,
+    "longitude": -81.7137864,
+    "geocodeLabel": "Park Street, Jacksonville, Florida"
   },
   "sunny-acres": {
-    "latitude": 31.5385081,
-    "longitude": -84.1562964,
-    "geocodeLabel": "Sunny Acres, Albany, Georgia"
+    "latitude": 30.3262346,
+    "longitude": -81.5246629,
+    "geocodeLabel": "InTown Suites Jacksonville Atlantic, Burris Drive, Jacksonville, Florida"
   },
   "sweetwater-playground": {
     "latitude": 30.2666385,
@@ -1725,9 +1725,9 @@
     "geocodeLabel": "Bridgecove Circle East, Jacksonville, Florida"
   },
   "taye-brown-regional-park": {
-    "latitude": 50.9224666,
-    "longitude": -119.6288674,
-    "geocodeLabel": "Tsútswecw Provincial Park, Area F (Scotch Creek/Seymour Arm), British Columbia"
+    "latitude": 30.2850706,
+    "longitude": -81.8235942,
+    "geocodeLabel": "Normandy Cove Street, Jacksonville, Florida"
   },
   "terrace-park": {
     "latitude": 30.3293998,
@@ -1860,9 +1860,9 @@
     "geocodeLabel": "Ortega Farms Circle, Jacksonville, Florida"
   },
   "wesconnett-elementary-school-park": {
-    "latitude": 25.6920879,
-    "longitude": -80.3584929,
-    "geocodeLabel": "Sunset Park Elementary School, Southwest 84th Street, Kendall, Florida"
+    "latitude": 30.2197097,
+    "longitude": -81.7507208,
+    "geocodeLabel": "Lake Lane, Jacksonville, Florida"
   },
   "wesconnett-playground": {
     "latitude": 30.3484301,
@@ -1885,9 +1885,9 @@
     "geocodeLabel": "Westside High School, Firestone Road, Jacksonville, FL"
   },
   "westside-middle-school-park": {
-    "latitude": 40.4502617,
-    "longitude": -99.3721011,
-    "geocodeLabel": "Holdrege Middle School, 14th Avenue, Holdrege, Nebraska"
+    "latitude": 30.2469064,
+    "longitude": -81.7303751,
+    "geocodeLabel": "Wesconnett, Jacksonville, Florida"
   },
   "westside-park": {
     "latitude": 30.3322313,
@@ -1935,9 +1935,9 @@
     "geocodeLabel": "Park Street, Jacksonville, Florida"
   },
   "windsor-place-park": {
-    "latitude": 28.0639977,
-    "longitude": -82.621206,
-    "geocodeLabel": "Windsor Place at Citrus Park, Westchase, Florida"
+    "latitude": 30.2913047,
+    "longitude": -81.7067951,
+    "geocodeLabel": "Montgomery Place, Jacksonville, Florida"
   },
   "windy-hill-center": {
     "latitude": 30.277852,

@@ -67,12 +67,6 @@ export const ParkDrawer = ({ park, isExpanded, onOpen, onClose }: ParkDrawerProp
         <div className={styles.content}>
           {park ? (
             <>
-              {park.localImagePath ? (
-                <div className={styles.image}>
-                  <img alt="" loading="lazy" src={park.localImagePath} />
-                </div>
-              ) : null}
-
               <div className={styles.hero}>
                 <div>
                   <p className={styles.eyebrow}>{park.kindLabel}</p>
@@ -86,6 +80,12 @@ export const ParkDrawer = ({ park, isExpanded, onOpen, onClose }: ParkDrawerProp
                   <X size={18} />
                 </IconButton>
               </div>
+
+              {park.localImagePath ? (
+                <div className={styles.image}>
+                  <img alt="" loading="lazy" src={park.localImagePath} />
+                </div>
+              ) : null}
 
               <p className={styles.summary}>
                 {park.poolDetails?.status.headline ??
@@ -111,7 +111,7 @@ export const ParkDrawer = ({ park, isExpanded, onOpen, onClose }: ParkDrawerProp
                       </span>
                     }
                   />
-                  <InfoRow eyebrow="Address" value={park.geocodeLabel || park.address} />
+                  <InfoRow eyebrow="Address" value={park.address} />
                 </div>
                 {park.detailUrl ? (
                   <a className={styles.siteLink} href={park.detailUrl} rel="noreferrer" target="_blank">

@@ -18,6 +18,20 @@ const poolsSourcePath = path.join(rootDir, 'src/content/pools/pools.source.json'
 const poolsGeneratedPath = path.join(rootDir, 'src/content/pools/pools.generated.json');
 
 const jacksonvilleCenter = { latitude: 30.3322, longitude: -81.6557 };
+const northeastFloridaBounds = {
+  minLatitude: 29.85,
+  maxLatitude: 30.7,
+  minLongitude: -82.15,
+  maxLongitude: -81.2,
+};
+const allowedLocalityFragments = [
+  'jacksonville',
+  'jacksonville beach',
+  'atlantic beach',
+  'neptune beach',
+  'baldwin',
+  'duval',
+];
 const fallbackAmenityDefinitions = {
   canoe: 'Canoe Access',
   featuredpark: 'Featured Park',
@@ -44,6 +58,15 @@ const normalizeAddress = (value) =>
     .replace(/[.,]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
+
+const extractZipCode = (value = '') => value.match(/\b(32\d{3})\b/)?.[1] ?? '';
+const extractCoreAddress = (value = '') => value.match(/^.*?\b32\d{3}\b/)?.[0]?.trim() ?? value.trim();
+
+const isWithinJacksonvilleRegion = (latitude, longitude) =>
+  latitude >= northeastFloridaBounds.minLatitude &&
+  latitude <= northeastFloridaBounds.maxLatitude &&
+  longitude >= northeastFloridaBounds.minLongitude &&
+  longitude <= northeastFloridaBounds.maxLongitude;
 
 const extractBackgroundImage = (styleValue = '') => {
   const match = styleValue.match(/url\((['"]?)(.*?)\1\)/i);
@@ -125,27 +148,47 @@ const downloadFile = async (url, outputPath) => {
   await writeFile(outputPath, Buffer.from(arrayBuffer));
 };
 
-const scoreCandidate = (feature, name) => {
+const scoreCandidate = (feature, park) => {
   const latitude = Number(feature.geometry.coordinates[1]);
   const longitude = Number(feature.geometry.coordinates[0]);
+
+  if (!Number.isFinite(latitude) || !Number.isFinite(longitude) || !isWithinJacksonvilleRegion(latitude, longitude)) {
+    return Number.NEGATIVE_INFINITY;
+  }
+
   const distancePenalty =
     Math.abs(latitude - jacksonvilleCenter.latitude) + Math.abs(longitude - jacksonvilleCenter.longitude);
   const state = String(feature.properties.state ?? '').toLowerCase();
   const city = String(feature.properties.city ?? '').toLowerCase();
+  const district = String(feature.properties.district ?? '').toLowerCase();
+  const county = String(feature.properties.county ?? '').toLowerCase();
+  const postcode = String(feature.properties.postcode ?? '').toLowerCase();
+  const street = String(feature.properties.street ?? '').toLowerCase();
   const featureName = String(feature.properties.name ?? '').toLowerCase();
-  const normalizedName = name.toLowerCase();
-  let score = 100 - distancePenalty * 100;
+  const normalizedName = park.name.toLowerCase();
+  const normalizedAddress = normalizeAddress(park.address);
+  const zipCode = extractZipCode(park.address).toLowerCase();
+  const locality = [city, district, county].join(' ');
+  let score = 120 - distancePenalty * 100;
 
   if (state.includes('florida')) {
-    score += 40;
+    score += 80;
   }
 
-  if (['jacksonville', 'baldwin', 'neptune beach', 'atlantic beach'].some((value) => city.includes(value))) {
-    score += 30;
+  if (allowedLocalityFragments.some((value) => locality.includes(value))) {
+    score += 80;
   }
 
   if (normalizedName.split(/[^a-z0-9]+/).some((part) => part.length > 4 && featureName.includes(part))) {
     score += 20;
+  }
+
+  if (zipCode && postcode === zipCode) {
+    score += 120;
+  }
+
+  if (street && normalizedAddress.includes(street)) {
+    score += 35;
   }
 
   return score;
@@ -171,19 +214,104 @@ const fetchPhoton = async (query, retries = 3) => {
   return response.json();
 };
 
-const geocodePark = async (park, geocodeCache) => {
-  if (geocodeCache[park.id]) {
-    return geocodeCache[park.id];
+const fetchNominatim = async (query, retries = 3) => {
+  const searchUrl = new URL('https://nominatim.openstreetmap.org/search');
+  searchUrl.searchParams.set('q', query);
+  searchUrl.searchParams.set('format', 'jsonv2');
+  searchUrl.searchParams.set('limit', '5');
+  searchUrl.searchParams.set('countrycodes', 'us');
+  searchUrl.searchParams.set('viewbox', `${northeastFloridaBounds.minLongitude},${northeastFloridaBounds.maxLatitude},${northeastFloridaBounds.maxLongitude},${northeastFloridaBounds.minLatitude}`);
+  searchUrl.searchParams.set('bounded', '1');
+
+  const response = await fetch(searchUrl, {
+    headers: {
+      'User-Agent': 'splash-spot-parks-ingest/0.1 (local build)',
+      Accept: 'application/json',
+    },
+  });
+
+  if ((response.status === 429 || response.status === 503) && retries > 0) {
+    await delay(2000);
+    return fetchNominatim(query, retries - 1);
   }
 
-  const attempts = [park.mapQuery, park.address, `${park.name}, ${park.address}`, park.name]
+  if (!response.ok) {
+    throw new Error(`Nominatim request failed for "${query}": ${response.status}`);
+  }
+
+  return response.json();
+};
+
+const selectPhotonMatch = (candidates, park) =>
+  candidates
+    .map((candidate) => ({
+      candidate,
+      score: scoreCandidate(candidate, park),
+    }))
+    .filter(({ score }) => Number.isFinite(score))
+    .sort((left, right) => right.score - left.score)[0]?.candidate;
+
+const selectNominatimMatch = (candidates, park) => {
+  const zipCode = extractZipCode(park.address);
+
+  return candidates
+    .map((candidate) => {
+      const latitude = Number(candidate.lat);
+      const longitude = Number(candidate.lon);
+      const displayName = String(candidate.display_name ?? '').toLowerCase();
+      let score = isWithinJacksonvilleRegion(latitude, longitude) ? 100 : Number.NEGATIVE_INFINITY;
+
+      if (displayName.includes('florida')) {
+        score += 80;
+      }
+
+      if (allowedLocalityFragments.some((value) => displayName.includes(value))) {
+        score += 80;
+      }
+
+      if (zipCode && displayName.includes(zipCode)) {
+        score += 120;
+      }
+
+      if (normalizeAddress(displayName).includes(normalizeAddress(park.address))) {
+        score += 80;
+      }
+
+      return {
+        candidate,
+        score,
+      };
+    })
+    .filter(({ score }) => Number.isFinite(score))
+    .sort((left, right) => right.score - left.score)[0]?.candidate;
+};
+
+const geocodePark = async (park, geocodeCache) => {
+  const cachedEntry = geocodeCache[park.id];
+
+  if (
+    cachedEntry &&
+    isWithinJacksonvilleRegion(Number(cachedEntry.latitude), Number(cachedEntry.longitude))
+  ) {
+    return cachedEntry;
+  }
+
+  const coreAddress = extractCoreAddress(park.address);
+  const coreMapQuery = extractCoreAddress(park.mapQuery);
+  const attempts = [
+    `${coreAddress}, Florida`,
+    coreMapQuery,
+    coreAddress,
+    `${park.name}, ${coreAddress}`,
+    `${park.name}, Jacksonville, Florida ${extractZipCode(park.address)}`,
+  ]
     .filter(Boolean)
     .map((value) => value.replaceAll('.', ''));
 
   for (const attempt of attempts) {
     const payload = await fetchPhoton(attempt);
     const candidates = Array.isArray(payload?.features) ? payload.features : [];
-    const match = candidates.sort((left, right) => scoreCandidate(right, park.name) - scoreCandidate(left, park.name))[0];
+    const match = selectPhotonMatch(candidates, park);
 
     if (match) {
       const result = {
@@ -197,6 +325,25 @@ const geocodePark = async (park, geocodeCache) => {
         ]
           .filter(Boolean)
           .join(', '),
+      };
+
+      geocodeCache[park.id] = result;
+      await writeFile(geocodeCachePath, `${JSON.stringify(geocodeCache, null, 2)}\n`);
+      await delay(250);
+      return result;
+    }
+  }
+
+  for (const attempt of attempts) {
+    const payload = await fetchNominatim(attempt);
+    const candidates = Array.isArray(payload) ? payload : [];
+    const match = selectNominatimMatch(candidates, park);
+
+    if (match) {
+      const result = {
+        latitude: Number(match.lat),
+        longitude: Number(match.lon),
+        geocodeLabel: String(match.display_name ?? ''),
       };
 
       geocodeCache[park.id] = result;
