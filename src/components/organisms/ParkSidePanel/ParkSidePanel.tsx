@@ -25,8 +25,16 @@ const quickFilters: { id: ParkQuickFilter; label: string }[] = [
   { id: 'all', label: 'All parks' },
   { id: 'pool-sites', label: 'Pool sites' },
   { id: 'open-now', label: 'Open now' },
-  { id: 'lessons', label: 'Lessons' },
+  { id: 'swim-lessons', label: 'Swim lessons' },
   { id: 'splash-pads', label: 'Splash pads' },
+  { id: 'playgrounds', label: 'Playgrounds' },
+  { id: 'trails', label: 'Trails' },
+  { id: 'sports', label: 'Sports' },
+  { id: 'boat-access', label: 'Boat access' },
+  { id: 'picnic', label: 'Picnic' },
+  { id: 'community-centers', label: 'Community centers' },
+  { id: 'accessible', label: 'Accessible' },
+  { id: 'dog-parks', label: 'Dog parks' },
 ];
 
 export const ParkSidePanel = ({
@@ -61,67 +69,69 @@ export const ParkSidePanel = ({
         </IconButton>
       </div>
 
-      <div className={styles.filterSection}>
-        <div className={styles.subHeader}>
-          <p className={styles.sectionTitle}>Quick filters</p>
-        </div>
-        <div className={styles.quickFilters}>
-          {quickFilters.map((filter) => (
-            <FilterChip
-              key={filter.id}
-              label={filter.label}
-              onClick={() => onQuickFilterChange(filter.id)}
-              selected={activeQuickFilter === filter.id}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className={styles.amenities}>
-        <div className={styles.sectionHeader}>
-          <div>
-            <p className={styles.sectionTitle}>Amenities</p>
-            <p className={styles.sectionMeta}>
-              {selectedAmenityKeys.length > 0
-                ? `${selectedAmenityKeys.length} active`
-                : 'Filter the map by park features'}
-            </p>
+      <div className={styles.scrollArea}>
+        <div className={styles.filterSection}>
+          <div className={styles.subHeader}>
+            <p className={styles.sectionTitle}>Quick filters</p>
           </div>
-          {selectedAmenityKeys.length > 0 ? (
-            <button className={styles.clearButton} onClick={onClearAmenities} type="button">
-              Clear
-            </button>
-          ) : null}
-        </div>
-        <div className={styles.amenityChips}>
-          {amenityOptions.map((amenity) => (
-            <FilterChip
-              key={amenity.key}
-              label={amenity.label}
-              leadingVisual={<AmenityIcon label={amenity.label} src={amenity.sourceIconUrl} />}
-              onClick={() => onAmenityToggle(amenity.key)}
-              selected={selectedAmenityKeys.includes(amenity.key)}
-              trailingValue={amenity.count}
-            />
-          ))}
-        </div>
-      </div>
-
-      <ul className={styles.list}>
-        {parks.length > 0 ? (
-          parks.map((park) => (
-            <li className={styles.item} key={park.id}>
-              <ParkListItem
-                onClick={() => onSelectPark(park.id)}
-                park={park}
-                selected={selectedParkId === park.id}
+          <div className={styles.quickFilters}>
+            {quickFilters.map((filter) => (
+              <FilterChip
+                key={filter.id}
+                label={filter.label}
+                onClick={() => onQuickFilterChange(filter.id)}
+                selected={activeQuickFilter === filter.id}
               />
-            </li>
-          ))
-        ) : (
-          <li className={styles.empty}>No parks match the current filter set.</li>
-        )}
-      </ul>
+            ))}
+          </div>
+        </div>
+
+        <div className={styles.amenities}>
+          <div className={styles.sectionHeader}>
+            <div>
+              <p className={styles.sectionTitle}>Amenities</p>
+              <p className={styles.sectionMeta}>
+                {selectedAmenityKeys.length > 0
+                  ? `${selectedAmenityKeys.length} active`
+                  : 'Filter the map by park features'}
+              </p>
+            </div>
+            {selectedAmenityKeys.length > 0 ? (
+              <button className={styles.clearButton} onClick={onClearAmenities} type="button">
+                Clear
+              </button>
+            ) : null}
+          </div>
+          <div className={styles.amenityChips}>
+            {amenityOptions.map((amenity) => (
+              <FilterChip
+                key={amenity.key}
+                label={amenity.label}
+                leadingVisual={<AmenityIcon label={amenity.label} src={amenity.sourceIconUrl} />}
+                onClick={() => onAmenityToggle(amenity.key)}
+                selected={selectedAmenityKeys.includes(amenity.key)}
+                trailingValue={amenity.count}
+              />
+            ))}
+          </div>
+        </div>
+
+        <ul className={styles.list}>
+          {parks.length > 0 ? (
+            parks.map((park) => (
+              <li className={styles.item} key={park.id}>
+                <ParkListItem
+                  onClick={() => onSelectPark(park.id)}
+                  park={park}
+                  selected={selectedParkId === park.id}
+                />
+              </li>
+            ))
+          ) : (
+            <li className={styles.empty}>No parks match the current filter set.</li>
+          )}
+        </ul>
+      </div>
     </aside>
   </>
 );

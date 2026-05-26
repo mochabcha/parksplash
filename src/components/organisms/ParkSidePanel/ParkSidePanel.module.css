@@ -22,6 +22,7 @@
   inset: 0 0 0 auto;
   z-index: 630;
   inline-size: min(25rem, 88vw);
+  block-size: 100dvh;
   padding: calc(env(safe-area-inset-top) + 0.75rem) 0.9rem calc(env(safe-area-inset-bottom) + 0.9rem);
   background: color-mix(in oklab, var(--color-app-surface) 97%, var(--color-page) 3%);
   border-left: 1px solid var(--color-line);
@@ -29,8 +30,9 @@
   transform: translateX(100%);
   transition: transform 220ms ease;
   display: grid;
-  grid-template-rows: auto auto auto 1fr;
+  grid-template-rows: auto minmax(0, 1fr);
   gap: 1rem;
+  overflow: hidden;
 }
 
 .open {
@@ -73,6 +75,15 @@
   gap: 0.7rem;
 }
 
+.scrollArea {
+  min-block-size: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-inline-end: 0.2rem;
+  display: grid;
+  gap: 1rem;
+}
+
 .quickFilters,
 .amenityChips {
   display: flex;
@@ -95,7 +106,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  overflow: auto;
+  min-block-size: 0;
 }
 
 .item + .item {

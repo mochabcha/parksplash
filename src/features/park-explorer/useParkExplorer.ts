@@ -3,10 +3,62 @@ import { buildAmenityFilterOptions } from '../../domain/parks/parkAmenities';
 import { getParkAmenityMap } from '../../domain/parks/parkDirectory';
 import type { AmenityFilterOption, ParkViewModel } from '../../domain/parks/park.types';
 
-export type ParkQuickFilter = 'all' | 'pool-sites' | 'open-now' | 'lessons' | 'splash-pads';
+export type ParkQuickFilter =
+  | 'all'
+  | 'pool-sites'
+  | 'open-now'
+  | 'swim-lessons'
+  | 'splash-pads'
+  | 'playgrounds'
+  | 'trails'
+  | 'sports'
+  | 'boat-access'
+  | 'picnic'
+  | 'community-centers'
+  | 'accessible'
+  | 'dog-parks';
 export type AppDialog = 'park-guide' | null;
 
 const amenityMap = getParkAmenityMap();
+const sportsAmenityKeys = [
+  'baseball',
+  'basketball',
+  'football',
+  'soccer',
+  'tennis',
+  'pickleball',
+  'multipurposefield',
+  'skate',
+  'golf',
+  'workoutstation',
+  'fitnessequipment',
+  'equestrian',
+];
+const trailAmenityKeys = ['hikingtrail', 'biketrail', 'birding', 'riverwalk', 'scenic'];
+const boatAmenityKeys = [
+  'onwater',
+  'boatramp',
+  'boatdock',
+  'boattrailerparking',
+  'nonmotorizedlaunch',
+  'shorelaunch',
+  'fishingpier',
+  'beachpier',
+  'kayakrental',
+  'canoe',
+  'canoerental',
+  'paddleboard',
+  'paddleboat',
+  'boatpump',
+  'baittackle',
+  'pwc',
+  'pwcrental',
+  'sailboatrental',
+  'surfing',
+];
+const picnicAmenityKeys = ['picnictables', 'picnicshelters', 'grills'];
+
+const hasAnyAmenity = (park: ParkViewModel, keys: string[]) => keys.some((key) => park.amenityKeys.includes(key));
 
 const matchesQuickFilter = (park: ParkViewModel, filter: ParkQuickFilter) => {
   switch (filter) {
@@ -14,10 +66,26 @@ const matchesQuickFilter = (park: ParkViewModel, filter: ParkQuickFilter) => {
       return park.hasPool;
     case 'open-now':
       return park.poolDetails?.status.state === 'open-now';
-    case 'lessons':
+    case 'swim-lessons':
       return Boolean(park.poolDetails);
     case 'splash-pads':
       return park.hasSplashPad;
+    case 'playgrounds':
+      return park.amenityKeys.includes('playground');
+    case 'trails':
+      return hasAnyAmenity(park, trailAmenityKeys);
+    case 'sports':
+      return hasAnyAmenity(park, sportsAmenityKeys);
+    case 'boat-access':
+      return hasAnyAmenity(park, boatAmenityKeys);
+    case 'picnic':
+      return hasAnyAmenity(park, picnicAmenityKeys);
+    case 'community-centers':
+      return park.amenityKeys.includes('communitycenter');
+    case 'accessible':
+      return park.amenityKeys.includes('wheelchair') || park.amenityKeys.includes('accessibleamenities');
+    case 'dog-parks':
+      return park.amenityKeys.includes('dogpark');
     default:
       return true;
   }

@@ -1,6 +1,7 @@
 .viewport {
   min-height: 100dvh;
   background: var(--color-page);
+  overflow: hidden;
 }
 
 .device {
@@ -8,4 +9,5 @@
   width: 100%;
   min-height: 100dvh;
   background: var(--color-app-surface);
+  overflow: hidden;
 }

@@ -17,8 +17,16 @@ const filterLabels: Record<ParkQuickFilter, string> = {
   all: 'All parks',
   'pool-sites': 'Pool sites',
   'open-now': 'Open now',
-  lessons: 'Lessons',
+  'swim-lessons': 'Swim lessons',
   'splash-pads': 'Splash pads',
+  playgrounds: 'Playgrounds',
+  trails: 'Trails',
+  sports: 'Sports',
+  'boat-access': 'Boat access',
+  picnic: 'Picnic',
+  'community-centers': 'Community centers',
+  accessible: 'Accessible',
+  'dog-parks': 'Dog parks',
 };
 
 export const MapTopBar = ({
