@@ -4,17 +4,19 @@ import { IconButton } from '../../atoms/IconButton/IconButton';
 import { FilterChip } from '../../molecules/FilterChip/FilterChip';
 import { ParkListItem } from '../../molecules/ParkListItem/ParkListItem';
 import type { AmenityFilterOption, ParkViewModel } from '../../../domain/parks/park.types';
-import type { ParkQuickFilter } from '../../../features/park-explorer/useParkExplorer';
+import type { ParkBrowserTab, ParkQuickFilter } from '../../../features/park-explorer/useParkExplorer';
 import styles from './ParkSidePanel.module.css';
 
 interface ParkSidePanelProps {
   parks: ParkViewModel[];
   selectedParkId?: string;
   activeQuickFilter: ParkQuickFilter;
+  sidePanelTab: ParkBrowserTab;
   selectedAmenityKeys: string[];
   amenityOptions: AmenityFilterOption[];
   isOpen: boolean;
   onClose: () => void;
+  onTabChange: (tab: ParkBrowserTab) => void;
   onSelectPark: (parkId: string) => void;
   onQuickFilterChange: (filter: ParkQuickFilter) => void;
   onAmenityToggle: (amenityKey: string) => void;
@@ -37,14 +39,22 @@ const quickFilters: { id: ParkQuickFilter; label: string }[] = [
   { id: 'dog-parks', label: 'Dog parks' },
 ];
 
+const browserTabs: { id: ParkBrowserTab; label: string }[] = [
+  { id: 'parks', label: 'Parks' },
+  { id: 'quick-filters', label: 'Quick filters' },
+  { id: 'amenities', label: 'Amenities' },
+];
+
 export const ParkSidePanel = ({
   parks,
   selectedParkId,
   activeQuickFilter,
+  sidePanelTab,
   selectedAmenityKeys,
   amenityOptions,
   isOpen,
   onClose,
+  onTabChange,
   onSelectPark,
   onQuickFilterChange,
   onAmenityToggle,
@@ -69,68 +79,85 @@ export const ParkSidePanel = ({
         </IconButton>
       </div>
 
+      <div className={styles.tabs}>
+        {browserTabs.map((tab) => (
+          <FilterChip
+            key={tab.id}
+            label={tab.label}
+            onClick={() => onTabChange(tab.id)}
+            selected={sidePanelTab === tab.id}
+          />
+        ))}
+      </div>
+
       <div className={styles.scrollArea}>
-        <div className={styles.filterSection}>
-          <div className={styles.subHeader}>
-            <p className={styles.sectionTitle}>Quick filters</p>
-          </div>
-          <div className={styles.quickFilters}>
-            {quickFilters.map((filter) => (
-              <FilterChip
-                key={filter.id}
-                label={filter.label}
-                onClick={() => onQuickFilterChange(filter.id)}
-                selected={activeQuickFilter === filter.id}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className={styles.amenities}>
-          <div className={styles.sectionHeader}>
-            <div>
-              <p className={styles.sectionTitle}>Amenities</p>
-              <p className={styles.sectionMeta}>
-                {selectedAmenityKeys.length > 0
-                  ? `${selectedAmenityKeys.length} active`
-                  : 'Filter the map by park features'}
-              </p>
+        {sidePanelTab === 'quick-filters' ? (
+          <div className={styles.filterSection}>
+            <div className={styles.subHeader}>
+              <p className={styles.sectionTitle}>Quick filters</p>
             </div>
-            {selectedAmenityKeys.length > 0 ? (
-              <button className={styles.clearButton} onClick={onClearAmenities} type="button">
-                Clear
-              </button>
-            ) : null}
-          </div>
-          <div className={styles.amenityChips}>
-            {amenityOptions.map((amenity) => (
-              <FilterChip
-                key={amenity.key}
-                label={amenity.label}
-                leadingVisual={<AmenityIcon label={amenity.label} src={amenity.sourceIconUrl} />}
-                onClick={() => onAmenityToggle(amenity.key)}
-                selected={selectedAmenityKeys.includes(amenity.key)}
-                trailingValue={amenity.count}
-              />
-            ))}
-          </div>
-        </div>
-
-        <ul className={styles.list}>
-          {parks.length > 0 ? (
-            parks.map((park) => (
-              <li className={styles.item} key={park.id}>
-                <ParkListItem
-                  onClick={() => onSelectPark(park.id)}
-                  park={park}
-                  selected={selectedParkId === park.id}
+            <div className={styles.quickFilters}>
+              {quickFilters.map((filter) => (
+                <FilterChip
+                  key={filter.id}
+                  label={filter.label}
+                  onClick={() => onQuickFilterChange(filter.id)}
+                  selected={activeQuickFilter === filter.id}
                 />
-              </li>
-            ))
-          ) : (
-            <li className={styles.empty}>No parks match the current filter set.</li>
-          )}
-        </ul>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        {sidePanelTab === 'amenities' ? (
+          <div className={styles.amenities}>
+            <div className={styles.sectionHeader}>
+              <div>
+                <p className={styles.sectionTitle}>Amenities</p>
+                <p className={styles.sectionMeta}>
+                  {selectedAmenityKeys.length > 0
+                    ? `${selectedAmenityKeys.length} active`
+                    : 'Filter the map by park features'}
+                </p>
+              </div>
+              {selectedAmenityKeys.length > 0 ? (
+                <button className={styles.clearButton} onClick={onClearAmenities} type="button">
+                  Clear
+                </button>
+              ) : null}
+            </div>
+            <div className={styles.amenityChips}>
+              {amenityOptions.map((amenity) => (
+                <FilterChip
+                  key={amenity.key}
+                  label={amenity.label}
+                  leadingVisual={<AmenityIcon label={amenity.label} src={amenity.sourceIconUrl} />}
+                  onClick={() => onAmenityToggle(amenity.key)}
+                  selected={selectedAmenityKeys.includes(amenity.key)}
+                  trailingValue={amenity.count}
+                />
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        {sidePanelTab === 'parks' ? (
+          <ul className={styles.list}>
+            {parks.length > 0 ? (
+              parks.map((park) => (
+                <li className={styles.item} key={park.id}>
+                  <ParkListItem
+                    onClick={() => onSelectPark(park.id)}
+                    park={park}
+                    selected={selectedParkId === park.id}
+                  />
+                </li>
+              ))
+            ) : (
+              <li className={styles.empty}>No parks match the current filter set.</li>
+            )}
+          </ul>
+        ) : null}
       </div>
     </aside>
   </>

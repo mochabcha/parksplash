@@ -53,10 +53,9 @@
   color: var(--color-ink-strong);
   font-size: 0.78rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
-@media (max-width: 30rem) {
-  .filterState {
-    display: none;
-  }
+.filterState:hover {
+  transform: translateY(-1px);
 }

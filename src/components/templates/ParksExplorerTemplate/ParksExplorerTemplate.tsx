@@ -8,7 +8,11 @@ import { ParkMap } from '../../organisms/ParkMap/ParkMap';
 import { ParkSidePanel } from '../../organisms/ParkSidePanel/ParkSidePanel';
 import { parkGuideSections } from '../../../content/parks/guideContent';
 import type { ParkViewModel, AmenityFilterOption } from '../../../domain/parks/park.types';
-import type { AppDialog as AppDialogType, ParkQuickFilter } from '../../../features/park-explorer/useParkExplorer';
+import type {
+  AppDialog as AppDialogType,
+  ParkBrowserTab,
+  ParkQuickFilter,
+} from '../../../features/park-explorer/useParkExplorer';
 import type { ThemeMode } from '../../../features/theme/useThemeMode';
 import styles from './ParksExplorerTemplate.module.css';
 
@@ -19,6 +23,7 @@ interface ParksExplorerTemplateProps {
   selectedPark?: ParkViewModel;
   activeQuickFilter: ParkQuickFilter;
   selectedAmenityKeys: string[];
+  sidePanelTab: ParkBrowserTab;
   setActiveQuickFilter: (filter: ParkQuickFilter) => void;
   toggleAmenityFilter: (amenityKey: string) => void;
   clearAmenityFilters: () => void;
@@ -29,6 +34,8 @@ interface ParksExplorerTemplateProps {
   isDrawerExpanded: boolean;
   isSidePanelOpen: boolean;
   toggleSidePanel: () => void;
+  openSidePanelTab: (tab: ParkBrowserTab) => void;
+  setSidePanelTab: (tab: ParkBrowserTab) => void;
   closeSidePanel: () => void;
   activeDialog: AppDialogType;
   openDialog: (dialog: AppDialogType) => void;
@@ -56,6 +63,7 @@ export const ParksExplorerTemplate = ({
   selectedPark,
   activeQuickFilter,
   selectedAmenityKeys,
+  sidePanelTab,
   setActiveQuickFilter,
   toggleAmenityFilter,
   clearAmenityFilters,
@@ -66,6 +74,8 @@ export const ParksExplorerTemplate = ({
   isDrawerExpanded,
   isSidePanelOpen,
   toggleSidePanel,
+  openSidePanelTab,
+  setSidePanelTab,
   closeSidePanel,
   activeDialog,
   openDialog,
@@ -91,6 +101,7 @@ export const ParksExplorerTemplate = ({
       <MapTopBar
         activeQuickFilter={activeQuickFilter}
         onCenterMap={recenterMap}
+        onFilterToggle={() => openSidePanelTab('quick-filters')}
         onMenuToggle={toggleSidePanel}
         selectedAmenityCount={selectedAmenityKeys.length}
         totalParks={metrics.totalParks}
@@ -106,7 +117,9 @@ export const ParksExplorerTemplate = ({
         onClose={closeSidePanel}
         onQuickFilterChange={setActiveQuickFilter}
         onSelectPark={openParkFromBrowser}
+        onTabChange={setSidePanelTab}
         parks={filteredParks}
+        sidePanelTab={sidePanelTab}
         selectedAmenityKeys={selectedAmenityKeys}
         selectedParkId={selectedPark?.id}
       />

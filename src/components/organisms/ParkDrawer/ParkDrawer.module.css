@@ -24,7 +24,8 @@
 .handleZone {
   display: grid;
   place-items: center;
-  padding: 0.65rem 1rem 0.55rem;
+  min-block-size: 2.9rem;
+  padding: 0.9rem 1rem 0.8rem;
   cursor: ns-resize;
   touch-action: none;
 }
@@ -62,10 +63,12 @@
 }
 
 .hero {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 0.85rem;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
   align-items: start;
+  padding-inline-end: 3.5rem;
 }
 
 .eyebrow {
@@ -92,12 +95,23 @@
   color: var(--color-ink);
   font-size: 0.84rem;
   line-height: 1.35;
+  text-decoration: none;
+}
+
+.address span {
+  text-decoration: underline;
+  text-underline-offset: 0.16rem;
 }
 
 .summary {
   color: var(--color-ink);
   font-size: 0.84rem;
   line-height: 1.45;
+}
+
+.closeButton {
+  position: absolute;
+  inset: 0 0 auto auto;
 }
 
 .pills {
@@ -143,15 +157,15 @@
   text-decoration: none;
 }
 
+.addressLink {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.16rem;
+}
+
 .note,
 .emptyState p {
   color: var(--color-ink);
   font-size: 0.84rem;
   line-height: 1.45;
-}
-
-@media (max-width: 30rem) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
 }

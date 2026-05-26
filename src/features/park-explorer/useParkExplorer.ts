@@ -18,6 +18,7 @@ export type ParkQuickFilter =
   | 'accessible'
   | 'dog-parks';
 export type AppDialog = 'park-guide' | null;
+export type ParkBrowserTab = 'parks' | 'quick-filters' | 'amenities';
 
 const amenityMap = getParkAmenityMap();
 const sportsAmenityKeys = [
@@ -100,6 +101,7 @@ export const useParkExplorer = (parks: ParkViewModel[]) => {
   const [selectedParkId, setSelectedParkId] = useState<string>('');
   const [isDrawerExpanded, setIsDrawerExpanded] = useState(false);
   const [isSidePanelOpen, setIsSidePanelOpen] = useState(false);
+  const [sidePanelTab, setSidePanelTab] = useState<ParkBrowserTab>('parks');
   const [activeDialog, setActiveDialog] = useState<AppDialog>(null);
   const [recenterSignal, setRecenterSignal] = useState(0);
 
@@ -165,6 +167,7 @@ export const useParkExplorer = (parks: ParkViewModel[]) => {
     setSelectedParkId(parkId);
     setIsDrawerExpanded(true);
     setIsSidePanelOpen(false);
+    setSidePanelTab('parks');
   };
 
   const openDrawer = () => {
@@ -187,6 +190,7 @@ export const useParkExplorer = (parks: ParkViewModel[]) => {
     selectedPark,
     activeQuickFilter,
     selectedAmenityKeys,
+    sidePanelTab,
     isDrawerExpanded,
     isSidePanelOpen,
     activeDialog,
@@ -199,7 +203,15 @@ export const useParkExplorer = (parks: ParkViewModel[]) => {
     openParkFromBrowser: openPark,
     openDrawer,
     closeDrawer: () => setIsDrawerExpanded(false),
-    toggleSidePanel: () => setIsSidePanelOpen((value) => !value),
+    toggleSidePanel: () => {
+      setSidePanelTab('parks');
+      setIsSidePanelOpen((value) => !value);
+    },
+    openSidePanelTab: (tab: ParkBrowserTab) => {
+      setSidePanelTab(tab);
+      setIsSidePanelOpen(true);
+    },
+    setSidePanelTab,
     closeSidePanel: () => setIsSidePanelOpen(false),
     openDialog: (dialog: AppDialog) => setActiveDialog(dialog),
     closeDialog: () => setActiveDialog(null),

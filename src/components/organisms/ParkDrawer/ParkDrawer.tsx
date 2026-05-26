@@ -17,6 +17,9 @@ interface ParkDrawerProps {
   onClose: () => void;
 }
 
+const buildGoogleMapsUrl = (address: string) =>
+  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+
 export const ParkDrawer = ({ park, isExpanded, onOpen, onClose }: ParkDrawerProps) => {
   const dragState = useRef<{ pointerId: number; startY: number } | null>(null);
 
@@ -50,6 +53,8 @@ export const ParkDrawer = ({ park, isExpanded, onOpen, onClose }: ParkDrawerProp
     dragState.current = null;
   };
 
+  const mapsUrl = park ? buildGoogleMapsUrl(park.address) : '';
+
   return (
     <section className={`${styles.drawer} ${isExpanded ? styles.expanded : ''}`}>
       <div
@@ -71,27 +76,27 @@ export const ParkDrawer = ({ park, isExpanded, onOpen, onClose }: ParkDrawerProp
                 <div>
                   <p className={styles.eyebrow}>{park.kindLabel}</p>
                   <h2 className={styles.title}>{park.name}</h2>
-                  <p className={styles.address}>
+                  <a className={styles.address} href={mapsUrl} rel="noreferrer" target="_blank">
                     <MapPin size={15} />
-                    {park.address}
-                  </p>
+                    <span>{park.address}</span>
+                  </a>
                 </div>
-                <IconButton label="Collapse park drawer" onClick={onClose}>
+                <IconButton className={styles.closeButton} label="Collapse park drawer" onClick={onClose}>
                   <X size={18} />
                 </IconButton>
               </div>
-
-              {park.localImagePath ? (
-                <div className={styles.image}>
-                  <img alt="" loading="lazy" src={park.localImagePath} />
-                </div>
-              ) : null}
 
               <p className={styles.summary}>
                 {park.poolDetails?.status.headline ??
                   park.hours ??
                   'No official hours were listed for this site.'}
               </p>
+
+              {park.localImagePath ? (
+                <div className={styles.image}>
+                  <img alt="" loading="lazy" src={park.localImagePath} />
+                </div>
+              ) : null}
 
               <div className={styles.pills}>
                 {park.amenityDefinitions.map((amenity) => (
@@ -111,7 +116,14 @@ export const ParkDrawer = ({ park, isExpanded, onOpen, onClose }: ParkDrawerProp
                       </span>
                     }
                   />
-                  <InfoRow eyebrow="Address" value={park.address} />
+                  <InfoRow
+                    eyebrow="Address"
+                    value={
+                      <a className={styles.addressLink} href={mapsUrl} rel="noreferrer" target="_blank">
+                        {park.address}
+                      </a>
+                    }
+                  />
                 </div>
                 {park.detailUrl ? (
                   <a className={styles.siteLink} href={park.detailUrl} rel="noreferrer" target="_blank">

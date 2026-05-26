@@ -30,7 +30,7 @@
   transform: translateX(100%);
   transition: transform 220ms ease;
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr);
   gap: 1rem;
   overflow: hidden;
 }
@@ -46,6 +46,12 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
 
 .title,
@@ -82,6 +88,7 @@
   padding-inline-end: 0.2rem;
   display: grid;
   gap: 1rem;
+  align-content: start;
 }
 
 .quickFilters,

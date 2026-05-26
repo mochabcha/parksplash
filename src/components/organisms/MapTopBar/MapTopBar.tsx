@@ -10,6 +10,7 @@ interface MapTopBarProps {
   activeQuickFilter: ParkQuickFilter;
   selectedAmenityCount: number;
   onMenuToggle: () => void;
+  onFilterToggle: () => void;
   onCenterMap: () => void;
 }
 
@@ -36,6 +37,7 @@ export const MapTopBar = ({
   activeQuickFilter,
   selectedAmenityCount,
   onMenuToggle,
+  onFilterToggle,
   onCenterMap,
 }: MapTopBarProps) => (
   <header className={styles.bar}>
@@ -51,13 +53,13 @@ export const MapTopBar = ({
       </div>
     </div>
     <div className={styles.right}>
-      <div className={styles.filterState}>
+      <button className={styles.filterState} onClick={onFilterToggle} type="button">
         <ListFilter size={14} />
         <span>
           {filterLabels[activeQuickFilter]}
           {selectedAmenityCount > 0 ? ` • ${selectedAmenityCount} amenities` : ''}
         </span>
-      </div>
+      </button>
       <IconButton label="Center map" onClick={onCenterMap}>
         <Target size={18} />
       </IconButton>

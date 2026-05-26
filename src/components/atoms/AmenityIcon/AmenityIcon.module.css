@@ -19,3 +19,11 @@
 .fallback {
   color: var(--color-ink-muted);
 }
+
+[data-theme='dark'] .icon img {
+  filter: brightness(0) invert(1);
+}
+
+[data-theme='dark'] .fallback {
+  color: var(--color-ink-strong);
+}
