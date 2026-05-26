@@ -72,36 +72,42 @@ export const ParkDrawer = ({ park, isExpanded, onOpen, onClose }: ParkDrawerProp
         <div className={styles.content}>
           {park ? (
             <>
-              <div className={styles.hero}>
-                <div>
-                  <p className={styles.eyebrow}>{park.kindLabel}</p>
-                  <h2 className={styles.title}>{park.name}</h2>
-                  <a className={styles.address} href={mapsUrl} rel="noreferrer" target="_blank">
-                    <MapPin size={15} />
-                    <span>{park.address}</span>
-                  </a>
+              <div className={styles.summarySection}>
+                <div className={styles.hero}>
+                  <div>
+                    <p className={styles.eyebrow}>{park.kindLabel}</p>
+                    <h2 className={styles.title}>{park.name}</h2>
+                    <a className={styles.address} href={mapsUrl} rel="noreferrer" target="_blank">
+                      <MapPin size={15} />
+                      <span>{park.address}</span>
+                    </a>
+                  </div>
+                  <IconButton className={styles.closeButton} label="Collapse park drawer" onClick={onClose}>
+                    <X size={18} />
+                  </IconButton>
                 </div>
-                <IconButton className={styles.closeButton} label="Collapse park drawer" onClick={onClose}>
-                  <X size={18} />
-                </IconButton>
+
+                <p className={styles.summary}>
+                  {park.poolDetails?.status.headline ??
+                    park.hours ??
+                    'No official hours were listed for this site.'}
+                </p>
               </div>
 
-              <p className={styles.summary}>
-                {park.poolDetails?.status.headline ??
-                  park.hours ??
-                  'No official hours were listed for this site.'}
-              </p>
-
               {park.localImagePath ? (
-                <div className={styles.image}>
-                  <img alt="" loading="lazy" src={park.localImagePath} />
+                <div className={styles.mediaSection}>
+                  <div className={styles.image}>
+                    <img alt="" loading="lazy" src={park.localImagePath} />
+                  </div>
                 </div>
               ) : null}
 
-              <div className={styles.pills}>
-                {park.amenityDefinitions.map((amenity) => (
-                  <AmenityPill key={amenity.key} iconSrc={amenity.sourceIconUrl} label={amenity.label} />
-                ))}
+              <div className={styles.amenitiesSection}>
+                <div className={styles.pills}>
+                  {park.amenityDefinitions.map((amenity) => (
+                    <AmenityPill key={amenity.key} iconSrc={amenity.sourceIconUrl} label={amenity.label} />
+                  ))}
+                </div>
               </div>
 
               <div className={styles.section}>
