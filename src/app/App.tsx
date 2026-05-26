@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { PoolsExplorerTemplate } from '../components/templates/PoolsExplorerTemplate/PoolsExplorerTemplate';
-import { getPoolDirectory } from '../domain/pools/poolDirectory';
-import { usePoolExplorer } from '../features/pool-explorer/usePoolExplorer';
+import { ParksExplorerTemplate } from '../components/templates/ParksExplorerTemplate/ParksExplorerTemplate';
+import { getParkDirectory } from '../domain/parks/parkDirectory';
+import { useParkExplorer } from '../features/park-explorer/useParkExplorer';
 import { useThemeMode } from '../features/theme/useThemeMode';
 
 export const App = () => {
-  const [pools] = useState(() => getPoolDirectory());
-  const explorer = usePoolExplorer(pools);
+  const [parks] = useState(() => getParkDirectory());
+  const explorer = useParkExplorer(parks);
   const theme = useThemeMode();
 
-  return <PoolsExplorerTemplate {...explorer} {...theme} />;
+  return <ParksExplorerTemplate {...explorer} {...theme} />;
 };

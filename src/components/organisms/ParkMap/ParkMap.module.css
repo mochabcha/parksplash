@@ -1,0 +1,39 @@
+.map {
+  background: color-mix(in oklab, var(--color-water) 8%, var(--color-page));
+}
+
+.markerShell :global(.marker) {
+  display: block;
+  inline-size: 1rem;
+  block-size: 1rem;
+  border: 2px solid var(--color-marker-ring);
+  border-radius: 999px;
+  background: var(--color-marker);
+  box-shadow: 0 0 0 0.22rem color-mix(in oklab, var(--color-marker) 18%, transparent);
+}
+
+.markerShell :global(.markerPool) {
+  background: var(--color-pink);
+  box-shadow: 0 0 0 0.24rem color-mix(in oklab, var(--color-pink) 18%, transparent);
+}
+
+.markerShell :global(.markerSplash) {
+  background: var(--color-yellow);
+  box-shadow: 0 0 0 0.24rem color-mix(in oklab, var(--color-yellow) 18%, transparent);
+}
+
+.markerShell :global(.markerActive) {
+  inline-size: 1.15rem;
+  block-size: 1.15rem;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 0.28rem color-mix(in oklab, var(--color-accent) 18%, transparent);
+}
+
+.map :global(.leaflet-tooltip) {
+  padding: 0.38rem 0.55rem;
+  border: 1px solid var(--color-line);
+  border-radius: 0.8rem;
+  background: var(--color-overlay-strong);
+  color: var(--color-ink-strong);
+  box-shadow: var(--shadow-overlay);
+}

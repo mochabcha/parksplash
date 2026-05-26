@@ -1,46 +1,54 @@
 import { ListFilter, Menu, Target } from 'lucide-react';
 import { IconButton } from '../../atoms/IconButton/IconButton';
-import type { PoolFilter } from '../../../features/pool-explorer/usePoolExplorer';
+import type { ParkQuickFilter } from '../../../features/park-explorer/useParkExplorer';
 import styles from './MapTopBar.module.css';
 
 interface MapTopBarProps {
-  totalPools: number;
-  openNow: number;
-  activeFilter: PoolFilter;
+  totalParks: number;
+  visibleParks: number;
+  visiblePoolSites: number;
+  activeQuickFilter: ParkQuickFilter;
+  selectedAmenityCount: number;
   onMenuToggle: () => void;
   onCenterMap: () => void;
 }
 
-const filterLabels: Record<PoolFilter, string> = {
-  all: 'All pools',
+const filterLabels: Record<ParkQuickFilter, string> = {
+  all: 'All parks',
+  'pool-sites': 'Pool sites',
   'open-now': 'Open now',
   lessons: 'Lessons',
-  july: 'July site',
+  'splash-pads': 'Splash pads',
 };
 
 export const MapTopBar = ({
-  totalPools,
-  openNow,
-  activeFilter,
+  totalParks,
+  visibleParks,
+  visiblePoolSites,
+  activeQuickFilter,
+  selectedAmenityCount,
   onMenuToggle,
   onCenterMap,
 }: MapTopBarProps) => (
   <header className={styles.bar}>
     <div className={styles.left}>
-      <IconButton label="Open pool browser" onClick={onMenuToggle}>
+      <IconButton label="Open park browser" onClick={onMenuToggle}>
         <Menu size={18} />
       </IconButton>
       <div className={styles.brand}>
         <p className={styles.title}>Splash Spot</p>
         <p className={styles.meta}>
-          {totalPools} pools • {openNow} open
+          {visibleParks} of {totalParks} parks • {visiblePoolSites} pool sites
         </p>
       </div>
     </div>
     <div className={styles.right}>
       <div className={styles.filterState}>
         <ListFilter size={14} />
-        <span>{filterLabels[activeFilter]}</span>
+        <span>
+          {filterLabels[activeQuickFilter]}
+          {selectedAmenityCount > 0 ? ` • ${selectedAmenityCount} amenities` : ''}
+        </span>
       </div>
       <IconButton label="Center map" onClick={onCenterMap}>
         <Target size={18} />

@@ -1,0 +1,297 @@
+[
+  {
+    "key": "accessibleamenities",
+    "label": "Accessible Amenities",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_AccessibleAmenities.png"
+  },
+  {
+    "key": "baittackle",
+    "label": "Bait & Tackle",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Bait_Tackle.png"
+  },
+  {
+    "key": "baseball",
+    "label": "Baseball",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Baseball.png"
+  },
+  {
+    "key": "basketball",
+    "label": "Basketball",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Basketball.png"
+  },
+  {
+    "key": "beachpier",
+    "label": "Beach Pier",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_BeachPier.png"
+  },
+  {
+    "key": "benches",
+    "label": "Benches",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Benches.png"
+  },
+  {
+    "key": "bikeracks",
+    "label": "Bike Racks",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_BikeRacks.png"
+  },
+  {
+    "key": "biketrail",
+    "label": "Bike Trail",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_BikeTrail.png"
+  },
+  {
+    "key": "birding",
+    "label": "Birding Trail",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Birding.png"
+  },
+  {
+    "key": "boatdock",
+    "label": "Boat Dock",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_BoatDock.png"
+  },
+  {
+    "key": "boatpump",
+    "label": "Boat Pumpout",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_BoatPump.png"
+  },
+  {
+    "key": "boatramp",
+    "label": "Boat Ramp",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_BoatRamp.png"
+  },
+  {
+    "key": "boattrailerparking",
+    "label": "Boat Trailer Parking",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_BoatTrailerParking.png"
+  },
+  {
+    "key": "canoe",
+    "label": "Canoe Access",
+    "sourceIconUrl": ""
+  },
+  {
+    "key": "canoerental",
+    "label": "Canoe Rental",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_CanoeRental.png"
+  },
+  {
+    "key": "carparking",
+    "label": "Car Parking",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_CarParking.png"
+  },
+  {
+    "key": "communitycenter",
+    "label": "Community Center",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_CommunityCenter.png"
+  },
+  {
+    "key": "concessionstand",
+    "label": "Concession Stand",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_ConcessionStand.png"
+  },
+  {
+    "key": "dogpark",
+    "label": "Dog Park",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_DogPark.png"
+  },
+  {
+    "key": "drinkingfountain",
+    "label": "Drinking Fountain",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_DrinkingFountain.png"
+  },
+  {
+    "key": "equestrian",
+    "label": "Equestrian",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Equestrian.png"
+  },
+  {
+    "key": "featuredpark",
+    "label": "Featured Park",
+    "sourceIconUrl": ""
+  },
+  {
+    "key": "featuredwaterway",
+    "label": "Featured Waterway",
+    "sourceIconUrl": ""
+  },
+  {
+    "key": "fencing",
+    "label": "Fencing",
+    "sourceIconUrl": ""
+  },
+  {
+    "key": "fishingpier",
+    "label": "Fishing Available",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_FishingPier.png"
+  },
+  {
+    "key": "fitnessequipment",
+    "label": "Fitness Equipment",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_FitnessEquipment.png"
+  },
+  {
+    "key": "football",
+    "label": "Football",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Football.png"
+  },
+  {
+    "key": "golf",
+    "label": "Golf",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Golf.png"
+  },
+  {
+    "key": "grills",
+    "label": "Grills",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Grills.png"
+  },
+  {
+    "key": "hikingtrail",
+    "label": "Hiking Trail",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_HikingTrail.png"
+  },
+  {
+    "key": "kayakrental",
+    "label": "Kayak Rental",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_KayakRental.png"
+  },
+  {
+    "key": "manateeeducation",
+    "label": "Manatee Education",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_ManateeEducation.png"
+  },
+  {
+    "key": "multipurposefield",
+    "label": "Multipurpose Field",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_MultipurposeField.png"
+  },
+  {
+    "key": "nonmotorizedlaunch",
+    "label": "Nonmotorized Launch",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_KayakLaunch.png"
+  },
+  {
+    "key": "onwater",
+    "label": "On Water",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_OnWater.png"
+  },
+  {
+    "key": "paddleboard",
+    "label": "Paddleboard",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Paddleboard.png"
+  },
+  {
+    "key": "paddleboat",
+    "label": "Paddleboat",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Paddleboat.png"
+  },
+  {
+    "key": "pwc",
+    "label": "Personal Watercraft",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/PWC.png"
+  },
+  {
+    "key": "pickleball",
+    "label": "Pickleball",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_PickleBall.png"
+  },
+  {
+    "key": "picnicshelters",
+    "label": "Picnic Shelters",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_PicnicShelters.png"
+  },
+  {
+    "key": "picnictables",
+    "label": "Picnic Tables",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_PicnicTables.png"
+  },
+  {
+    "key": "playground",
+    "label": "Playground",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Playground.png"
+  },
+  {
+    "key": "pwcrental",
+    "label": "PWC Rental",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_PWCRental.png"
+  },
+  {
+    "key": "restaurant",
+    "label": "Restaurant",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Restaurant.png"
+  },
+  {
+    "key": "restrooms",
+    "label": "Restrooms",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Restrooms.png"
+  },
+  {
+    "key": "riverwalk",
+    "label": "River Walk",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_RiverWalk.png"
+  },
+  {
+    "key": "sailboatrental",
+    "label": "Sailboat Rental",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_SailBoatRental.png"
+  },
+  {
+    "key": "scenic",
+    "label": "Scenic Overlook",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Scenic.png"
+  },
+  {
+    "key": "securitylighting",
+    "label": "Security Lighting",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_SecurityLighting.png"
+  },
+  {
+    "key": "shorelaunch",
+    "label": "Shore Launch",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_ShoreLaunch.png"
+  },
+  {
+    "key": "skate",
+    "label": "Skate Park",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Skate.png"
+  },
+  {
+    "key": "soccer",
+    "label": "Soccer",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Soccer.png"
+  },
+  {
+    "key": "splashpad",
+    "label": "Splash Pad",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_SplashPad.png"
+  },
+  {
+    "key": "surfing",
+    "label": "Surfing",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Surfing.png"
+  },
+  {
+    "key": "swimmingpool",
+    "label": "Swimming Pool",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_SwimmingPool.png"
+  },
+  {
+    "key": "tennis",
+    "label": "Tennis",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Tennis.png"
+  },
+  {
+    "key": "trashbarrels",
+    "label": "Trash Barrels",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_TrashBarrels.png"
+  },
+  {
+    "key": "wheelchair",
+    "label": "Wheelchair Accessible",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_Wheelchair.png"
+  },
+  {
+    "key": "workoutstation",
+    "label": "Workout Station",
+    "sourceIconUrl": "https://www.jacksonville.gov/Content/Images/pageTypes/parkList/icon_WorkoutStation.png"
+  }
+]

@@ -8,9 +8,11 @@
     "build": "tsc -b && vite build",
     "typecheck": "tsc --noEmit",
     "geocode:pools": "node scripts/geocode-pools.mjs",
+    "build:parks": "node scripts/build-parks-dataset.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
+    "cheerio": "^1.2.0",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.511.0",
     "react": "^18.3.1",

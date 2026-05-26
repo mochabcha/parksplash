@@ -1,0 +1,1992 @@
+{
+  "riverfront-music-garden": {
+    "latitude": 42.3288589,
+    "longitude": -83.0357663,
+    "geocodeLabel": "Riverfront Garden Rooms, Detroit, Michigan"
+  },
+  "fort-george-island-state-cultural-site": {
+    "latitude": 30.4029879,
+    "longitude": -81.4320731,
+    "geocodeLabel": "Fort George Road, Jacksonville, Florida"
+  },
+  "forest-street-dog-park": {
+    "latitude": 30.3229664,
+    "longitude": -81.6785779,
+    "geocodeLabel": "Forest Street, Jacksonville, Florida"
+  },
+  "103rd-street-sports-complex": {
+    "latitude": 30.2456325,
+    "longitude": -81.8289132,
+    "geocodeLabel": "103rd Street Sports Complex, 103rd Street, Jacksonville, Florida"
+  },
+  "a-philip-randolph-heritage-park": {
+    "latitude": 30.3288212,
+    "longitude": -81.6426679,
+    "geocodeLabel": "A. Philip Randolph Boulevard, Jacksonville, Florida"
+  },
+  "adams-park": {
+    "latitude": 30.2993072,
+    "longitude": -81.7026226,
+    "geocodeLabel": "Adams Park, Riverside Avenue, Jacksonville, FL"
+  },
+  "adolph-wurn-park": {
+    "latitude": 30.2838307,
+    "longitude": -81.5909343,
+    "geocodeLabel": "Dean Road, Jacksonville, FL"
+  },
+  "alberts-field": {
+    "latitude": 30.1462666,
+    "longitude": -81.6491931,
+    "geocodeLabel": "Brady Road, Jacksonville, Florida"
+  },
+  "alejandro-garces-camp-tomahawk-park": {
+    "latitude": 30.2442918,
+    "longitude": -81.6316826,
+    "geocodeLabel": "San Pedro Road, Jacksonville, Florida"
+  },
+  "alexandria-oaks-park": {
+    "latitude": 30.3047893,
+    "longitude": -81.6543537,
+    "geocodeLabel": "Jacksonville Fire Rescue - Station 13, San Marco Place, Jacksonville, Florida"
+  },
+  "alimacani-elementary-school-park": {
+    "latitude": 30.3142971,
+    "longitude": -81.4469157,
+    "geocodeLabel": "San Pablo Road South, Jacksonville, FL"
+  },
+  "alimacani-park-and-boat-ramp": {
+    "latitude": 30.3939777,
+    "longitude": -81.459535,
+    "geocodeLabel": "Heckscher Drive, Jacksonville, Florida"
+  },
+  "andrew-jackson-pool": {
+    "latitude": 30.3662573,
+    "longitude": -81.6527075,
+    "geocodeLabel": "Main Street, Jacksonville, Florida"
+  },
+  "angelina-danese-park": {
+    "latitude": 30.2973539,
+    "longitude": -81.6420273,
+    "geocodeLabel": "East Saint Augustine Road, Jacksonville, Florida"
+  },
+  "archie-dickinson-park": {
+    "latitude": 30.3307372,
+    "longitude": -81.5324687,
+    "geocodeLabel": "East Jackson Road, Jacksonville, Florida"
+  },
+  "argyle-forest-park": {
+    "latitude": 30.1919779,
+    "longitude": -81.7562474,
+    "geocodeLabel": "Acanthus Drive, Jacksonville, Florida"
+  },
+  "arlington-lions-club-park": {
+    "latitude": 30.3766356,
+    "longitude": -81.6174181,
+    "geocodeLabel": "Arlington Lions Club Park, Richard Denby Gatlin Road, Jacksonville, FL"
+  },
+  "arlington-road-boat-ramp": {
+    "latitude": 30.333821,
+    "longitude": -81.6073582,
+    "geocodeLabel": "Arlington Road, Jacksonville, Florida"
+  },
+  "arlingwood-park": {
+    "latitude": 30.3422674,
+    "longitude": -81.5616067,
+    "geocodeLabel": "Mill Creek Road, Jacksonville, Florida"
+  },
+  "artist-walk": {
+    "latitude": 30.3096172,
+    "longitude": -81.6843495,
+    "geocodeLabel": "Saint Johns Avenue, Jacksonville, Florida"
+  },
+  "atlantic-beach-elementary": {
+    "latitude": 30.3274925,
+    "longitude": -81.4008754,
+    "geocodeLabel": "Sherry Drive, Atlantic Beach, FL"
+  },
+  "atlantic-highlands-park": {
+    "latitude": 30.3110143,
+    "longitude": -81.678328,
+    "geocodeLabel": "Memorial Park Drive, Jacksonville, FL"
+  },
+  "baker-point": {
+    "latitude": 30.2821303,
+    "longitude": -81.7306592,
+    "geocodeLabel": "San Juan Avenue, Jacksonville, Florida"
+  },
+  "baker-skinner-park": {
+    "latitude": 30.2429892,
+    "longitude": -81.6068986,
+    "geocodeLabel": "Powers Avenue, Jacksonville, FL"
+  },
+  "baldwin-middle-senior-high-school": {
+    "latitude": 30.3057068,
+    "longitude": -81.9764405,
+    "geocodeLabel": "North Chestnut Street, Baldwin, Florida"
+  },
+  "balis-park": {
+    "latitude": 30.3047893,
+    "longitude": -81.6543537,
+    "geocodeLabel": "Jacksonville Fire Rescue - Station 13, San Marco Place, Jacksonville, Florida"
+  },
+  "barney-browning-park": {
+    "latitude": 30.3835425,
+    "longitude": -81.6736949,
+    "geocodeLabel": "Norwood Avenue, Jacksonville, Florida"
+  },
+  "bay-and-broad-pocket-park": {
+    "latitude": 30.3273617,
+    "longitude": -81.664617,
+    "geocodeLabel": "West Bay Street, Jacksonville, FL"
+  },
+  "beach-and-peach-urban-park": {
+    "latitude": 30.278241,
+    "longitude": -81.5524761,
+    "geocodeLabel": "Anders Boulevard, Jacksonville, FL"
+  },
+  "beach-blvd-boat-ramp": {
+    "latitude": 30.2880589,
+    "longitude": -81.5787546,
+    "geocodeLabel": "Everything Automotive Jacksonville, Beach Blvd, Jacksonville, FL"
+  },
+  "beachwood-center-and-park": {
+    "latitude": 30.2903604,
+    "longitude": -81.5143078,
+    "geocodeLabel": "Marina Drive, Jacksonville, FL"
+  },
+  "bee-street-park": {
+    "latitude": 30.3113333,
+    "longitude": -81.6468346,
+    "geocodeLabel": "Huntsford Road, Jacksonville, Florida"
+  },
+  "william-bill-gulliford-jr-community-center": {
+    "latitude": 30.3868685,
+    "longitude": -81.4333732,
+    "geocodeLabel": "U.S. Coast Guard Sector Jacksonville Annex, Ocean Street, Jacksonville, FL"
+  },
+  "belmonte-park": {
+    "latitude": 30.308984,
+    "longitude": -81.6582369,
+    "geocodeLabel": "Belmonte Avenue, Jacksonville, Florida"
+  },
+  "belvedere-park-1-and-2": {
+    "latitude": 30.3056565,
+    "longitude": -81.7055052,
+    "geocodeLabel": "Belvedere Avenue, Jacksonville, FL"
+  },
+  "bent-creek-golf-course-of-jacksonville": {
+    "latitude": 30.2386405,
+    "longitude": -81.8325099,
+    "geocodeLabel": "Bent Creek Golf Course, Tournament Lane, Jacksonville, Florida"
+  },
+  "bert-maxwell-boat-ramp": {
+    "latitude": 30.4038019,
+    "longitude": -81.6618332,
+    "geocodeLabel": "Maxwell Road, Jacksonville, Florida"
+  },
+  "bethesda-park": {
+    "latitude": 30.43382,
+    "longitude": -81.7206835,
+    "geocodeLabel": "Key Haven Boulevard, Jacksonville, Florida"
+  },
+  "bettes-park": {
+    "latitude": 30.2789974,
+    "longitude": -81.6998114,
+    "geocodeLabel": "Bettes Park, Jacksonville, Florida"
+  },
+  "betz-tiger-point-preserve": {
+    "latitude": 30.4571752,
+    "longitude": -81.5748363,
+    "geocodeLabel": "Shadow Creek Road, Jacksonville, Florida"
+  },
+  "beverly-hills-park-lewis-cobb-community-center": {
+    "latitude": 30.4076998,
+    "longitude": -81.7203192,
+    "geocodeLabel": "Portsmouth Avenue, Jacksonville, Florida"
+  },
+  "big-pottsburg-creek-preserve": {
+    "latitude": 30.2972965,
+    "longitude": -81.5795526,
+    "geocodeLabel": "Holiday Road South, Jacksonville, FL"
+  },
+  "big-talbot-island-state-park": {
+    "latitude": 30.3939777,
+    "longitude": -81.459535,
+    "geocodeLabel": "Heckscher Drive, Jacksonville, Florida"
+  },
+  "bishop-circle-park": {
+    "latitude": 30.2664998,
+    "longitude": -81.6347925,
+    "geocodeLabel": "Bishop Circle, Jacksonville, Florida"
+  },
+  "bishopswood-park": {
+    "latitude": 30.2029768,
+    "longitude": -81.7451249,
+    "geocodeLabel": "Boeing Jacksonville Training Systems Center, Lake Gray Boulevard, Jacksonville, Florida"
+  },
+  "black-hammock-island-park": {
+    "latitude": 30.5215297,
+    "longitude": -81.4809393,
+    "geocodeLabel": "Sawpit Road, Jacksonville, Florida"
+  },
+  "blue-cypress-park-community-center-golf-course": {
+    "latitude": 30.3763319,
+    "longitude": -81.6112915,
+    "geocodeLabel": "Blue Cypress Park, University Blvd. North, Jacksonville, FL"
+  },
+  "bob-hayes-sports-complex-and-legends-center": {
+    "latitude": 30.3868698,
+    "longitude": -81.7333003,
+    "geocodeLabel": "Soutel Drive, Jacksonville, Florida"
+  },
+  "bogey-creek-preserve": {
+    "latitude": 30.4641921,
+    "longitude": -81.5553373,
+    "geocodeLabel": "Cedar Point Road Lane South, Jacksonville, Florida"
+  },
+  "boone-park": {
+    "latitude": 30.2919849,
+    "longitude": -81.7037124,
+    "geocodeLabel": "Richmond Street, Jacksonville, FL"
+  },
+  "brackridge-park": {
+    "latitude": 30.2755278,
+    "longitude": -81.5622921,
+    "geocodeLabel": "Newton Road, Jacksonville, FL"
+  },
+  "brannan-field-park": {
+    "latitude": 30.1611921,
+    "longitude": -81.5947836,
+    "geocodeLabel": "Falling Leaf Trail, Jacksonville, Florida"
+  },
+  "brentwood-golf-course": {
+    "latitude": 30.3700483,
+    "longitude": -81.6767957,
+    "geocodeLabel": "Brentwood Golf Course, Golfair Boulevard, Jacksonville, FL"
+  },
+  "brooklyn-park": {
+    "latitude": 30.3334203,
+    "longitude": -81.6737921,
+    "geocodeLabel": "West Church Street, Jacksonville, FL"
+  },
+  "brookview-elementary-school-park": {
+    "latitude": 30.3180103,
+    "longitude": -81.5288861,
+    "geocodeLabel": "Mc Aleer Road, Jacksonville, FL"
+  },
+  "brown-l-whatley-memorial-park": {
+    "latitude": 30.3096955,
+    "longitude": -81.6613553,
+    "geocodeLabel": "Cordova Place, Jacksonville, Florida"
+  },
+  "bruce-park": {
+    "latitude": 30.3341497,
+    "longitude": -81.5903229,
+    "geocodeLabel": "Bruce Park, Arlington Road, Jacksonville, FL"
+  },
+  "buck-park": {
+    "latitude": 30.3567121,
+    "longitude": -81.5147924,
+    "geocodeLabel": "Buck Park, McCormick Road, Jacksonville, FL"
+  },
+  "bulls-bay-preserve": {
+    "latitude": 30.3329043,
+    "longitude": -81.836969,
+    "geocodeLabel": "Old Plank Road, Jacksonville, Florida"
+  },
+  "burnett-park": {
+    "latitude": 30.1763514,
+    "longitude": -81.6174596,
+    "geocodeLabel": "Burnett Park Road, Jacksonville, FL"
+  },
+  "buster-ford-checkerboard-park": {
+    "latitude": 30.3288212,
+    "longitude": -81.6426679,
+    "geocodeLabel": "A. Philip Randolph Boulevard, Jacksonville, Florida"
+  },
+  "caleb-park": {
+    "latitude": 30.3000346,
+    "longitude": -81.8013669,
+    "geocodeLabel": "Old Gainesville Road, Jacksonville, Florida"
+  },
+  "cameron-park": {
+    "latitude": 30.3104427,
+    "longitude": -81.7078494,
+    "geocodeLabel": "Day Avenue, Jacksonville, Florida"
+  },
+  "camp-milton-historic-preserve": {
+    "latitude": 30.3279508,
+    "longitude": -81.8693595,
+    "geocodeLabel": "Halsema Road North, Jacksonville, Florida"
+  },
+  "cardinal-park": {
+    "latitude": 28.4866275,
+    "longitude": -81.3173749,
+    "geocodeLabel": "Cardinal Park, Conway, Florida"
+  },
+  "castaway-island-preserve": {
+    "latitude": 30.2960061,
+    "longitude": -81.4350138,
+    "geocodeLabel": "San Pablo Road South, Jacksonville, FL"
+  },
+  "catherine-hester-mcnair-park": {
+    "latitude": 30.3484582,
+    "longitude": -81.6649149,
+    "geocodeLabel": "UF Health Jacksonville, West 8th Street, Jacksonville, Florida"
+  },
+  "cecil-field-conservation-corridor": {
+    "latitude": 30.3091641,
+    "longitude": -81.7343018,
+    "geocodeLabel": "Normandy Boulevard, Jacksonville, Florida"
+  },
+  "cecil-field": {
+    "latitude": 30.299337,
+    "longitude": -81.8000958,
+    "geocodeLabel": "Victory Lake Drive, Jacksonville, Florida"
+  },
+  "cedar-point-boat-ramp": {
+    "latitude": 30.4641921,
+    "longitude": -81.5553373,
+    "geocodeLabel": "Cedar Point Road Lane South, Jacksonville, Florida"
+  },
+  "cedar-point-preserve": {
+    "latitude": 30.4641921,
+    "longitude": -81.5553373,
+    "geocodeLabel": "Cedar Point Road Lane South, Jacksonville, Florida"
+  },
+  "cemetery-park": {
+    "latitude": 30.3400902,
+    "longitude": -81.6431648,
+    "geocodeLabel": "Evergreen Avenue, Jacksonville, Florida"
+  },
+  "cesery-park": {
+    "latitude": 30.3488214,
+    "longitude": -81.5963988,
+    "geocodeLabel": "Cesery Park, Jacksonville, Florida"
+  },
+  "chapelgate-park": {
+    "latitude": 30.1688271,
+    "longitude": -81.6085358,
+    "geocodeLabel": "Chapelgate Road, Jacksonville, Florida"
+  },
+  "charles-boobie-clark-park-and-pool": {
+    "latitude": 30.3944258,
+    "longitude": -81.7293667,
+    "geocodeLabel": "Sibbald Road, Jacksonville, Florida"
+  },
+  "charles-reese-memorial-park": {
+    "latitude": 30.2752643,
+    "longitude": -81.6555097,
+    "geocodeLabel": "Kelnepa Drive, Jacksonville, Florida"
+  },
+  "cherry-street-park": {
+    "latitude": 30.3077076,
+    "longitude": -81.6974274,
+    "geocodeLabel": "Route 5 - Park Street & Cherry Street, Park Street, Jacksonville, Florida"
+  },
+  "chets-creek-elementary": {
+    "latitude": 30.2706261,
+    "longitude": -81.4820589,
+    "geocodeLabel": "North Chets Creek Drive, Jacksonville, Florida"
+  },
+  "cisco-gardens-park": {
+    "latitude": 30.3731581,
+    "longitude": -81.807351,
+    "geocodeLabel": "Jones Road, Jacksonville, FL"
+  },
+  "clanzel-t-brown-park": {
+    "latitude": 30.3710201,
+    "longitude": -81.6853532,
+    "geocodeLabel": "Moncrief Road, Jacksonville, Florida"
+  },
+  "colonial-manor-lake-park": {
+    "latitude": 30.2952051,
+    "longitude": -81.6479334,
+    "geocodeLabel": "San Jose Boulevard, Jacksonville, Florida"
+  },
+  "columbus-park": {
+    "latitude": 30.2637411,
+    "longitude": -81.7035058,
+    "geocodeLabel": "Iroquois Avenue, Jacksonville, Florida"
+  },
+  "concord-park": {
+    "latitude": 30.3951176,
+    "longitude": -81.6689674,
+    "geocodeLabel": "Concord Circle, Jacksonville, Florida"
+  },
+  "cortez-park": {
+    "latitude": 30.2714411,
+    "longitude": -81.7052411,
+    "geocodeLabel": "Cortez Park, Jacksonville, Florida"
+  },
+  "county-dock-road-park": {
+    "latitude": 30.1653332,
+    "longitude": -81.6456145,
+    "geocodeLabel": "County Dock Road, Jacksonville, Florida"
+  },
+  "crabtree-park": {
+    "latitude": 30.2669669,
+    "longitude": -81.6179174,
+    "geocodeLabel": "Emperors Gentlemen's Club Jacksonville, University Boulevard West, Jacksonville, Florida"
+  },
+  "cradle-creek-preserve": {
+    "latitude": 30.293053,
+    "longitude": -81.406428,
+    "geocodeLabel": "North 15th Street, Jacksonville Beach, Florida"
+  },
+  "criswell-park": {
+    "latitude": 30.2481524,
+    "longitude": -81.7751156,
+    "geocodeLabel": "103rd Street, Jacksonville, Florida"
+  },
+  "crown-point-elementary": {
+    "latitude": 30.1941327,
+    "longitude": -81.6143603,
+    "geocodeLabel": "Crown Point Road, Jacksonville, FL"
+  },
+  "crystal-springs-elementary": {
+    "latitude": 30.3003,
+    "longitude": -81.799329,
+    "geocodeLabel": "Crystal Springs Elementary School, Crystal Springs Elem Ac, Jacksonville, Florida"
+  },
+  "crystal-springs-road-park-julian-barrs-community-center": {
+    "latitude": 30.3037415,
+    "longitude": -81.8451313,
+    "geocodeLabel": "Crystal Springs Road, Jacksonville, Florida"
+  },
+  "cuba-hunter-park": {
+    "latitude": 30.2947845,
+    "longitude": -81.6196462,
+    "geocodeLabel": "Bedford Road, Jacksonville, Florida"
+  },
+  "curtis-lee-johnson-marina-boat-ramp": {
+    "latitude": 30.282079,
+    "longitude": -81.7418441,
+    "geocodeLabel": "San Juan Avenue, Jacksonville, Florida"
+  },
+  "david-wayne-pack-park": {
+    "latitude": 30.3868685,
+    "longitude": -81.4333732,
+    "geocodeLabel": "U.S. Coast Guard Sector Jacksonville Annex, Ocean Street, Jacksonville, FL"
+  },
+  "deerwood-rotary-childrens-park": {
+    "latitude": 30.2288121,
+    "longitude": -81.5088665,
+    "geocodeLabel": "Baymeadows Road East, Jacksonville, FL"
+  },
+  "desoto-park": {
+    "latitude": 30.236022,
+    "longitude": -81.6137735,
+    "geocodeLabel": "Conga Street, Jacksonville, FL"
+  },
+  "dinsmore-boat-ramp": {
+    "latitude": 30.4369688,
+    "longitude": -81.761231,
+    "geocodeLabel": "Dunn Avenue Terrace, Jacksonville, FL"
+  },
+  "dinsmore-park-and-community-center": {
+    "latitude": 30.4235153,
+    "longitude": -81.7686271,
+    "geocodeLabel": "Civic Club Drive, Jacksonville, FL"
+  },
+  "dinsmore-playground": {
+    "latitude": 30.4276818,
+    "longitude": -81.7669439,
+    "geocodeLabel": "Old Kings Road South, Jacksonville, FL"
+  },
+  "drew-park": {
+    "latitude": 30.271825,
+    "longitude": -81.5928572,
+    "geocodeLabel": "Barnes Road South, Jacksonville, FL"
+  },
+  "dutton-island-preserve": {
+    "latitude": 30.3403944,
+    "longitude": -81.4213024,
+    "geocodeLabel": "Dutton Island Road West, Jacksonville, Florida"
+  },
+  "earl-johnson-memorial-park": {
+    "latitude": 30.267187,
+    "longitude": -81.6374907,
+    "geocodeLabel": "Earl Johnson Memorial Park, Saint Augustine Road, Jacksonville, FL"
+  },
+  "eartha-h-napoleon-park": {
+    "latitude": 30.4361011,
+    "longitude": -81.6602587,
+    "geocodeLabel": "Harts Road, Jacksonville, Florida"
+  },
+  "ed-austin-regional-park": {
+    "latitude": 30.3637506,
+    "longitude": -81.507193,
+    "geocodeLabel": "Ed Austin Regional Park, McCormick Road, Jacksonville, FL"
+  },
+  "ed-white-school-pool": {
+    "latitude": 30.2908347,
+    "longitude": -81.7692709,
+    "geocodeLabel": "Edward H White High School, Old Middleburg Road N, Jacksonville, FL"
+  },
+  "edgewood-park-1-2-3": {
+    "latitude": 30.3139616,
+    "longitude": -81.7200352,
+    "geocodeLabel": "Edgewood Avenue South, Jacksonville, Florida"
+  },
+  "edwards-park": {
+    "latitude": 30.3497051,
+    "longitude": -81.6368635,
+    "geocodeLabel": "East 11th Street, Jacksonville, Florida"
+  },
+  "el-faro-memorial-at-dames-point-park": {
+    "latitude": 30.3885567,
+    "longitude": -81.5577234,
+    "geocodeLabel": "Dames Point Road, Jacksonville, Florida"
+  },
+  "elizabeth-betty-wolfe-park": {
+    "latitude": 30.2021114,
+    "longitude": -81.6246599,
+    "geocodeLabel": "Chrysler Drive, Jacksonville, FL"
+  },
+  "elizabeth-park": {
+    "latitude": 30.3003886,
+    "longitude": -81.6981139,
+    "geocodeLabel": "Elizabeth Place, Jacksonville, Florida"
+  },
+  "elizabeth-r-powell-park": {
+    "latitude": 30.3981576,
+    "longitude": -81.7347113,
+    "geocodeLabel": "Redpoll Avenue, Jacksonville, Florida"
+  },
+  "emmett-reed-park-and-community-center": {
+    "latitude": 30.3471568,
+    "longitude": -81.663198,
+    "geocodeLabel": "UF Health Pain Management Center – Jacksonville, West 8th Street, Jacksonville, Florida"
+  },
+  "englewood-high-school-pool": {
+    "latitude": 30.1840867,
+    "longitude": -81.6025878,
+    "geocodeLabel": "Hood Road, Jacksonville, FL"
+  },
+  "eugene-m-glover-playground": {
+    "latitude": 30.3289977,
+    "longitude": -81.6766699,
+    "geocodeLabel": "Myrtle Avenue, Jacksonville, Florida"
+  },
+  "exchange-club-island": {
+    "latitude": 30.3272204,
+    "longitude": -81.6225023,
+    "geocodeLabel": "Mathews Bridge, Arlington Expressway, Jacksonville, Florida"
+  },
+  "fishweir-park": {
+    "latitude": 30.2942572,
+    "longitude": -81.7149843,
+    "geocodeLabel": "Valencia Road, Jacksonville, FL"
+  },
+  "fletcher-high-school-pool": {
+    "latitude": 30.3074006,
+    "longitude": -81.4157513,
+    "geocodeLabel": "Seagate Avenue, Jacksonville Beach, Florida"
+  },
+  "fletcher-morgan-park": {
+    "latitude": 30.2877142,
+    "longitude": -81.590275,
+    "geocodeLabel": "Hogan-Spring Glen Elementary School, Beach Boulevard, Jacksonville, Florida"
+  },
+  "fletcher-park": {
+    "latitude": 39.7834016,
+    "longitude": -86.13374,
+    "geocodeLabel": "Fletcher Park, Indianapolis, Indiana"
+  },
+  "florida-c-dwight-memorial-playground": {
+    "latitude": 30.333671,
+    "longitude": -81.6735397,
+    "geocodeLabel": "West Church Street, Jacksonville, FL"
+  },
+  "flossie-brunson-eastside-park": {
+    "latitude": 30.3272654,
+    "longitude": -81.6403806,
+    "geocodeLabel": "Greater Jacksonville Expo Center, Franklin Street, Jacksonville, Florida"
+  },
+  "forestry-tower-park": {
+    "latitude": 30.2880589,
+    "longitude": -81.5787546,
+    "geocodeLabel": "Everything Automotive Jacksonville, Beach Blvd, Jacksonville, FL"
+  },
+  "forestview-park-and-community-center": {
+    "latitude": 30.4010356,
+    "longitude": -81.7163947,
+    "geocodeLabel": "Kenndle Road, Jacksonville, Florida"
+  },
+  "fort-caroline-club": {
+    "latitude": 30.3748997,
+    "longitude": -81.5858969,
+    "geocodeLabel": "Ferber Road, Jacksonville, FL"
+  },
+  "fort-caroline-national-memorial": {
+    "latitude": 30.3539617,
+    "longitude": -81.533751,
+    "geocodeLabel": "Fort Caroline Road, Jacksonville, Florida"
+  },
+  "fort-family-regional-park": {
+    "latitude": 30.2240932,
+    "longitude": -81.5097038,
+    "geocodeLabel": "Bold City Soccer Academy, Baymeadows Rd E, Jacksonville, FL"
+  },
+  "fort-george-island-state-cultural-state-park": {
+    "latitude": 30.3939777,
+    "longitude": -81.459535,
+    "geocodeLabel": "Heckscher Drive, Jacksonville, Florida"
+  },
+  "fouraker-park": {
+    "latitude": 30.300542,
+    "longitude": -81.7841136,
+    "geocodeLabel": "Lenox Avenue, Jacksonville, Florida"
+  },
+  "freedom-park": {
+    "latitude": 30.3541091,
+    "longitude": -81.5367946,
+    "geocodeLabel": "Fort Caroline Road, Jacksonville, Florida"
+  },
+  "fulton-road-landing": {
+    "latitude": 30.3572348,
+    "longitude": -81.5152561,
+    "geocodeLabel": "Fulton Road, Jacksonville, Florida"
+  },
+  "g-e-n-a-park": {
+    "latitude": 30.2816347,
+    "longitude": -81.6249454,
+    "geocodeLabel": "Clinton Avenue, Jacksonville, Florida"
+  },
+  "gamewell-tot-lot": {
+    "latitude": 30.3379998,
+    "longitude": -81.5939086,
+    "geocodeLabel": "Terry Parker Drive South, Jacksonville, Florida"
+  },
+  "garden-city-elementary-school-park": {
+    "latitude": 30.4292273,
+    "longitude": -81.647581,
+    "geocodeLabel": "North Jacksonville Post Office, Dunn Avenue, Jacksonville, Florida"
+  },
+  "garden-city-park": {
+    "latitude": 30.518649,
+    "longitude": -81.765307,
+    "geocodeLabel": "Lem Turner Road, Jacksonville, Florida"
+  },
+  "genovar-park": {
+    "latitude": 30.1418683,
+    "longitude": -81.509796,
+    "geocodeLabel": "Genovar Street, Jacksonville, FL"
+  },
+  "george-crady-fishing-pier-state-park": {
+    "latitude": 30.6103229,
+    "longitude": -81.4631046,
+    "geocodeLabel": "Fernandina Beach Municipal Airport, Airport Road, Fernandina Beach, FL"
+  },
+  "gerrie-s-park": {
+    "latitude": 30.3673929,
+    "longitude": -81.6009882,
+    "geocodeLabel": "5959-7 Ft Caroline Ap, Jacksonville, Florida"
+  },
+  "glen-myra-park": {
+    "latitude": 30.3474575,
+    "longitude": -81.631834,
+    "geocodeLabel": "Winthrop Street, Jacksonville, Florida"
+  },
+  "glynlea-park": {
+    "latitude": 30.3035,
+    "longitude": -81.5868673,
+    "geocodeLabel": "Altama Road, Jacksonville, FL"
+  },
+  "goodbys-creek-preserve": {
+    "latitude": 30.207307,
+    "longitude": -81.6196488,
+    "geocodeLabel": "9252-1 San Jose Ap, Jacksonville, Florida"
+  },
+  "granada-park": {
+    "latitude": 30.2829354,
+    "longitude": -81.6583281,
+    "geocodeLabel": "Alcazar Avenue, Jacksonville, Florida"
+  },
+  "greenland-park": {
+    "latitude": 30.1563757,
+    "longitude": -81.544049,
+    "geocodeLabel": "Greenland Park, Fayal Drive, Jacksonville, FL"
+  },
+  "greenridge-road-park": {
+    "latitude": 30.2952051,
+    "longitude": -81.6479334,
+    "geocodeLabel": "San Jose Boulevard, Jacksonville, Florida"
+  },
+  "greenscape-celebration-park": {
+    "latitude": 30.3154696,
+    "longitude": -81.6632849,
+    "geocodeLabel": "Baptist Medical Center Jacksonville, Prudential Drive, Jacksonville, Florida"
+  },
+  "grove-park": {
+    "latitude": 30.2897548,
+    "longitude": -81.5696914,
+    "geocodeLabel": "Grove Park Boulevard, Jacksonville, FL"
+  },
+  "grunthal-park": {
+    "latitude": 30.3300645,
+    "longitude": -81.6590554,
+    "geocodeLabel": "Jacksonville City Hall, Church Street West, Jacksonville, Florida"
+  },
+  "half-moon-island-preserve-and-boat-ramp": {
+    "latitude": 30.330369,
+    "longitude": -81.6567456,
+    "geocodeLabel": "Main Street, Jacksonville, Florida"
+  },
+  "hammond-park": {
+    "latitude": 30.3485294,
+    "longitude": -81.7235718,
+    "geocodeLabel": "Melson Avenue, Jacksonville, FL"
+  },
+  "harborview-boat-ramp": {
+    "latitude": 30.3968053,
+    "longitude": -81.710988,
+    "geocodeLabel": "Harborview Boat Ramp, Jacksonville, Florida"
+  },
+  "helen-cooper-floyd-park-little-jetties": {
+    "latitude": 30.356575,
+    "longitude": -81.4162481,
+    "geocodeLabel": "2610-10 Sr A1A Ap, Jacksonville, Florida"
+  },
+  "henry-j-klutho-park": {
+    "latitude": 30.3300645,
+    "longitude": -81.6590554,
+    "geocodeLabel": "Jacksonville City Hall, Church Street West, Jacksonville, Florida"
+  },
+  "henry-l-brown-kooker-park": {
+    "latitude": 30.366484,
+    "longitude": -81.6344414,
+    "geocodeLabel": "Bennett Street, Jacksonville, Florida"
+  },
+  "henry-t-jones-community-center": {
+    "latitude": 30.2830744,
+    "longitude": -81.6384935,
+    "geocodeLabel": "Grant Road, Jacksonville, Florida"
+  },
+  "henry-t-jones-park": {
+    "latitude": 30.2819322,
+    "longitude": -81.6370401,
+    "geocodeLabel": "Gattis Lane, Jacksonville, Florida"
+  },
+  "highlands-middle-school-pool": {
+    "latitude": 30.4305793,
+    "longitude": -81.6822279,
+    "geocodeLabel": "Pine Estates Elementary School, East Pine Estates Road, Jacksonville, Florida"
+  },
+  "historic-kings-road-park": {
+    "latitude": 30.3114226,
+    "longitude": -81.6531685,
+    "geocodeLabel": "Kings Avenue, Jacksonville, Florida"
+  },
+  "holiday-hill-elementary-school-park": {
+    "latitude": 30.3016434,
+    "longitude": -81.5853673,
+    "geocodeLabel": "Altama Road, Jacksonville, FL"
+  },
+  "holiday-road-park": {
+    "latitude": 30.3029587,
+    "longitude": -81.5864604,
+    "geocodeLabel": "North Holiday Road, Jacksonville, FL"
+  },
+  "hollybrook-park": {
+    "latitude": 30.324513,
+    "longitude": -81.7008893,
+    "geocodeLabel": "Cherokee Street, Jacksonville, FL"
+  },
+  "hollywood-park": {
+    "latitude": 30.3074106,
+    "longitude": -81.7088731,
+    "geocodeLabel": "Hollywood Avenue, Jacksonville, Florida"
+  },
+  "home-gardens-park": {
+    "latitude": 30.3888242,
+    "longitude": -81.7468125,
+    "geocodeLabel": "Mockingbird Road, Jacksonville, FL"
+  },
+  "hood-landing-boat-ramp": {
+    "latitude": 30.1490068,
+    "longitude": -81.5957946,
+    "geocodeLabel": "Hood Landing Road, Jacksonville, Florida"
+  },
+  "huffman-boulevard-park": {
+    "latitude": 30.2889733,
+    "longitude": -81.5049911,
+    "geocodeLabel": "Huffman Boulevard, Jacksonville, Florida"
+  },
+  "huguenot-memorial-park": {
+    "latitude": 30.3939777,
+    "longitude": -81.459535,
+    "geocodeLabel": "Heckscher Drive, Jacksonville, Florida"
+  },
+  "huguenot-park": {
+    "latitude": 30.2947845,
+    "longitude": -81.6246519,
+    "geocodeLabel": "Nain Road, Jacksonville, Florida"
+  },
+  "huntington-forest": {
+    "latitude": 30.1956676,
+    "longitude": -81.6070789,
+    "geocodeLabel": "Huntington Forest Boulevard, Jacksonville, Florida"
+  },
+  "hyde-grove-elementary": {
+    "latitude": 30.2990893,
+    "longitude": -81.7518985,
+    "geocodeLabel": "Lane Avenue South, Jacksonville, Florida"
+  },
+  "intracoastal-boat-ramp": {
+    "latitude": 30.2927759,
+    "longitude": -81.7301676,
+    "geocodeLabel": "Second Chance Finance, Cassat Avenue, Jacksonville, Florida"
+  },
+  "isle-of-palms-park": {
+    "latitude": 30.2511604,
+    "longitude": -81.7329278,
+    "geocodeLabel": "Eulace Road, Jacksonville, Florida"
+  },
+  "ivey-road-park": {
+    "latitude": 30.3713822,
+    "longitude": -81.8047752,
+    "geocodeLabel": "Pritchard Road, Jacksonville, FL"
+  },
+  "j-gardner-nip-sams-memorial-park": {
+    "latitude": 30.3811725,
+    "longitude": -81.7301312,
+    "geocodeLabel": "Richardson Road, Jacksonville, Florida"
+  },
+  "j-s-johnson-park": {
+    "latitude": 30.3252645,
+    "longitude": -81.6748529,
+    "geocodeLabel": "Jackson Street, Jacksonville, FL"
+  },
+  "jacksonville-arboretum-and-gardens": {
+    "latitude": 30.3464984,
+    "longitude": -81.5384032,
+    "geocodeLabel": "Jacksonville Arboretum & Gardens, Millcoe Road, Jacksonville, FL"
+  },
+  "jacksonville-baldwin-rail-trail": {
+    "latitude": 30.3367276,
+    "longitude": -81.6646857,
+    "geocodeLabel": "Florida Highway Patrol Regional Communication Center - Jacksonville, North Jefferson Street, Jacksonville, Florida"
+  },
+  "jacksonville-beach-pier": {
+    "latitude": 30.2942691,
+    "longitude": -81.3914461,
+    "geocodeLabel": "1st Street North;5th Avenue North, Jacksonville Beach, FL"
+  },
+  "jacksonville-heights-elementary-school-park": {
+    "latitude": 30.2171095,
+    "longitude": -81.7262606,
+    "geocodeLabel": "Shady Pine Street South, Jacksonville, Florida"
+  },
+  "jacksonville-zoo-gardens-boat-dock": {
+    "latitude": 30.4022848,
+    "longitude": -81.643262,
+    "geocodeLabel": "Jacksonville Zoo and Gardens, Zoo Parkway, Jacksonville, FL"
+  },
+  "james-and-downing-park": {
+    "latitude": 30.3132692,
+    "longitude": -81.698385,
+    "geocodeLabel": "James Street, Jacksonville, Florida"
+  },
+  "james-fields-park": {
+    "latitude": 30.3622263,
+    "longitude": -81.7449522,
+    "geocodeLabel": "Lane Avenue North, Jacksonville, FL"
+  },
+  "james-p-small-park": {
+    "latitude": 30.3289977,
+    "longitude": -81.6766699,
+    "geocodeLabel": "Myrtle Avenue, Jacksonville, Florida"
+  },
+  "james-weldon-johnson-park": {
+    "latitude": 30.3289467,
+    "longitude": -81.6592317,
+    "geocodeLabel": "Monroe Street West, Jacksonville, FL"
+  },
+  "jammes-road-park": {
+    "latitude": 30.349342,
+    "longitude": -81.7163081,
+    "geocodeLabel": "West 11th Street, Jacksonville, Florida"
+  },
+  "jasmine-park": {
+    "latitude": 30.3146984,
+    "longitude": -81.6901712,
+    "geocodeLabel": "College Street, Jacksonville, Florida"
+  },
+  "jennings-state-forest": {
+    "latitude": 30.0543377,
+    "longitude": -81.8929166,
+    "geocodeLabel": "Longmire Road, Middleburg, Florida"
+  },
+  "jerusalem-and-white": {
+    "latitude": 30.343556,
+    "longitude": -81.657574,
+    "geocodeLabel": "Greater New Jerusalem Baptist Church, West 6th Street, Jacksonville, Florida"
+  },
+  "jesse-b-smith-memorial-plaza": {
+    "latitude": 30.3267587,
+    "longitude": -81.6554974,
+    "geocodeLabel": "Jesse B. Smith Memorial Plaza, East Forsyth Street, Jacksonville, FL"
+  },
+  "jessie-ball-dupont-park": {
+    "latitude": 30.3163017,
+    "longitude": -81.6594367,
+    "geocodeLabel": "Prudential Drive, Jacksonville, Florida"
+  },
+  "jim-king-park-and-boat-ramp-at-sisters-creek": {
+    "latitude": 30.3939777,
+    "longitude": -81.459535,
+    "geocodeLabel": "Heckscher Drive, Jacksonville, Florida"
+  },
+  "jim-rink-park": {
+    "latitude": 30.310495,
+    "longitude": -81.6572396,
+    "geocodeLabel": "Cedar Street, Jacksonville, Florida"
+  },
+  "jim-wingate-preserve": {
+    "latitude": 30.4641921,
+    "longitude": -81.5553373,
+    "geocodeLabel": "Cedar Point Road Lane South, Jacksonville, Florida"
+  },
+  "joe-carlucci-sisters-creek-park-and-boat-ramp": {
+    "latitude": 30.3916647,
+    "longitude": -81.4643308,
+    "geocodeLabel": "Joe Carlucci Sisters Creek Park & Boat Ramp, Jacksonville, Florida"
+  },
+  "joe-davis-memorial-park": {
+    "latitude": 30.2757663,
+    "longitude": -81.6426219,
+    "geocodeLabel": "Fletcher Road, Jacksonville, Florida"
+  },
+  "joe-james-center": {
+    "latitude": 30.3508511,
+    "longitude": -81.6823555,
+    "geocodeLabel": "Hurst Place, Jacksonville, Florida"
+  },
+  "john-d-liverman-park": {
+    "latitude": 30.3094762,
+    "longitude": -81.7478808,
+    "geocodeLabel": "Grace Lane, Jacksonville, Florida"
+  },
+  "john-murray-forbes-park": {
+    "latitude": 30.3075181,
+    "longitude": -81.6919056,
+    "geocodeLabel": "Saint Johns Avenue, Jacksonville, FL"
+  },
+  "john-n-mcpherson-park": {
+    "latitude": 30.3470106,
+    "longitude": -81.6658457,
+    "geocodeLabel": "West 8th Street, Jacksonville, Florida"
+  },
+  "john-stockton-elementary-school-park": {
+    "latitude": 30.2602672,
+    "longitude": -81.7047502,
+    "geocodeLabel": "Carlisle Road, Jacksonville, Florida"
+  },
+  "john-t-lowe-boat-ramp-at-goodbys-creek": {
+    "latitude": 30.207307,
+    "longitude": -81.6196488,
+    "geocodeLabel": "9252-1 San Jose Ap, Jacksonville, Florida"
+  },
+  "johnnie-w-walker-park-community-center": {
+    "latitude": 30.3484582,
+    "longitude": -81.6649149,
+    "geocodeLabel": "UF Health Jacksonville, West 8th Street, Jacksonville, Florida"
+  },
+  "joseph-lee-center": {
+    "latitude": 30.3481283,
+    "longitude": -81.6599381,
+    "geocodeLabel": "Perry Street, Jacksonville, Florida"
+  },
+  "joseph-stilwell-middle-school-park": {
+    "latitude": 30.3077944,
+    "longitude": -81.778243,
+    "geocodeLabel": "Joseph Stilwell Military Academy of Leadership, Burma Road, Jacksonville, FL"
+  },
+  "julington-durbin-creek-preserve": {
+    "latitude": 30.1303714,
+    "longitude": -81.5430275,
+    "geocodeLabel": "Bartram Park Boulevard, Jacksonville, FL"
+  },
+  "julius-guinyard-park-and-pool": {
+    "latitude": 30.3351575,
+    "longitude": -81.6644103,
+    "geocodeLabel": "Jefferson Street, Jacksonville, Florida"
+  },
+  "justina-road-elementary-park": {
+    "latitude": 30.356828,
+    "longitude": -81.6004562,
+    "geocodeLabel": "Justina Road, Jacksonville, FL"
+  },
+  "kathryn-abbey-hanna-park": {
+    "latitude": 30.3592523,
+    "longitude": -81.4521575,
+    "geocodeLabel": "Wonderwood Drive, Jacksonville, Florida"
+  },
+  "kayak-amelia": {
+    "latitude": 30.4614939,
+    "longitude": -81.4275168,
+    "geocodeLabel": "Kayak Amelia, Heckscher Drive, Jacksonville, FL"
+  },
+  "kings-road-historic-park-thomas-creek-wildlife-properties": {
+    "latitude": 30.3761615,
+    "longitude": -81.7274141,
+    "geocodeLabel": "New Kings Road, Jacksonville, Florida"
+  },
+  "kingsley-plantation": {
+    "latitude": 30.4392648,
+    "longitude": -81.4379496,
+    "geocodeLabel": "Kingsley Plantation, Palmetto Avenue, Jacksonville, FL"
+  },
+  "lake-lucina-elementary-park": {
+    "latitude": 30.3531299,
+    "longitude": -81.5866248,
+    "geocodeLabel": "Lake Lucina Elementary Park, Merrill Road, Jacksonville, FL"
+  },
+  "lakeside-park-i-and-ii": {
+    "latitude": 30.2785322,
+    "longitude": -81.7176589,
+    "geocodeLabel": "Lakeside Drive, Jacksonville, Florida"
+  },
+  "landon-park": {
+    "latitude": 30.3047893,
+    "longitude": -81.6543537,
+    "geocodeLabel": "Jacksonville Fire Rescue - Station 13, San Marco Place, Jacksonville, Florida"
+  },
+  "lannie-road-flying-field": {
+    "latitude": 30.5384295,
+    "longitude": -81.7241879,
+    "geocodeLabel": "Lannie Road, Jacksonville, Florida"
+  },
+  "largo-well-park": {
+    "latitude": 30.30198,
+    "longitude": -81.6539211,
+    "geocodeLabel": "Largo Road, Jacksonville, Florida"
+  },
+  "lem-merrett-park": {
+    "latitude": 30.3102063,
+    "longitude": -81.7428045,
+    "geocodeLabel": "Ellis Road South, Jacksonville, FL"
+  },
+  "leonard-abess-park": {
+    "latitude": 30.3242087,
+    "longitude": -81.4744359,
+    "geocodeLabel": "Leonard Abess Park, Jacksonville, Florida"
+  },
+  "lew-brantley-park-mcgirts-creek-community-center": {
+    "latitude": 30.349342,
+    "longitude": -81.7163081,
+    "geocodeLabel": "West 11th Street, Jacksonville, Florida"
+  },
+  "liberty-park": {
+    "latitude": 30.363895,
+    "longitude": -81.6495989,
+    "geocodeLabel": "North Liberty Street, Jacksonville, Florida"
+  },
+  "lift-ev-ry-voice-and-sing-park": {
+    "latitude": 30.3292173,
+    "longitude": -81.6700578,
+    "geocodeLabel": "Lee Street, Jacksonville, Florida"
+  },
+  "lillian-s-davin-park": {
+    "latitude": 30.3001571,
+    "longitude": -81.6546571,
+    "geocodeLabel": "River Road, Jacksonville, Florida"
+  },
+  "lillian-saunders-center": {
+    "latitude": 30.3016362,
+    "longitude": -81.6400472,
+    "geocodeLabel": "Bartley Circle, Jacksonville, Florida"
+  },
+  "little-talbot-island-state-park": {
+    "latitude": 30.3939777,
+    "longitude": -81.459535,
+    "geocodeLabel": "Heckscher Drive, Jacksonville, Florida"
+  },
+  "little-van-wert-park": {
+    "latitude": 30.2930509,
+    "longitude": -81.7044149,
+    "geocodeLabel": "Little Van Wert Avenue, Jacksonville, Florida"
+  },
+  "long-branch-park": {
+    "latitude": 30.3265414,
+    "longitude": -81.6400277,
+    "geocodeLabel": "Franklin Street, Jacksonville, Florida"
+  },
+  "lonnie-c-miller-sr-regional-park": {
+    "latitude": 30.3162783,
+    "longitude": -81.7430684,
+    "geocodeLabel": "Primera Iglesia Bautista Hispana, Cassidy Road, Jacksonville, Florida"
+  },
+  "lonnie-wurn-boat-ramp": {
+    "latitude": 30.3748997,
+    "longitude": -81.5858969,
+    "geocodeLabel": "Ferber Road, Jacksonville, FL"
+  },
+  "lovelace-park": {
+    "latitude": 30.2735929,
+    "longitude": -81.6089387,
+    "geocodeLabel": "Barnes Road South, Jacksonville, Florida"
+  },
+  "lynn-park": {
+    "latitude": 42.4588987,
+    "longitude": -70.9437041,
+    "geocodeLabel": "Lynn Heritage State Park, Lynn, MA"
+  },
+  "main-street-park": {
+    "latitude": 30.3225828,
+    "longitude": -81.6585932,
+    "geocodeLabel": "Main Street Bridge, Northbank Riverwalk, Jacksonville, Florida"
+  },
+  "mallison-park-and-center": {
+    "latitude": 30.322344,
+    "longitude": -81.708793,
+    "geocodeLabel": "Lenox Avenue, Jacksonville, FL"
+  },
+  "mandarin-high-school-pool": {
+    "latitude": 30.1644744,
+    "longitude": -81.5851173,
+    "geocodeLabel": "Mandarin High School, Greenland Road, Jacksonville, Florida"
+  },
+  "mandarin-south-library-park": {
+    "latitude": 30.1609839,
+    "longitude": -81.6327593,
+    "geocodeLabel": "San Jose Boulevard, Jacksonville, Florida"
+  },
+  "manson-bull-felder-park": {
+    "latitude": 30.3354378,
+    "longitude": -81.6481403,
+    "geocodeLabel": "Fuller Lane, Jacksonville, Florida"
+  },
+  "marion-park": {
+    "latitude": 30.3971219,
+    "longitude": -81.671267,
+    "geocodeLabel": "Marion Circle, Jacksonville, Florida"
+  },
+  "marjenhoff-park": {
+    "latitude": 30.3089229,
+    "longitude": -81.643886,
+    "geocodeLabel": "Southampton Road, Jacksonville, Florida"
+  },
+  "martin-luther-king-elementary": {
+    "latitude": 30.4012592,
+    "longitude": -81.7093406,
+    "geocodeLabel": "Martin Luther King Junior Elementary School, Lake Placid Drive East, Jacksonville, FL"
+  },
+  "mary-lena-gibbs": {
+    "latitude": 30.269244,
+    "longitude": -81.759415,
+    "geocodeLabel": "Mary Lena Gibbs Community Center, Goodrich Road, Jacksonville, FL"
+  },
+  "maxville-park": {
+    "latitude": 30.2010079,
+    "longitude": -82.0081556,
+    "geocodeLabel": "Pennsylvania Avenue, Jacksonville, FL"
+  },
+  "may-mann-jennings-park": {
+    "latitude": 30.3645165,
+    "longitude": -81.6485568,
+    "geocodeLabel": "Winona Drive, Jacksonville, Florida"
+  },
+  "mayport-waterfront-park": {
+    "latitude": 30.3868685,
+    "longitude": -81.4333732,
+    "geocodeLabel": "U.S. Coast Guard Sector Jacksonville Annex, Ocean Street, Jacksonville, FL"
+  },
+  "mccoys-creek-boulevard-park": {
+    "latitude": 30.3272903,
+    "longitude": -81.6934114,
+    "geocodeLabel": "McCoys Creek, Jacksonville, Florida"
+  },
+  "mccue-park-boat-ramp": {
+    "latitude": 30.2899242,
+    "longitude": -81.4192274,
+    "geocodeLabel": "2nd Avenue North, Jacksonville Beach, FL"
+  },
+  "mcgirts-creek-park": {
+    "latitude": 30.349342,
+    "longitude": -81.7163081,
+    "geocodeLabel": "West 11th Street, Jacksonville, Florida"
+  },
+  "mcgirts-creek-park-expansion": {
+    "latitude": 30.349342,
+    "longitude": -81.7163081,
+    "geocodeLabel": "West 11th Street, Jacksonville, Florida"
+  },
+  "melvin-park": {
+    "latitude": 30.2445459,
+    "longitude": -81.752767,
+    "geocodeLabel": "West Norde Drive, Jacksonville, Florida"
+  },
+  "memorial-park": {
+    "latitude": 30.3106437,
+    "longitude": -81.6794324,
+    "geocodeLabel": "Memorial Park, Riverside Avenue, Jacksonville, FL"
+  },
+  "metropolitan-park": {
+    "latitude": 30.3222469,
+    "longitude": -81.6427097,
+    "geocodeLabel": "Gator Bowl Boulevard, Jacksonville, Florida"
+  },
+  "michael-b-scanlon-mayport-boat-ramp": {
+    "latitude": 30.3868685,
+    "longitude": -81.4333732,
+    "geocodeLabel": "U.S. Coast Guard Sector Jacksonville Annex, Ocean Street, Jacksonville, FL"
+  },
+  "mickey-king-park": {
+    "latitude": 30.3068008,
+    "longitude": -81.6540434,
+    "geocodeLabel": "Hendricks Avenue, Jacksonville, Florida"
+  },
+  "mitchell-community-center-and-park": {
+    "latitude": 30.3343484,
+    "longitude": -81.6822189,
+    "geocodeLabel": "Acorn Street, Jacksonville, Florida"
+  },
+  "modesky-park": {
+    "latitude": 30.3449449,
+    "longitude": -81.4480562,
+    "geocodeLabel": "Hammock Cay Drive, Jacksonville, Florida"
+  },
+  "monticello-wildlands": {
+    "latitude": 30.4108756,
+    "longitude": -81.726142,
+    "geocodeLabel": "Little John Road, Jacksonville, Florida"
+  },
+  "murray-drive-playground": {
+    "latitude": 30.3036437,
+    "longitude": -81.726235,
+    "geocodeLabel": "Murray Drive, Jacksonville, FL"
+  },
+  "murray-hill-art-center-at-herbert-bayer": {
+    "latitude": 30.3119076,
+    "longitude": -81.7217566,
+    "geocodeLabel": "Kerle Street, Jacksonville, FL"
+  },
+  "murray-hill-four-corners-park": {
+    "latitude": 30.3119898,
+    "longitude": -81.7245641,
+    "geocodeLabel": "Lawnview Street, Jacksonville, FL"
+  },
+  "murray-hill-playground": {
+    "latitude": 30.3055159,
+    "longitude": -81.7187228,
+    "geocodeLabel": "Kingsbury Street, Jacksonville, FL"
+  },
+  "myrtle-avenue-park": {
+    "latitude": 30.3253794,
+    "longitude": -81.6778675,
+    "geocodeLabel": "Myrtle Avenue, Jacksonville, FL"
+  },
+  "nathan-krestul-park": {
+    "latitude": 30.2530874,
+    "longitude": -81.639655,
+    "geocodeLabel": "Nathan Krestul Park, Jacksonville, Florida"
+  },
+  "native-parks-1-and-2": {
+    "latitude": 30.3028615,
+    "longitude": -81.7032681,
+    "geocodeLabel": "Park Street, Jacksonville, FL"
+  },
+  "new-berlin-boat-ramp": {
+    "latitude": 30.4619995,
+    "longitude": -81.5746463,
+    "geocodeLabel": "New Berlin Road, Jacksonville, Florida"
+  },
+  "norman-studios": {
+    "latitude": 30.333821,
+    "longitude": -81.6073582,
+    "geocodeLabel": "Arlington Road, Jacksonville, Florida"
+  },
+  "normandy-boulevard-sports-complex": {
+    "latitude": 26.6277955,
+    "longitude": -82.0214601,
+    "geocodeLabel": "Cape Coral Sports Complex, Sports Boulevard, Cape Coral, FL"
+  },
+  "normandy-center": {
+    "latitude": 39.6289645,
+    "longitude": -84.1732821,
+    "geocodeLabel": "Normandy Banquet & Event Center, Miamisburg Centerville Road, Washington Township, Ohio"
+  },
+  "normandy-park": {
+    "latitude": 30.3448635,
+    "longitude": -81.81549,
+    "geocodeLabel": "Rudd Road, Jacksonville, FL"
+  },
+  "north-shore-park": {
+    "latitude": 30.3808112,
+    "longitude": -81.6568109,
+    "geocodeLabel": "North Pearl Street, Jacksonville, Florida"
+  },
+  "northbank-riverwalk-corkscrew-park": {
+    "latitude": 30.3237751,
+    "longitude": -81.6560396,
+    "geocodeLabel": "East Coastline Drive, Jacksonville, FL"
+  },
+  "northbank-riverwalk-artist-square": {
+    "latitude": 30.3111656,
+    "longitude": -81.6930843,
+    "geocodeLabel": "Riverside Animal Hospital, Park Street, Jacksonville, Florida"
+  },
+  "norwood-park": {
+    "latitude": 30.3803098,
+    "longitude": -81.6689953,
+    "geocodeLabel": "Norwood Drive, Jacksonville, Florida"
+  },
+  "oak-harbor-boat-ramp": {
+    "latitude": 30.3571419,
+    "longitude": -81.4275298,
+    "geocodeLabel": "Seaway Street, Jacksonville, Florida"
+  },
+  "oak-hill-elementary-park": {
+    "latitude": 30.2524457,
+    "longitude": -81.7606848,
+    "geocodeLabel": "Oak Hill Elementary School, Daughtry Boulevard South, Jacksonville, FL"
+  },
+  "oakland-park": {
+    "latitude": 30.3380246,
+    "longitude": -81.6702963,
+    "geocodeLabel": "Union Street, Jacksonville, Florida"
+  },
+  "oceanway-community-center-park-and-pool": {
+    "latitude": 30.4609575,
+    "longitude": -81.6334753,
+    "geocodeLabel": "Sago Avenue West, Jacksonville, Florida"
+  },
+  "ortega-hills-park": {
+    "latitude": 30.2185655,
+    "longitude": -81.7053823,
+    "geocodeLabel": "Ortega Hills Drive, Jacksonville, Florida"
+  },
+  "ortega-hills-playground": {
+    "latitude": 30.2521807,
+    "longitude": -81.5279177,
+    "geocodeLabel": "Big Island Drive, Jacksonville, FL"
+  },
+  "our-community-club-park": {
+    "latitude": 30.2199401,
+    "longitude": -81.8137531,
+    "geocodeLabel": "Old Middleburg Road South, Jacksonville, Florida"
+  },
+  "pablo-creek-preserve": {
+    "latitude": 30.4717408,
+    "longitude": -81.5054973,
+    "geocodeLabel": "Pumpkin Hill Creek Preserve State Park, Pumpkin Hill Road, Jacksonville, FL"
+  },
+  "palmer-terrace": {
+    "latitude": 30.3108967,
+    "longitude": -81.6340834,
+    "geocodeLabel": "Palmer Terrace, Jacksonville, Florida"
+  },
+  "palmetto-leaves-regional-park": {
+    "latitude": 30.1582319,
+    "longitude": -81.5551217,
+    "geocodeLabel": "Greenland Road, Jacksonville, FL"
+  },
+  "palms-fish-camp": {
+    "latitude": 30.3939777,
+    "longitude": -81.459535,
+    "geocodeLabel": "Heckscher Drive, Jacksonville, Florida"
+  },
+  "panama-park": {
+    "latitude": 30.3701851,
+    "longitude": -81.6392032,
+    "geocodeLabel": "Buffalo Avenue, Jacksonville, Florida"
+  },
+  "parkwood-heights-elementary-park": {
+    "latitude": 30.2913894,
+    "longitude": -81.5921663,
+    "geocodeLabel": "Glendale Road, Jacksonville, FL"
+  },
+  "patton-park": {
+    "latitude": 30.297542,
+    "longitude": -81.4655203,
+    "geocodeLabel": "Patton Park, Hodges Blvd, Jacksonville, FL"
+  },
+  "peace-memorial-rose-garden-park": {
+    "latitude": 30.2982753,
+    "longitude": -81.7137864,
+    "geocodeLabel": "Park Street, Jacksonville, Florida"
+  },
+  "pine-forest-elementary-school-park": {
+    "latitude": 30.2830744,
+    "longitude": -81.6384935,
+    "geocodeLabel": "Grant Road, Jacksonville, Florida"
+  },
+  "pope-duval-park": {
+    "latitude": 30.332955,
+    "longitude": -81.6632024,
+    "geocodeLabel": "Beaver Street, Jacksonville, Florida"
+  },
+  "powers-park": {
+    "latitude": 30.3151709,
+    "longitude": -81.6967081,
+    "geocodeLabel": "Green Street, Jacksonville, Florida"
+  },
+  "pumpkin-hill-creek-preserve-state-park": {
+    "latitude": 30.4717408,
+    "longitude": -81.5054973,
+    "geocodeLabel": "Pumpkin Hill Creek Preserve State Park, Pumpkin Hill Road, Jacksonville, FL"
+  },
+  "rail-trail-buffer-properties": {
+    "latitude": 30.3235992,
+    "longitude": -81.7634149,
+    "geocodeLabel": "Old Plank Road, Jacksonville, Florida"
+  },
+  "ray-greene-park": {
+    "latitude": 30.4298018,
+    "longitude": -81.6733217,
+    "geocodeLabel": "Leonid Road, Jacksonville, Florida"
+  },
+  "raymond-e-davis-park": {
+    "latitude": 30.3471471,
+    "longitude": -81.6885207,
+    "geocodeLabel": "Spires Avenue, Jacksonville, Florida"
+  },
+  "reddie-point-preserve": {
+    "latitude": 30.3858413,
+    "longitude": -81.6165044,
+    "geocodeLabel": "Reddie Point Preserve, Yachtsman Way, Jacksonville, FL"
+  },
+  "reed-island": {
+    "latitude": 30.306274283006484,
+    "longitude": -81.72084263729874,
+    "geocodeLabel": "32205, Jacksonville, Florida"
+  },
+  "ribault-high-school-pool": {
+    "latitude": 30.3645165,
+    "longitude": -81.6485568,
+    "geocodeLabel": "Winona Drive, Jacksonville, Florida"
+  },
+  "ribault-river-preserve": {
+    "latitude": 30.3945593,
+    "longitude": -81.682938,
+    "geocodeLabel": "Ribault Scenic Drive Park, Jacksonville, Florida"
+  },
+  "ribault-scenic-drive-park": {
+    "latitude": 30.3937681,
+    "longitude": -81.6820788,
+    "geocodeLabel": "Ribault Scenic Drive, Jacksonville, Florida"
+  },
+  "richard-h-dick-kravitz-regional-park": {
+    "latitude": 30.1779436,
+    "longitude": -81.5669206,
+    "geocodeLabel": "Hood Road South, Jacksonville, FL"
+  },
+  "ringhaver-park": {
+    "latitude": 30.349342,
+    "longitude": -81.7163081,
+    "geocodeLabel": "West 11th Street, Jacksonville, Florida"
+  },
+  "ritz-park": {
+    "latitude": 30.3300645,
+    "longitude": -81.6590554,
+    "geocodeLabel": "Jacksonville City Hall, Church Street West, Jacksonville, Florida"
+  },
+  "river-oaks-park": {
+    "latitude": 30.3001571,
+    "longitude": -81.6546571,
+    "geocodeLabel": "River Road, Jacksonville, Florida"
+  },
+  "riverfront-park": {
+    "latitude": 30.3082033,
+    "longitude": -81.6524465,
+    "geocodeLabel": "Landon Avenue, Jacksonville, Florida"
+  },
+  "riversedge": {
+    "latitude": 30.3162514,
+    "longitude": -81.6475368,
+    "geocodeLabel": "RiversEdge Boulevard, Jacksonville, Florida"
+  },
+  "riverside-high-school-pool": {
+    "latitude": 30.3069588,
+    "longitude": -81.7039866,
+    "geocodeLabel": "Riverside High School, South McDuff Avenue, Jacksonville, FL"
+  },
+  "riverside-park": {
+    "latitude": 30.3254076,
+    "longitude": -81.6732828,
+    "geocodeLabel": "Jacksonville Winlectric Co., Park Street, Jacksonville, Florida"
+  },
+  "riverview-park": {
+    "latitude": 30.3701534,
+    "longitude": -81.6507475,
+    "geocodeLabel": "East 41st Street, Jacksonville, Florida"
+  },
+  "robert-f-kennedy-park-and-community-center": {
+    "latitude": 30.3328465,
+    "longitude": -81.6471962,
+    "geocodeLabel": "Ionia Street, Jacksonville, Florida"
+  },
+  "rogers-park": {
+    "latitude": 30.1609839,
+    "longitude": -81.6327593,
+    "geocodeLabel": "San Jose Boulevard, Jacksonville, Florida"
+  },
+  "rolliston-park": {
+    "latitude": 30.3861654,
+    "longitude": -81.6508045,
+    "geocodeLabel": "Rolliston Street, Jacksonville, Florida"
+  },
+  "rondette-park": {
+    "latitude": 30.3639241,
+    "longitude": -81.5672055,
+    "geocodeLabel": "Rondette Park, Rondette Lake Road, Jacksonville, FL"
+  },
+  "royal-terrace": {
+    "latitude": 30.37643,
+    "longitude": -81.693733,
+    "geocodeLabel": "Benedict Road, Jacksonville, Florida"
+  },
+  "russell-bill-cook-jr-park": {
+    "latitude": 30.3310713,
+    "longitude": -81.6596906,
+    "geocodeLabel": "Jones Bros. Furniture Building, Hogan Street, Jacksonville, Florida"
+  },
+  "ryder-park": {
+    "latitude": 30.3517828,
+    "longitude": -81.7056664,
+    "geocodeLabel": "Automobile Drive, Jacksonville, Florida"
+  },
+  "s-a-hull-elementary-school-park": {
+    "latitude": 30.391064,
+    "longitude": -81.7327428,
+    "geocodeLabel": "Hull Street, Jacksonville, FL"
+  },
+  "sal-taylor-creek-preserve": {
+    "latitude": 30.2140522,
+    "longitude": -81.9157911,
+    "geocodeLabel": "Nathan Hale Road, Jacksonville, Florida"
+  },
+  "san-jose-acre-park": {
+    "latitude": 30.2537709,
+    "longitude": -81.6272658,
+    "geocodeLabel": "Caballero Drive North, Jacksonville, Florida"
+  },
+  "san-jose-elementary-school-park": {
+    "latitude": 30.265431,
+    "longitude": -81.6309333,
+    "geocodeLabel": "St Augustine Road, Jacksonville, FL"
+  },
+  "san-mateo-elementary-park": {
+    "latitude": 30.4396911,
+    "longitude": -81.6260566,
+    "geocodeLabel": "Baisden Road, Jacksonville, Florida"
+  },
+  "san-mateo-little-league": {
+    "latitude": 30.439342,
+    "longitude": -81.6096078,
+    "geocodeLabel": "Kraft Road, Jacksonville, Florida"
+  },
+  "san-mateo-neighborhood-park": {
+    "latitude": 30.4435479,
+    "longitude": -81.6366131,
+    "geocodeLabel": "Renne Drive, Jacksonville, Florida"
+  },
+  "san-pablo-elementary-playground": {
+    "latitude": 30.3051001,
+    "longitude": -81.4000469,
+    "geocodeLabel": "18th Avenue North, Jacksonville Beach, Florida"
+  },
+  "sandalwood-high-school-pool": {
+    "latitude": 30.2987097,
+    "longitude": -81.5160991,
+    "geocodeLabel": "John Prom Boulevard, Jacksonville, Florida"
+  },
+  "saratoga-lake-park": {
+    "latitude": 26.6430061,
+    "longitude": -81.9692446,
+    "geocodeLabel": "Saratoga Lake Park, SE 4th Terrace, Cape Coral, Florida"
+  },
+  "scott-park": {
+    "latitude": 30.3675681,
+    "longitude": -81.7102108,
+    "geocodeLabel": "Scott Park, Hamilton Circle, Jacksonville, FL"
+  },
+  "seaton-creek-historic-preserve": {
+    "latitude": 30.5232785,
+    "longitude": -81.7095016,
+    "geocodeLabel": "Gold Star Family Parkway, Jacksonville, Florida"
+  },
+  "seminole-park": {
+    "latitude": 26.606529,
+    "longitude": -81.8852252,
+    "geocodeLabel": "Seminole Park Historic District, Fort Myers, Florida"
+  },
+  "sidney-j-gefen-riverwalk-park": {
+    "latitude": 30.3198955,
+    "longitude": -81.6728729,
+    "geocodeLabel": "Alfred Dupont Place, Jacksonville, FL"
+  },
+  "signet-park": {
+    "latitude": 30.3484582,
+    "longitude": -81.6649149,
+    "geocodeLabel": "UF Health Jacksonville, West 8th Street, Jacksonville, Florida"
+  },
+  "simonds-johnson-park": {
+    "latitude": 30.3710201,
+    "longitude": -81.6853532,
+    "geocodeLabel": "Moncrief Road, Jacksonville, Florida"
+  },
+  "singleton-park": {
+    "latitude": 30.3811725,
+    "longitude": -81.7301312,
+    "geocodeLabel": "Richardson Road, Jacksonville, Florida"
+  },
+  "s-line-rail-trail": {
+    "latitude": 30.3314299,
+    "longitude": -81.6624257,
+    "geocodeLabel": "Cologix Jacksonville JAX1, Church Street West, Jacksonville, Florida"
+  },
+  "southbank-riverwalk": {
+    "latitude": 30.3188812,
+    "longitude": -81.6598085,
+    "geocodeLabel": "Museum of Science & History, Museum Circle, Jacksonville, Florida"
+  },
+  "southside-park": {
+    "latitude": 30.3068008,
+    "longitude": -81.6540434,
+    "geocodeLabel": "Hendricks Avenue, Jacksonville, Florida"
+  },
+  "springfield-park": {
+    "latitude": 30.3345864,
+    "longitude": -81.653119,
+    "geocodeLabel": "Jacksonville Scottish Rite Masonic Center, Hubbard Street, Jacksonville, Florida"
+  },
+  "springfield-playground": {
+    "latitude": 30.3345864,
+    "longitude": -81.653119,
+    "geocodeLabel": "Jacksonville Scottish Rite Masonic Center, Hubbard Street, Jacksonville, Florida"
+  },
+  "st-johns-river-park": {
+    "latitude": 30.3188812,
+    "longitude": -81.6598085,
+    "geocodeLabel": "Museum of Science & History, Museum Circle, Jacksonville, Florida"
+  },
+  "st-johns-marina": {
+    "latitude": 30.3188812,
+    "longitude": -81.6598085,
+    "geocodeLabel": "Museum of Science & History, Museum Circle, Jacksonville, Florida"
+  },
+  "st-johns-park": {
+    "latitude": 30.3185376,
+    "longitude": -81.657893,
+    "geocodeLabel": "Riverplace Boulevard, Jacksonville, Florida"
+  },
+  "st-nicholas-playground": {
+    "latitude": 30.3010533,
+    "longitude": -81.634002,
+    "geocodeLabel": "Saint Nicholas Playground, Spring Park Road, Jacksonville, FL"
+  },
+  "st-nicholas-train-station-park": {
+    "latitude": 42.1660397,
+    "longitude": -87.7834651,
+    "geocodeLabel": "Ravinia Train Station North parking lot, St Johns Avenue, Highland Park, IL"
+  },
+  "stinson-park": {
+    "latitude": 30.282079,
+    "longitude": -81.7418441,
+    "geocodeLabel": "San Juan Avenue, Jacksonville, Florida"
+  },
+  "stockton-park": {
+    "latitude": 42.3538034,
+    "longitude": -82.9807666,
+    "geocodeLabel": "Stockton Park, Detroit, Michigan"
+  },
+  "stone-park": {
+    "latitude": 33.8069694,
+    "longitude": -84.1423193,
+    "geocodeLabel": "Stone Mountain Park, Stone Mountain, Georgia"
+  },
+  "sunny-acres": {
+    "latitude": 31.5385081,
+    "longitude": -84.1562964,
+    "geocodeLabel": "Sunny Acres, Albany, Georgia"
+  },
+  "sweetwater-playground": {
+    "latitude": 30.2666385,
+    "longitude": -81.7627308,
+    "geocodeLabel": "Esther Street, Jacksonville, Florida"
+  },
+  "t-k-stokes-boat-ramp-closed-for-repairs": {
+    "latitude": 30.3978219,
+    "longitude": -81.6836333,
+    "geocodeLabel": "Riverview Street, Jacksonville, Florida"
+  },
+  "tallulah-park": {
+    "latitude": 30.387781,
+    "longitude": -81.6594292,
+    "geocodeLabel": "Tallulah Avenue, Jacksonville, Florida"
+  },
+  "tara-woods-park": {
+    "latitude": 30.2658347,
+    "longitude": -81.5841091,
+    "geocodeLabel": "Bridgecove Circle East, Jacksonville, Florida"
+  },
+  "taye-brown-regional-park": {
+    "latitude": 50.9224666,
+    "longitude": -119.6288674,
+    "geocodeLabel": "Tsútswecw Provincial Park, Area F (Scotch Creek/Seymour Arm), British Columbia"
+  },
+  "terrace-park": {
+    "latitude": 30.3293998,
+    "longitude": -81.7298662,
+    "geocodeLabel": "Edgewood Avenue North, Jacksonville, FL"
+  },
+  "terry-parker-pool-and-park": {
+    "latitude": 30.3412694,
+    "longitude": -81.5744666,
+    "geocodeLabel": "Parker School Road, Jacksonville, Florida"
+  },
+  "thebaut-sisters-landing": {
+    "latitude": 30.3939777,
+    "longitude": -81.459535,
+    "geocodeLabel": "Heckscher Drive, Jacksonville, Florida"
+  },
+  "thomas-creek-preserve-fish-camp": {
+    "latitude": 30.5489384,
+    "longitude": -81.7304482,
+    "geocodeLabel": "Ethel Road, Jacksonville, Florida"
+  },
+  "thomas-jefferson-elementary": {
+    "latitude": 30.3256236,
+    "longitude": -81.7867478,
+    "geocodeLabel": "Thomas Jefferson Elementary School, Nevada Street, Jacksonville, FL"
+  },
+  "tideviews-preserve": {
+    "latitude": 30.3482534,
+    "longitude": -81.4152892,
+    "geocodeLabel": "2268-1 Mayport Ap, Jacksonville, Florida"
+  },
+  "tidewater-acres-park": {
+    "latitude": 30.3079995,
+    "longitude": -81.5829468,
+    "geocodeLabel": "Crane Avenue, Jacksonville, FL"
+  },
+  "tillie-k-fowler-regional-park": {
+    "latitude": 30.2370647,
+    "longitude": -81.7027058,
+    "geocodeLabel": "Tillie K Fowler Regional Park, Jacksonville, Florida"
+  },
+  "timucuan-ecological-and-historic-preserve": {
+    "latitude": 30.5215297,
+    "longitude": -81.4809393,
+    "geocodeLabel": "Sawpit Road, Jacksonville, Florida"
+  },
+  "timucuan-elementary": {
+    "latitude": 30.349342,
+    "longitude": -81.7163081,
+    "geocodeLabel": "West 11th Street, Jacksonville, Florida"
+  },
+  "timuquana-park": {
+    "latitude": 30.2479272,
+    "longitude": -81.6990163,
+    "geocodeLabel": "Timuquana Park, Jacksonville, Florida"
+  },
+  "tom-marshall-park": {
+    "latitude": 30.4731498,
+    "longitude": -81.5976793,
+    "geocodeLabel": "Elmar Road, Jacksonville, Florida"
+  },
+  "tommy-hazouri-sr-park": {
+    "latitude": 30.1359776,
+    "longitude": -81.6358714,
+    "geocodeLabel": "Mandarin Park, Mandarin Road, Jacksonville, FL"
+  },
+  "touchton-road-park": {
+    "latitude": 30.2694788,
+    "longitude": -81.5706188,
+    "geocodeLabel": "Touchton Road, Jacksonville, Florida"
+  },
+  "tree-hill-nature-center": {
+    "latitude": 30.3305075,
+    "longitude": -81.594993,
+    "geocodeLabel": "Lone Star Road, Jacksonville, Florida"
+  },
+  "trout-river-pier": {
+    "latitude": 30.3900068,
+    "longitude": -81.6436909,
+    "geocodeLabel": "Trout River Drive, Jacksonville, Florida"
+  },
+  "venetia-elementary-school-park": {
+    "latitude": 30.2376768,
+    "longitude": -81.9432655,
+    "geocodeLabel": "Yellow Water Road, Jacksonville, FL"
+  },
+  "verona-park": {
+    "latitude": 30.2467087,
+    "longitude": -81.6305624,
+    "geocodeLabel": "San Fernando Road, Jacksonville, FL"
+  },
+  "victoria-park": {
+    "latitude": 30.2735929,
+    "longitude": -81.6089387,
+    "geocodeLabel": "Barnes Road South, Jacksonville, Florida"
+  },
+  "victory-park": {
+    "latitude": 30.3672635,
+    "longitude": -81.5926154,
+    "geocodeLabel": "Victory Park, University Club Blvd, Jacksonville, FL"
+  },
+  "walter-anderson-memorial-park": {
+    "latitude": 30.1494684,
+    "longitude": -81.6426019,
+    "geocodeLabel": "Orange Picker Road, Jacksonville, Florida"
+  },
+  "walter-jones-historical-park": {
+    "latitude": 30.1653473,
+    "longitude": -81.6464054,
+    "geocodeLabel": "Mandarin Museum, Mandarin Road, Jacksonville, FL"
+  },
+  "warren-w-schell-jr-memorial-park": {
+    "latitude": 30.3439382,
+    "longitude": -81.661641,
+    "geocodeLabel": "West 6th Street, Jacksonville, Florida"
+  },
+  "warrington-park": {
+    "latitude": 30.3252399,
+    "longitude": -81.5706472,
+    "geocodeLabel": "WJAX-AM (Jacksonville), Bowlan Street, Jacksonville, Florida"
+  },
+  "water-broad-st-pocket-park": {
+    "latitude": 30.3257025,
+    "longitude": -81.6626562,
+    "geocodeLabel": "Water Street, Jacksonville, Florida"
+  },
+  "wayne-b-stevens-boat-ramp": {
+    "latitude": 30.2595534,
+    "longitude": -81.7220341,
+    "geocodeLabel": "Ortega Farms Circle, Jacksonville, Florida"
+  },
+  "wesconnett-elementary-school-park": {
+    "latitude": 25.6920879,
+    "longitude": -80.3584929,
+    "geocodeLabel": "Sunset Park Elementary School, Southwest 84th Street, Kendall, Florida"
+  },
+  "wesconnett-playground": {
+    "latitude": 30.3484301,
+    "longitude": -81.716302,
+    "geocodeLabel": "West 10th Street, Jacksonville, Florida"
+  },
+  "westbrook-center-and-park": {
+    "latitude": 30.3340217,
+    "longitude": -81.7021288,
+    "geocodeLabel": "Westbrook Road, Jacksonville, Florida"
+  },
+  "westridge-park": {
+    "latitude": 30.1578974,
+    "longitude": -81.6801301,
+    "geocodeLabel": "Maple Leaf, Weaver Glen Road, Jacksonville, Florida"
+  },
+  "westside-high-school-pool": {
+    "latitude": 30.2457446,
+    "longitude": -81.7666613,
+    "geocodeLabel": "Westside High School, Firestone Road, Jacksonville, FL"
+  },
+  "westside-middle-school-park": {
+    "latitude": 40.4502617,
+    "longitude": -99.3721011,
+    "geocodeLabel": "Holdrege Middle School, 14th Avenue, Holdrege, Nebraska"
+  },
+  "westside-park": {
+    "latitude": 30.3322313,
+    "longitude": -81.6706021,
+    "geocodeLabel": "West Duval Street, Jacksonville, FL"
+  },
+  "westwood-park": {
+    "latitude": 30.2444768,
+    "longitude": -81.7564661,
+    "geocodeLabel": "Tampico Road, Jacksonville, Florida"
+  },
+  "wheat-road-park": {
+    "latitude": 30.2403235,
+    "longitude": -81.775148,
+    "geocodeLabel": "Wheat Road, Jacksonville, Florida"
+  },
+  "whitehouse-park": {
+    "latitude": 30.3120054,
+    "longitude": -81.8466711,
+    "geocodeLabel": "General Avenue, Jacksonville, FL"
+  },
+  "wigmore-park": {
+    "latitude": 30.3661258,
+    "longitude": -81.634014,
+    "geocodeLabel": "Wigmore Street, Jacksonville, Florida"
+  },
+  "wiley-road-playground": {
+    "latitude": 30.2948554,
+    "longitude": -81.7530121,
+    "geocodeLabel": "Lane Avenue South, Jacksonville, Florida"
+  },
+  "william-f-sheffield-regional-park": {
+    "latitude": 30.4619995,
+    "longitude": -81.5746463,
+    "geocodeLabel": "New Berlin Road, Jacksonville, Florida"
+  },
+  "willowbranch-park": {
+    "latitude": 30.3078801,
+    "longitude": -81.7002062,
+    "geocodeLabel": "Sydney Street, Jacksonville, Florida"
+  },
+  "willowbranch-rose-garden-park": {
+    "latitude": 30.2982753,
+    "longitude": -81.7137864,
+    "geocodeLabel": "Park Street, Jacksonville, Florida"
+  },
+  "windsor-place-park": {
+    "latitude": 28.0639977,
+    "longitude": -82.621206,
+    "geocodeLabel": "Windsor Place at Citrus Park, Westchase, Florida"
+  },
+  "windy-hill-center": {
+    "latitude": 30.277852,
+    "longitude": -81.5392646,
+    "geocodeLabel": "Anders Boulevard, Jacksonville, FL"
+  },
+  "windy-hill-elementary-park": {
+    "latitude": 30.276923,
+    "longitude": -81.5416328,
+    "geocodeLabel": "Skycrest Drive, Jacksonville, FL"
+  },
+  "wolfson-high-school-park-and-pool": {
+    "latitude": 30.2499159,
+    "longitude": -81.6157483,
+    "geocodeLabel": "Powers Avenue, Jacksonville, FL"
+  },
+  "woodstock-park-edith-b-ford-community-center": {
+    "latitude": 30.3318657,
+    "longitude": -81.7152744,
+    "geocodeLabel": "West Beaver Street, Jacksonville, FL"
+  },
+  "yacht-basin-park": {
+    "latitude": 30.2908387,
+    "longitude": -81.7122582,
+    "geocodeLabel": "Saint Johns Avenue, Jacksonville, Florida"
+  },
+  "yancey-park": {
+    "latitude": 30.4055114,
+    "longitude": -81.7042314,
+    "geocodeLabel": "Wilton Avenue, Jacksonville, Florida"
+  },
+  "yellow-water-trailhead": {
+    "latitude": 30.5317419,
+    "longitude": -81.5966475,
+    "geocodeLabel": "Yellow Bluff Road, Jacksonville, Florida"
+  },
+  "yerkes-park": {
+    "latitude": 30.2779132,
+    "longitude": -81.7024057,
+    "geocodeLabel": "Yerkes Park, Jacksonville, Florida"
+  },
+  "young-men-s-and-young-women-s-leadership-academy-pool": {
+    "latitude": 30.3343484,
+    "longitude": -81.6822189,
+    "geocodeLabel": "Acorn Street, Jacksonville, Florida"
+  },
+  "zeta-phi-beta-park": {
+    "latitude": 30.4898978,
+    "longitude": -81.6323397,
+    "geocodeLabel": "Owens Road, Jacksonville, Florida"
+  }
+}

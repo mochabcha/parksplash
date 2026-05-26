@@ -1,0 +1,21 @@
+.icon {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 1rem;
+  block-size: 1rem;
+  flex: 0 0 auto;
+}
+
+.icon img,
+.fallback {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.icon img {
+  object-fit: contain;
+}
+
+.fallback {
+  color: var(--color-ink-muted);
+}

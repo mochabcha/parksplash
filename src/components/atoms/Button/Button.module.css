@@ -1,5 +1,9 @@
 .button {
   appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
   border: 1px solid var(--color-line-strong);
   cursor: pointer;
   min-height: 2.35rem;

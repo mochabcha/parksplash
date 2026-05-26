@@ -1,0 +1,73 @@
+.button {
+  display: grid;
+  grid-template-columns: 4.25rem minmax(0, 1fr);
+  gap: 0.85rem;
+  inline-size: 100%;
+  padding: 0.9rem 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.thumb {
+  position: relative;
+  inline-size: 4.25rem;
+  block-size: 4.25rem;
+  overflow: hidden;
+  border-radius: 0.9rem;
+  background: color-mix(in oklab, var(--color-water) 12%, var(--color-app-surface));
+}
+
+.thumb img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.thumbFallback {
+  display: grid;
+  place-items: center;
+  inline-size: 100%;
+  block-size: 100%;
+  color: var(--color-accent);
+}
+
+.body {
+  min-inline-size: 0;
+  display: grid;
+  gap: 0.32rem;
+  align-content: center;
+}
+
+.eyebrow,
+.name,
+.meta {
+  margin: 0;
+}
+
+.eyebrow {
+  color: var(--color-ink-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.name {
+  color: var(--color-ink-strong);
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.meta {
+  color: var(--color-ink);
+  font-size: 0.79rem;
+  line-height: 1.35;
+}
+
+.selected .name,
+.button:hover .name {
+  color: var(--color-accent);
+}

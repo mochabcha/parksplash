@@ -1,0 +1,157 @@
+.drawer {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 520;
+  display: grid;
+  padding: 0 0 calc(env(safe-area-inset-bottom) + 0.2rem);
+  border-top: 1px solid var(--color-line-strong);
+  background: color-mix(in oklab, var(--color-app-surface) 94%, transparent);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-drawer);
+}
+
+.handleZone,
+.hero,
+.title,
+.address,
+.summary,
+.note,
+.description,
+.emptyState p {
+  margin: 0;
+}
+
+.handleZone {
+  display: grid;
+  place-items: center;
+  padding: 0.65rem 1rem 0.55rem;
+  cursor: ns-resize;
+  touch-action: none;
+}
+
+.contentWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 220ms ease;
+}
+
+.expanded .contentWrap {
+  grid-template-rows: 1fr;
+}
+
+.content {
+  min-height: 0;
+  overflow: hidden auto;
+  max-height: min(62dvh, 40rem);
+  padding: 0 0.95rem 0.85rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.image {
+  overflow: hidden;
+  border-radius: 1rem;
+  aspect-ratio: 16 / 9;
+  background: color-mix(in oklab, var(--color-water) 10%, var(--color-app-surface));
+}
+
+.image img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.eyebrow {
+  margin: 0 0 0.2rem;
+  color: var(--color-ink-muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.title {
+  color: var(--color-ink-strong);
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.address {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  margin-top: 0.35rem;
+  color: var(--color-ink);
+  font-size: 0.84rem;
+  line-height: 1.35;
+}
+
+.summary {
+  color: var(--color-ink);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.section {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.infoGrid,
+.programs {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.iconLine {
+  display: inline-flex;
+  align-items: start;
+  gap: 0.45rem;
+}
+
+.description,
+.note,
+.emptyState {
+  padding-top: 0.1rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.description {
+  color: var(--color-ink);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.siteLink {
+  color: var(--color-accent);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.note,
+.emptyState p {
+  color: var(--color-ink);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 30rem) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}

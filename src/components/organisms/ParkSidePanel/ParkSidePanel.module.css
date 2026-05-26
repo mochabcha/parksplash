@@ -1,0 +1,110 @@
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 620;
+  background: rgb(16 25 36 / 0);
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 180ms ease,
+    background-color 180ms ease;
+}
+
+.scrimOpen {
+  opacity: 1;
+  pointer-events: auto;
+  background: rgb(16 25 36 / 0.24);
+}
+
+.panel {
+  position: absolute;
+  inset: 0 0 0 auto;
+  z-index: 630;
+  inline-size: min(25rem, 88vw);
+  padding: calc(env(safe-area-inset-top) + 0.75rem) 0.9rem calc(env(safe-area-inset-bottom) + 0.9rem);
+  background: color-mix(in oklab, var(--color-app-surface) 97%, var(--color-page) 3%);
+  border-left: 1px solid var(--color-line);
+  box-shadow: var(--shadow-side-drawer);
+  transform: translateX(100%);
+  transition: transform 220ms ease;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  gap: 1rem;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.header,
+.sectionHeader,
+.subHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.title,
+.meta,
+.sectionTitle,
+.sectionMeta,
+.empty {
+  margin: 0;
+}
+
+.title,
+.sectionTitle {
+  color: var(--color-ink-strong);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.meta,
+.sectionMeta {
+  color: var(--color-ink);
+  font-size: 0.78rem;
+}
+
+.filterSection,
+.amenities {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.quickFilters,
+.amenityChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.clearButton {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--color-accent);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.item + .item {
+  border-top: 1px solid var(--color-line);
+}
+
+.empty {
+  padding: 1rem 0;
+  color: var(--color-ink);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}

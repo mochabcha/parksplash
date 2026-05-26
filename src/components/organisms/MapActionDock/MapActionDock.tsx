@@ -11,7 +11,7 @@ interface MapActionDockProps {
 
 export const MapActionDock = ({ onOpenGuide, onToggleTheme, themeMode }: MapActionDockProps) => (
   <div className={styles.dock}>
-    <IconButton label="Open season guide" onClick={onOpenGuide}>
+    <IconButton label="Open parks and pools guide" onClick={onOpenGuide}>
       <Info size={18} />
     </IconButton>
     <IconButton
