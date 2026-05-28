@@ -91,7 +91,7 @@ export const loadParkCatalog = async () => {
 
 export const loadParkDetail = async (slug: string) => {
   try {
-    const park = await request<ParkDetailDto>(`/api/parks/${slug}`);
+    const park = await request<ParkDetailDto>(`/api/parks/by-slug/${slug}`);
     return toViewModel(park);
   } catch {
     return fromFallback().find((entry) => entry.slug === slug);
