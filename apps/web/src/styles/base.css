@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-page);
+  color: var(--color-ink);
+  background-image:
+    radial-gradient(circle at top left, color-mix(in oklab, var(--color-aqua) 18%, transparent) 0, transparent 32%),
+    radial-gradient(circle at top right, color-mix(in oklab, var(--color-pink) 14%, transparent) 0, transparent 28%);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-ink-strong);
+}

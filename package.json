@@ -1,30 +1,19 @@
 {
-  "name": "splash-spot",
-  "version": "0.1.0",
+  "name": "parksplash",
+  "version": "0.2.0",
   "private": true,
-  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "typecheck": "tsc --noEmit",
-    "geocode:pools": "node scripts/geocode-pools.mjs",
-    "build:parks": "node scripts/build-parks-dataset.mjs",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "cheerio": "^1.2.0",
-    "leaflet": "^1.9.4",
-    "lucide-react": "^0.511.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-leaflet": "^4.2.1"
-  },
-  "devDependencies": {
-    "@types/leaflet": "^1.9.20",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react-swc": "^3.8.0",
-    "typescript": "^5.7.2",
-    "vite": "^5.4.11"
+    "dev": "bash -lc 'npm run dev:web & npm run dev:cms & wait'",
+    "dev:web": "npm run dev --workspace @parksplash/web",
+    "dev:cms": "npm run dev --workspace @parksplash/cms",
+    "build": "npm run build --workspace @parksplash/shared && npm run build --workspace @parksplash/web && npm run build --workspace @parksplash/cms",
+    "typecheck": "npm run typecheck --workspace @parksplash/shared && npm run typecheck --workspace @parksplash/web && npm run typecheck --workspace @parksplash/cms",
+    "seed:parks": "npm run seed:parks --workspace @parksplash/cms",
+    "build:parks": "npm run build:parks --workspace @parksplash/cms",
+    "geocode:pools": "npm run geocode:pools --workspace @parksplash/cms"
   }
 }

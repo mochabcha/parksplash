@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --font-display: 'Instrument Sans', sans-serif;
+  --font-body: 'Instrument Sans', sans-serif;
+  --color-page: oklch(0.985 0.03 98);
+  --color-app-surface: oklch(0.995 0.02 98);
+  --color-overlay: oklch(1 0.01 98 / 0.82);
+  --color-overlay-strong: oklch(1 0.01 98 / 0.94);
+  --color-ink-strong: oklch(0.24 0.05 248);
+  --color-ink: oklch(0.36 0.04 244);
+  --color-ink-muted: oklch(0.53 0.03 238);
+  --color-line: oklch(0.91 0.02 98 / 0.95);
+  --color-line-strong: oklch(0.82 0.03 234 / 0.95);
+  --color-aqua: oklch(0.8 0.13 214);
+  --color-pink: oklch(0.72 0.2 357);
+  --color-yellow: oklch(0.9 0.13 95);
+  --color-water: var(--color-aqua);
+  --color-sun: var(--color-yellow);
+  --color-marker: oklch(0.52 0.14 226);
+  --color-marker-ring: oklch(0.99 0.02 98);
+  --color-marker-active: oklch(0.84 0.13 95);
+  --color-marker-active-ring: oklch(0.99 0.02 98);
+  --color-accent: oklch(0.72 0.2 357);
+  --shadow-overlay: 0 0.65rem 1.5rem rgb(15 49 105 / 0.08);
+  --shadow-drawer: 0 -1rem 2.2rem rgb(15 49 105 / 0.14);
+  --shadow-side-drawer: -1rem 0 2.2rem rgb(15 49 105 / 0.16);
+  --shadow-dialog: 0 1.4rem 3.4rem rgb(15 49 105 / 0.22);
+}
+
+[data-theme='dark'] {
+  --color-page: oklch(0.2 0.05 248);
+  --color-app-surface: oklch(0.24 0.05 248);
+  --color-overlay: oklch(0.29 0.04 244 / 0.84);
+  --color-overlay-strong: oklch(0.33 0.04 244 / 0.94);
+  --color-ink-strong: oklch(0.95 0.02 98);
+  --color-ink: oklch(0.86 0.02 98);
+  --color-ink-muted: oklch(0.74 0.03 238);
+  --color-line: oklch(0.38 0.03 236 / 0.95);
+  --color-line-strong: oklch(0.5 0.04 232 / 0.95);
+  --color-aqua: oklch(0.76 0.12 214);
+  --color-pink: oklch(0.78 0.17 357);
+  --color-yellow: oklch(0.9 0.12 95);
+  --color-water: var(--color-aqua);
+  --color-sun: var(--color-yellow);
+  --color-marker: oklch(0.74 0.11 214);
+  --color-marker-ring: oklch(0.24 0.05 248);
+  --color-marker-active: oklch(0.86 0.13 95);
+  --color-marker-active-ring: oklch(0.24 0.05 248);
+  --color-accent: oklch(0.78 0.13 357);
+  --shadow-overlay: 0 0.7rem 1.6rem rgb(4 11 28 / 0.34);
+  --shadow-drawer: 0 -1rem 2.6rem rgb(4 11 28 / 0.4);
+  --shadow-side-drawer: -1rem 0 2.6rem rgb(4 11 28 / 0.4);
+  --shadow-dialog: 0 1.6rem 3.8rem rgb(4 11 28 / 0.48);
+}

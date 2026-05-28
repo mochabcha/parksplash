@@ -1,0 +1,22 @@
+{
+  "name": "parksplash",
+  "short_name": "parksplash",
+  "description": "Explore Jacksonville parks, pools, splash pads, and live conditions.",
+  "theme_color": "#123e88",
+  "background_color": "#fff9dc",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icons/parksplash-icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/icons/parksplash-maskable.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

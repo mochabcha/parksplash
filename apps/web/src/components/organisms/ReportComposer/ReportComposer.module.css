@@ -1,0 +1,74 @@
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 560;
+  background: rgb(11 25 58 / 0.52);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.scrimVisible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dialog {
+  position: absolute;
+  inset: auto 1rem calc(env(safe-area-inset-bottom) + 1rem) 1rem;
+  z-index: 570;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 1.4rem;
+  background: var(--color-app-surface);
+  box-shadow: var(--shadow-dialog);
+  opacity: 0;
+  transform: translateY(1rem);
+  pointer-events: none;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.dialogVisible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.header,
+.form,
+.field {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.header {
+  grid-template-columns: 1fr auto;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-ink-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.field span {
+  color: var(--color-ink-strong);
+  font-size: 0.82rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  border: 1px solid var(--color-line-strong);
+  border-radius: 0.9rem;
+  padding: 0.8rem 0.9rem;
+  background: var(--color-overlay-strong);
+  color: var(--color-ink-strong);
+}
