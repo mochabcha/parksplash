@@ -1,6 +1,11 @@
 import { getPayload } from 'payload';
+import { handleOptions, jsonWithCors } from '../../../lib/http';
 import config from '../../../payload.config';
 import { getParks } from '../../../services/parks/getParks';
+
+export function OPTIONS(request: Request) {
+  return handleOptions(request);
+}
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -21,5 +26,5 @@ export async function GET(request: Request) {
         : undefined
   });
 
-  return Response.json(parks);
+  return jsonWithCors(request, parks);
 }

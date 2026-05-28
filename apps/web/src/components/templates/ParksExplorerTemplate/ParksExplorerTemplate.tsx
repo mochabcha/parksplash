@@ -4,6 +4,7 @@ import { AccountDialog } from '../../organisms/AccountDialog/AccountDialog';
 import { AppToast } from '../../organisms/AppToast/AppToast';
 import { ExplorerFrame } from '../../organisms/ExplorerFrame/ExplorerFrame';
 import { LoveOfferingDialog } from '../../organisms/LoveOfferingDialog/LoveOfferingDialog';
+import { DataNotice } from '../../organisms/DataNotice/DataNotice';
 import { MapActionDock } from '../../organisms/MapActionDock/MapActionDock';
 import { MapTopBar } from '../../organisms/MapTopBar/MapTopBar';
 import { ParkDrawer } from '../../organisms/ParkDrawer/ParkDrawer';
@@ -84,6 +85,11 @@ interface ParksExplorerTemplateProps {
     triggerSource: 'google-maps' | 'park-limit';
     submit: (input: { amount: number; email: string }) => Promise<void>;
   };
+  dataState: {
+    isLoading: boolean;
+    errorMessage?: string;
+    onRetry: () => void;
+  };
   onOpenMaps: (park: ParkViewModel) => void;
   onComment: (body: string) => void;
   onCheckIn: () => void;
@@ -122,6 +128,7 @@ export const ParksExplorerTemplate = ({
   auth,
   reporting,
   loveOffering,
+  dataState,
   onOpenMaps,
   onComment,
   onCheckIn,
@@ -138,6 +145,7 @@ export const ParksExplorerTemplate = ({
           userLocation={userLocation}
         />
       </div>
+      <DataNotice errorMessage={dataState.errorMessage} isLoading={dataState.isLoading} onRetry={dataState.onRetry} />
       <MapTopBar
         activeQuickFilter={activeQuickFilter}
         onCenterMap={recenterMap}

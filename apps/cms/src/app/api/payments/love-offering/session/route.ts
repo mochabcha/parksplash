@@ -1,16 +1,22 @@
 import { getPayload } from 'payload';
+import { createCmsPayloadRequest } from '../../../../../lib/payloadRequest';
 import config from '../../../../../payload.config';
 import { cmsEnv } from '../../../../../lib/env';
+import { handleOptions, jsonWithCors } from '../../../../../lib/http';
 import { getStripe } from '../../../../../lib/stripe';
+
+export function OPTIONS(request: Request) {
+  return handleOptions(request);
+}
 
 export async function POST(request: Request) {
   const payload = await getPayload({ config });
-  const payloadRequest = await payload.createPayloadRequest({ request });
+  const payloadRequest = await createCmsPayloadRequest(request);
   const body = await request.json();
   const stripe = getStripe();
 
   if (!stripe) {
-    return Response.json({ error: 'Stripe is not configured.' }, { status: 500 });
+    return jsonWithCors(request, { error: 'Stripe is not configured.' }, { status: 500 });
   }
 
   const amount = Number(body.amount);
@@ -59,7 +65,7 @@ export async function POST(request: Request) {
     }
   });
 
-  return Response.json({
+  return jsonWithCors(request, {
     checkoutUrl: session.url,
     offeringId: offering.id
   });

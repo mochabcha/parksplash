@@ -1,10 +1,16 @@
 import { getPayload } from 'payload';
+import { createCmsPayloadRequest } from '../../../../../lib/payloadRequest';
+import { handleOptions, jsonWithCors } from '../../../../../lib/http';
 import config from '../../../../../payload.config';
 import { sendThankYouEmail } from '../../../../../services/email/sendThankYouEmail';
 
+export function OPTIONS(request: Request) {
+  return handleOptions(request);
+}
+
 export async function POST(request: Request) {
   const payload = await getPayload({ config });
-  const payloadRequest = await payload.createPayloadRequest({ request });
+  const payloadRequest = await createCmsPayloadRequest(request);
   const body = await request.json();
   const created = await payload.create({
     collection: 'loveOfferings',
@@ -33,5 +39,5 @@ export async function POST(request: Request) {
     amount: 0
   });
 
-  return Response.json(created, { status: 201 });
+  return jsonWithCors(request, created, { status: 201 });
 }

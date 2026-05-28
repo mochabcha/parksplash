@@ -6,12 +6,27 @@ import type {
   ParkDetailDto,
   ParkReportSummaryDto
 } from '@parksplash/shared';
+import { cmsEnv } from '../../lib/env';
 
 type RawRecord = Record<string, unknown>;
 
 const asText = (value: unknown) => (typeof value === 'string' ? value : '');
 const asBoolean = (value: unknown) => Boolean(value);
 const asNumber = (value: unknown) => (typeof value === 'number' ? value : 0);
+
+
+const joinUrl = (base: string, path: string) => `${base.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+
+const resolveMediaUrl = (media: RawRecord | undefined) => {
+  const filename = asText(media?.filename);
+
+  if (cmsEnv.assetBaseUrl && filename) {
+    return joinUrl(cmsEnv.assetBaseUrl, encodeURIComponent(filename));
+  }
+
+  return asText(media?.url);
+};
+
 
 export const mapAmenity = (amenity: RawRecord): AmenityDefinitionDto => ({
   id: asText(amenity.id),
@@ -21,6 +36,7 @@ export const mapAmenity = (amenity: RawRecord): AmenityDefinitionDto => ({
 });
 
 export const mapParkCard = (doc: RawRecord): ParkCardDto => {
+  const image = (doc.image as RawRecord | undefined) ?? undefined;
   const location = (doc.geoOverride as RawRecord | undefined)?.latitude
     ? (doc.geoOverride as RawRecord)
     : ((doc.location as RawRecord | undefined) ?? {});
@@ -36,7 +52,7 @@ export const mapParkCard = (doc: RawRecord): ParkCardDto => {
     address: asText(doc.address),
     mapQuery: asText(doc.mapQuery) || asText(doc.address),
     detailUrl: asText(doc.detailUrl),
-    localImagePath: asText((doc.image as RawRecord | undefined)?.url),
+    imageUrl: resolveMediaUrl(image),
     kindLabel: asBoolean(doc.hasPool) ? 'Park with pool' : 'Park',
     browseSummary: asText(doc.hours) || 'Hours not listed',
     hoursSummary: asText(doc.hours) || 'Hours not listed',

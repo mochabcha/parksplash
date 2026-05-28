@@ -54,7 +54,7 @@ const MapEffects = ({
   isDrawerExpanded: boolean;
 }) => {
   const map = useMap();
-  const previousSelectedPoolId = useRef<string>();
+  const previousSelectedPoolId = useRef<string | undefined>(undefined);
   const previousDrawerExpanded = useRef(isDrawerExpanded);
 
   useEffect(() => {

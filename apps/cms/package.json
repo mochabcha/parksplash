@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.typecheck.json",
     "seed:parks": "node --env-file=.env.local --import tsx ./scripts/import-parks.mjs",
     "build:parks": "node --env-file=.env.local --import tsx ./scripts/build-parks-dataset.mjs",
     "geocode:pools": "node --env-file=.env.local --import tsx ./scripts/geocode-pools.mjs"
@@ -19,8 +19,8 @@
     "@payloadcms/storage-s3": "^3.42.0",
     "next": "15.4.11",
     "payload": "^3.42.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "sharp": "^0.34.5",
     "stripe": "^18.2.1",
     "zod": "^3.25.28"

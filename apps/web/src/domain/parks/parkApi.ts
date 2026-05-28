@@ -1,9 +1,6 @@
 import type { ParkCardDto, ParkDetailDto } from '@parksplash/shared';
 import { appConfig } from '../../config/appConfig';
-import { getParkDirectory } from './parkDirectory';
 import type { ParkViewModel } from './park.types';
-
-const fromFallback = (): ParkViewModel[] => getParkDirectory();
 
 const request = async <T>(path: string, init?: RequestInit): Promise<T> => {
   const response = await fetch(`${appConfig.cmsUrl}${path}`, {
@@ -28,7 +25,7 @@ const toViewModel = (park: ParkCardDto | ParkDetailDto): ParkViewModel => ({
   name: park.name,
   address: park.address,
   detailUrl: park.detailUrl,
-  localImagePath: park.localImagePath,
+  imageUrl: park.imageUrl,
   mapQuery: park.mapQuery,
   kindLabel: park.kindLabel,
   browseSummary: park.browseSummary,
@@ -81,21 +78,13 @@ const toViewModel = (park: ParkCardDto | ParkDetailDto): ParkViewModel => ({
 });
 
 export const loadParkCatalog = async () => {
-  try {
-    const parks = await request<ParkCardDto[]>('/api/parks');
-    return parks.map(toViewModel);
-  } catch {
-    return fromFallback();
-  }
+  const parks = await request<ParkCardDto[]>('/api/parks');
+  return parks.map(toViewModel);
 };
 
 export const loadParkDetail = async (slug: string) => {
-  try {
-    const park = await request<ParkDetailDto>(`/api/parks/by-slug/${slug}`);
-    return toViewModel(park);
-  } catch {
-    return fromFallback().find((entry) => entry.slug === slug);
-  }
+  const park = await request<ParkDetailDto>(`/api/parks/by-slug/${slug}`);
+  return toViewModel(park);
 };
 
 export const submitReport = async (parkId: string, payload: Record<string, unknown>) =>

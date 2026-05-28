@@ -2,20 +2,25 @@ import { headers } from 'next/headers';
 import { getPayload } from 'payload';
 import config from '../../../../../payload.config';
 import { cmsEnv } from '../../../../../lib/env';
+import { handleOptions, jsonWithCors } from '../../../../../lib/http';
 import { getStripe } from '../../../../../lib/stripe';
 import { sendThankYouEmail } from '../../../../../services/email/sendThankYouEmail';
+
+export function OPTIONS(request: Request) {
+  return handleOptions(request);
+}
 
 export async function POST(request: Request) {
   const stripe = getStripe();
 
   if (!stripe || !cmsEnv.stripeWebhookSecret) {
-    return Response.json({ error: 'Stripe webhook is not configured.' }, { status: 500 });
+    return jsonWithCors(request, { error: 'Stripe webhook is not configured.' }, { status: 500 });
   }
 
   const signature = (await headers()).get('stripe-signature');
 
   if (!signature) {
-    return Response.json({ error: 'Missing stripe signature.' }, { status: 400 });
+    return jsonWithCors(request, { error: 'Missing stripe signature.' }, { status: 400 });
   }
 
   const event = stripe.webhooks.constructEvent(
@@ -25,14 +30,14 @@ export async function POST(request: Request) {
   );
 
   if (event.type !== 'checkout.session.completed') {
-    return Response.json({ ok: true });
+    return jsonWithCors(request, { ok: true });
   }
 
   const session = event.data.object;
   const loveOfferingId = session.metadata?.loveOfferingId;
 
   if (!loveOfferingId) {
-    return Response.json({ ok: true });
+    return jsonWithCors(request, { ok: true });
   }
 
   const payload = await getPayload({ config });
@@ -66,5 +71,5 @@ export async function POST(request: Request) {
     amount: Number(updated.amount)
   });
 
-  return Response.json({ ok: true });
+  return jsonWithCors(request, { ok: true });
 }

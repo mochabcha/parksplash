@@ -123,10 +123,10 @@ export const ParkDrawer = ({
                 </p>
               </div>
 
-              {park.localImagePath ? (
+              {park.imageUrl ? (
                 <div className={styles.mediaSection}>
                   <div className={styles.image}>
-                    <img alt="" loading="lazy" src={park.localImagePath} />
+                    <img alt="" loading="lazy" src={park.imageUrl} />
                   </div>
                 </div>
               ) : null}

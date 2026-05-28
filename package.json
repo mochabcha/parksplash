@@ -7,13 +7,22 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "bash -lc 'npm run dev:web & npm run dev:cms & wait'",
-    "dev:web": "npm run dev --workspace @parksplash/web",
-    "dev:cms": "npm run dev --workspace @parksplash/cms",
-    "build": "npm run build --workspace @parksplash/shared && npm run build --workspace @parksplash/web && npm run build --workspace @parksplash/cms",
-    "typecheck": "npm run typecheck --workspace @parksplash/shared && npm run typecheck --workspace @parksplash/web && npm run typecheck --workspace @parksplash/cms",
-    "seed:parks": "npm run seed:parks --workspace @parksplash/cms",
-    "build:parks": "npm run build:parks --workspace @parksplash/cms",
-    "geocode:pools": "npm run geocode:pools --workspace @parksplash/cms"
+    "dev": "bash -lc 'pnpm --filter @parksplash/web dev & pnpm --filter @parksplash/cms dev & wait'",
+    "dev:web": "pnpm --filter @parksplash/web dev",
+    "dev:cms": "pnpm --filter @parksplash/cms dev",
+    "build": "pnpm --filter @parksplash/shared build && pnpm --filter @parksplash/web build && pnpm --filter @parksplash/cms build",
+    "typecheck": "pnpm --filter @parksplash/shared typecheck && pnpm --filter @parksplash/web typecheck && pnpm --filter @parksplash/cms typecheck",
+    "seed:parks": "pnpm --filter @parksplash/cms seed:parks",
+    "build:parks": "pnpm --filter @parksplash/cms build:parks",
+    "geocode:pools": "pnpm --filter @parksplash/cms geocode:pools",
+    "verify": "pnpm run typecheck && pnpm --filter @parksplash/shared build && pnpm --filter @parksplash/web build && pnpm --filter @parksplash/cms build"
+  },
+  "overrides": {
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
   }
 }

@@ -73,7 +73,7 @@ const MapEffects = ({
   isDrawerExpanded: boolean;
 }) => {
   const map = useMap();
-  const previousSelectedParkId = useRef<string>();
+  const previousSelectedParkId = useRef<string | undefined>(undefined);
   const previousDrawerExpanded = useRef(isDrawerExpanded);
 
   useEffect(() => {

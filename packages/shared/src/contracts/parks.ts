@@ -51,7 +51,7 @@ export interface ParkCardDto {
   address: string;
   mapQuery: string;
   detailUrl: string;
-  localImagePath: string;
+  imageUrl: string;
   kindLabel: string;
   browseSummary: string;
   hoursSummary: string;

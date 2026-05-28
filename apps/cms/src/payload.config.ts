@@ -27,7 +27,6 @@ const plugins =
           },
           bucket: cmsEnv.aws.bucket,
           config: {
-            prefix: process.env.S3_PREFIX ?? undefined,
             credentials: {
               accessKeyId: cmsEnv.aws.accessKeyId,
               secretAccessKey: cmsEnv.aws.secretAccessKey

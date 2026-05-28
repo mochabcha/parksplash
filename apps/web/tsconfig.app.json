@@ -14,12 +14,12 @@
     "moduleResolution": "Node",
     "baseUrl": ".",
     "paths": {
-      "@parksplash/shared": ["../../packages/shared/dist/index.d.ts"]
+      "@parksplash/shared": ["../../packages/shared/src/index.ts"]
     },
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"]
+  "include": ["src", "../../packages/shared/src/**/*.ts"]
 }

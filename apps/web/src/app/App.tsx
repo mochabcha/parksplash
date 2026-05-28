@@ -1,14 +1,14 @@
 import { useEffect, useMemo, useState } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
 import { ParksExplorerTemplate } from '../components/templates/ParksExplorerTemplate/ParksExplorerTemplate';
 import {
   createLoveOfferingSession,
-  loadParkCatalog,
-  loadParkDetail,
   submitCheckIn,
   submitComment,
   submitReport,
   submitZeroLoveOffering
 } from '../domain/parks/parkApi';
+import { parkQueryKeys, useParkCatalogQuery, useParkDetailQuery } from '../domain/parks/parkQueries';
 import type { ParkViewModel } from '../domain/parks/park.types';
 import { useLoveOfferingGate } from '../features/donations/useLoveOfferingGate';
 import { useAuth } from '../features/auth/useAuth';
@@ -16,36 +16,42 @@ import { applyUserLocationToParks, useParkExplorer } from '../features/park-expl
 import { useUserLocation } from '../features/location/useUserLocation';
 import { useThemeMode } from '../features/theme/useThemeMode';
 
+const asErrorMessage = (error: unknown) => (error instanceof Error ? error.message : 'Request failed.');
+
 export const App = () => {
-  const [parks, setParks] = useState<ParkViewModel[]>([]);
   const [isAccountOpen, setIsAccountOpen] = useState(false);
   const [isReportOpen, setIsReportOpen] = useState(false);
   const auth = useAuth();
+  const queryClient = useQueryClient();
   const location = useUserLocation(auth.user);
-  const parksWithLocation = useMemo(() => applyUserLocationToParks(parks, location), [location, parks]);
-  const explorer = useParkExplorer(parksWithLocation);
   const theme = useThemeMode();
   const gate = useLoveOfferingGate(auth.user);
+  const parkCatalogQuery = useParkCatalogQuery();
+  const parksWithLocation = useMemo(
+    () => applyUserLocationToParks(parkCatalogQuery.data ?? [], location),
+    [location, parkCatalogQuery.data],
+  );
+  const explorer = useParkExplorer(parksWithLocation);
+  const parkDetailQuery = useParkDetailQuery(explorer.selectedPark?.slug);
+  const selectedPark = (parkDetailQuery.data ?? explorer.selectedPark) as ParkViewModel | undefined;
 
   useEffect(() => {
-    void loadParkCatalog().then(setParks);
-  }, []);
-
-  useEffect(() => {
-    if (!explorer.selectedPark?.slug) {
+    if (!selectedPark?.id) {
       return;
     }
 
-    gate.trackViewedPark(explorer.selectedPark.id);
+    gate.trackViewedPark(selectedPark.id);
+  }, [gate, selectedPark?.id]);
 
-    void loadParkDetail(explorer.selectedPark.slug).then((detail) => {
-      if (!detail) {
-        return;
-      }
+  const refreshSelectedPark = async (park?: ParkViewModel) => {
+    const invalidations = [queryClient.invalidateQueries({ queryKey: parkQueryKeys.catalog() })];
 
-      setParks((current) => current.map((park) => (park.id === detail.id ? detail : park)));
-    });
-  }, [explorer.selectedPark?.id, explorer.selectedPark?.slug]);
+    if (park?.slug) {
+      invalidations.push(queryClient.invalidateQueries({ queryKey: parkQueryKeys.detail(park.slug) }));
+    }
+
+    await Promise.all(invalidations);
+  };
 
   const openMaps = (park: ParkViewModel) => {
     if (gate.interceptGoogleMaps(park.id)) {
@@ -55,7 +61,7 @@ export const App = () => {
     window.open(
       `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(park.mapQuery || park.address)}`,
       '_blank',
-      'noopener,noreferrer'
+      'noopener,noreferrer',
     );
   };
 
@@ -66,12 +72,19 @@ export const App = () => {
       auth={{
         user: auth.user,
         authError: auth.authError,
-        isAccountOpen,
+        isAccountOpen: isAccountOpen,
         openAccount: () => setIsAccountOpen(true),
         closeAccount: () => setIsAccountOpen(false),
         signIn: auth.signIn,
         signUp: auth.signUp,
         signOut: auth.signOut
+      }}
+      dataState={{
+        isLoading: parkCatalogQuery.isLoading,
+        errorMessage: parkCatalogQuery.error ? asErrorMessage(parkCatalogQuery.error) : undefined,
+        onRetry: () => {
+          void parkCatalogQuery.refetch();
+        }
       }}
       loveOffering={{
         isOpen: gate.isOpen,
@@ -102,7 +115,7 @@ export const App = () => {
         }
       }}
       onCheckIn={() => {
-        if (!explorer.selectedPark) {
+        if (!selectedPark) {
           return;
         }
 
@@ -111,12 +124,12 @@ export const App = () => {
           return;
         }
 
-        void submitCheckIn(explorer.selectedPark.id, {
-          parkId: explorer.selectedPark.id
-        });
+        void submitCheckIn(selectedPark.id, {
+          parkId: selectedPark.id
+        }).then(() => refreshSelectedPark(selectedPark));
       }}
       onComment={(body) => {
-        if (!explorer.selectedPark || !body) {
+        if (!selectedPark || !body) {
           return;
         }
 
@@ -125,10 +138,10 @@ export const App = () => {
           return;
         }
 
-        void submitComment(explorer.selectedPark.id, {
-          parkId: explorer.selectedPark.id,
+        void submitComment(selectedPark.id, {
+          parkId: selectedPark.id,
           body
-        });
+        }).then(() => refreshSelectedPark(selectedPark));
       }}
       onOpenMaps={openMaps}
       parks={parksWithLocation}
@@ -137,7 +150,7 @@ export const App = () => {
         open: () => setIsReportOpen(true),
         close: () => setIsReportOpen(false),
         submit: async (input) => {
-          if (!explorer.selectedPark) {
+          if (!selectedPark) {
             return;
           }
 
@@ -146,10 +159,12 @@ export const App = () => {
             return;
           }
 
-          await submitReport(explorer.selectedPark.id, input);
+          await submitReport(selectedPark.id, input);
+          await refreshSelectedPark(selectedPark);
           setIsReportOpen(false);
         }
       }}
+      selectedPark={selectedPark}
       userLocation={location.coords}
     />
   );

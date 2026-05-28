@@ -13,6 +13,7 @@ export const cmsEnv = {
   payloadSecret: () => required('PAYLOAD_SECRET'),
   publicServerUrl: process.env.NEXT_PUBLIC_SERVER_URL ?? 'http://localhost:3001',
   publicWebUrl: process.env.NEXT_PUBLIC_WEB_URL ?? 'http://localhost:3000',
+  assetBaseUrl: process.env.NEXT_PUBLIC_ASSET_BASE_URL ?? '',
   stripeSecretKey: process.env.STRIPE_SECRET_KEY,
   stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET,
   stripePriceIds: {

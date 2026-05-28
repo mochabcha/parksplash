@@ -1,0 +1,71 @@
+.notice {
+  position: absolute;
+  top: 5.2rem;
+  left: 50%;
+  z-index: 18;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(42rem, calc(100% - 2rem));
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-line-strong);
+  background: color-mix(in oklab, var(--color-app-surface) 88%, var(--color-overlay-strong));
+  box-shadow: var(--shadow-card);
+  transform: translateX(-50%);
+}
+
+.loading {
+  border-color: color-mix(in oklab, var(--color-aqua) 45%, var(--color-line-strong));
+}
+
+.error {
+  border-color: color-mix(in oklab, var(--color-rose) 55%, var(--color-line-strong));
+}
+
+.copy {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-ink-strong);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.message {
+  margin: 0.2rem 0 0;
+  color: var(--color-ink-muted);
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
+.retry {
+  flex-shrink: 0;
+}
+
+.iconSpin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 720px) {
+  .notice {
+    top: 4.7rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .retry {
+    width: 100%;
+  }
+}

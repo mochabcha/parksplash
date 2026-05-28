@@ -5,8 +5,8 @@ export const Users: CollectionConfig = {
   auth: {
     verify: true,
     forgotPassword: {
-      generateEmailHTML: ({ token }) =>
-        `<p>Reset your parksplash password.</p><p>Token: ${token}</p>`
+      generateEmailHTML: (args) =>
+        `<p>Reset your parksplash password.</p><p>Token: ${args?.token ?? ''}</p>`
     }
   },
   admin: {

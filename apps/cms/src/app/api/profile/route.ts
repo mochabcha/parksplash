@@ -1,13 +1,19 @@
 import { getPayload } from 'payload';
+import { createCmsPayloadRequest } from '../../../lib/payloadRequest';
+import { handleOptions, jsonWithCors } from '../../../lib/http';
 import config from '../../../payload.config';
 import { requireUser } from '../../../lib/auth';
 
+export function OPTIONS(request: Request) {
+  return handleOptions(request);
+}
+
 export async function GET(request: Request) {
   const payload = await getPayload({ config });
-  const payloadRequest = await payload.createPayloadRequest({ request });
-  const user = requireUser(payloadRequest);
+  const payloadRequest = await createCmsPayloadRequest(request);
+  const user = requireUser(payloadRequest, request);
 
-  return Response.json({
+  return jsonWithCors(request, {
     id: user.id,
     email: user.email,
     displayName: user.displayName,
@@ -19,8 +25,8 @@ export async function GET(request: Request) {
 
 export async function PATCH(request: Request) {
   const payload = await getPayload({ config });
-  const payloadRequest = await payload.createPayloadRequest({ request });
-  const user = requireUser(payloadRequest);
+  const payloadRequest = await createCmsPayloadRequest(request);
+  const user = requireUser(payloadRequest, request);
   const body = await request.json();
   const updated = await payload.update({
     collection: 'users',
@@ -31,5 +37,5 @@ export async function PATCH(request: Request) {
     }
   });
 
-  return Response.json(updated);
+  return jsonWithCors(request, updated);
 }

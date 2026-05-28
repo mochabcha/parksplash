@@ -15,8 +15,8 @@ export const ParkListItem = ({ park, selected = false, onClick }: ParkListItemPr
     type="button"
   >
     <span className={styles.thumb}>
-      {park.localImagePath ? (
-        <img alt="" loading="lazy" src={park.localImagePath} />
+      {park.imageUrl ? (
+        <img alt="" loading="lazy" src={park.imageUrl} />
       ) : (
         <span className={styles.thumbFallback}>
           <Image size={18} />

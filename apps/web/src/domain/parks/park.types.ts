@@ -32,7 +32,7 @@ export interface ParkRecord {
   detailUrl: string;
   sourceImageUrl: string;
   detailImageUrl: string;
-  localImagePath: string;
+  imageUrl: string;
   mapQuery: string;
   description: string;
   amenityKeys: string[];
@@ -63,7 +63,7 @@ export interface ParkViewModel {
   address: string;
   hours?: string;
   detailUrl: string;
-  localImagePath: string;
+  imageUrl: string;
   mapQuery: string;
   kindLabel: string;
   browseSummary: string;
@@ -102,7 +102,7 @@ export type ParkCatalogItem = Pick<
   | 'name'
   | 'address'
   | 'detailUrl'
-  | 'localImagePath'
+  | 'imageUrl'
   | 'mapQuery'
   | 'kindLabel'
   | 'browseSummary'

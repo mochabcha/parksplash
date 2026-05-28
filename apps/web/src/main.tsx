@@ -1,9 +1,13 @@
 import 'leaflet/dist/leaflet.css';
+import { QueryClientProvider } from '@tanstack/react-query';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './app/App';
+import { createQueryClient } from './lib/queryClient';
 import './styles/theme.css';
 import './styles/base.css';
+
+const queryClient = createQueryClient();
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -12,7 +16,7 @@ if ('serviceWorker' in navigator) {
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  <QueryClientProvider client={queryClient}>
     <App />
-  </React.StrictMode>,
+  </QueryClientProvider>,
 );
