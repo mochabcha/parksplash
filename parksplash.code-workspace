@@ -1,8 +1,42 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "name": "web",
+      "path": "apps/web"
+    },
+    {
+      "name": "api",
+      "path": "apps/cms"
+    },
+    {
+      "name": "shared",
+      "path": "packages/shared"
+    },
+    {
+      "name": "repo",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.next": true,
+      "**/dist": true,
+      "**/node_modules": true,
+      "**/.vercel": true
+    },
+    "search.exclude": {
+      "**/.next": true,
+      "**/dist": true,
+      "**/node_modules": true
+    },
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "extensions": {
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "bradlc.vscode-tailwindcss"
+    ]
+  }
 }

@@ -17,3 +17,5 @@ apps/web/node_modules
 packages/shared/node_modules
 data/bootstrap
 .env*.local
+
+# Local app envs are the source of truth. Root env files are not for app config.
