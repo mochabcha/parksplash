@@ -1,4 +1,5 @@
 import { cmsEnv } from './env';
+import { isAllowedOrigin, normalizeOrigin } from './deployment';
 
 const ALLOWED_METHODS = 'GET,POST,PATCH,DELETE,OPTIONS';
 const ALLOWED_HEADERS = 'content-type, authorization, x-requested-with';
@@ -10,9 +11,13 @@ const getAllowedOrigin = (request: Request) => {
     return cmsEnv.publicWebUrl;
   }
 
-  const allowedOrigins = new Set([cmsEnv.publicWebUrl, cmsEnv.publicServerUrl]);
+  try {
+    const normalizedOrigin = normalizeOrigin(origin);
 
-  return allowedOrigins.has(origin) ? origin : cmsEnv.publicWebUrl;
+    return isAllowedOrigin(cmsEnv.allowedOrigins, normalizedOrigin) ? normalizedOrigin : cmsEnv.publicWebUrl;
+  } catch {
+    return cmsEnv.publicWebUrl;
+  }
 };
 
 export const buildCorsHeaders = (request: Request) =>

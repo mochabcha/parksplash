@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@parksplash/shared": "0.2.0",
+    "@parksplash/shared": "workspace:*",
     "@tanstack/react-query": "^5.100.14",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.511.0",

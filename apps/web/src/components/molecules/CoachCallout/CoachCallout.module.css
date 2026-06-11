@@ -1,0 +1,55 @@
+.callout {
+  inline-size: min(20rem, calc(100vw - 1.5rem));
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.95rem 1rem 1rem;
+  border: 1px solid color-mix(in oklab, var(--color-water) 34%, var(--color-line-strong));
+  border-radius: 1.15rem;
+  background:
+    linear-gradient(180deg, color-mix(in oklab, var(--color-water) 8%, var(--color-app-surface)) 0%, var(--color-app-surface) 100%);
+  box-shadow: var(--shadow-dialog);
+  color: var(--color-ink);
+}
+
+.eyebrow,
+.title,
+.body {
+  margin: 0;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--color-ink-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.count {
+  color: var(--color-accent);
+}
+
+.title {
+  color: var(--color-ink-strong);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.body {
+  font-size: 0.84rem;
+  line-height: 1.48;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dismissButton {
+  background: color-mix(in oklab, var(--color-pink) 12%, var(--color-overlay-strong));
+  border-color: color-mix(in oklab, var(--color-pink) 42%, var(--color-line-strong));
+}

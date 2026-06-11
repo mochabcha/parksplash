@@ -44,7 +44,7 @@ export const MapTopBar = ({
 }: MapTopBarProps) => (
   <header className={styles.bar}>
     <div className={styles.left}>
-      <IconButton label="Open park browser" onClick={onMenuToggle}>
+      <IconButton data-feature-coach="park-browser" label="Open park browser" onClick={onMenuToggle}>
         <Menu size={18} />
       </IconButton>
       <div className={styles.brand}>
@@ -55,7 +55,7 @@ export const MapTopBar = ({
       </div>
     </div>
     <div className={styles.right}>
-      <button className={styles.filterState} onClick={onFilterToggle} type="button">
+      <button className={styles.filterState} data-feature-coach="filters" onClick={onFilterToggle} type="button">
         <ListFilter size={14} />
         <span>
           {filterLabels[activeQuickFilter]}

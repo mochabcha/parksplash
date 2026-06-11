@@ -1,0 +1,43 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 700;
+  pointer-events: none;
+}
+
+.highlight {
+  position: fixed;
+  border: 2px solid color-mix(in oklab, var(--color-water) 72%, var(--color-accent));
+  border-radius: 1rem;
+  box-shadow:
+    0 0 0 0.2rem color-mix(in oklab, var(--color-water) 20%, transparent),
+    0 0.85rem 2rem rgb(15 49 105 / 0.16);
+}
+
+.bubble {
+  position: fixed;
+  inline-size: max-content;
+  max-inline-size: calc(100vw - 1.5rem);
+  pointer-events: auto;
+}
+
+.bubble::before {
+  content: '';
+  position: absolute;
+  inline-size: 0.9rem;
+  block-size: 0.9rem;
+  background: color-mix(in oklab, var(--color-water) 8%, var(--color-app-surface));
+  border-inline-start: 1px solid color-mix(in oklab, var(--color-water) 34%, var(--color-line-strong));
+  border-block-start: 1px solid color-mix(in oklab, var(--color-water) 34%, var(--color-line-strong));
+  transform: rotate(45deg);
+  inset-inline-start: 1.5rem;
+}
+
+.below::before {
+  inset-block-start: -0.45rem;
+}
+
+.above::before {
+  inset-block-end: -0.45rem;
+  transform: rotate(225deg);
+}

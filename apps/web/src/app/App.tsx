@@ -12,6 +12,7 @@ import { parkQueryKeys, useParkCatalogQuery, useParkDetailQuery } from '../domai
 import type { ParkViewModel } from '../domain/parks/park.types';
 import { useLoveOfferingGate } from '../features/donations/useLoveOfferingGate';
 import { useAuth } from '../features/auth/useAuth';
+import { useFeatureCoach } from '../features/onboarding/useFeatureCoach';
 import { applyUserLocationToParks, useParkExplorer } from '../features/park-explorer/useParkExplorer';
 import { useUserLocation } from '../features/location/useUserLocation';
 import { useThemeMode } from '../features/theme/useThemeMode';
@@ -34,6 +35,9 @@ export const App = () => {
   const explorer = useParkExplorer(parksWithLocation);
   const parkDetailQuery = useParkDetailQuery(explorer.selectedPark?.slug);
   const selectedPark = (parkDetailQuery.data ?? explorer.selectedPark) as ParkViewModel | undefined;
+  const featureCoach = useFeatureCoach({
+    hasSelectedPark: Boolean(selectedPark)
+  });
 
   useEffect(() => {
     if (!selectedPark?.id) {
@@ -54,6 +58,8 @@ export const App = () => {
   };
 
   const openMaps = (park: ParkViewModel) => {
+    featureCoach.recordAction();
+
     if (gate.interceptGoogleMaps(park.id)) {
       return;
     }
@@ -73,7 +79,10 @@ export const App = () => {
         user: auth.user,
         authError: auth.authError,
         isAccountOpen: isAccountOpen,
-        openAccount: () => setIsAccountOpen(true),
+        openAccount: () => {
+          featureCoach.recordAction();
+          setIsAccountOpen(true);
+        },
         closeAccount: () => setIsAccountOpen(false),
         signIn: auth.signIn,
         signUp: auth.signUp,
@@ -114,16 +123,22 @@ export const App = () => {
           }
         }
       }}
+      clearAmenityFilters={() => {
+        featureCoach.recordAction();
+        explorer.clearAmenityFilters();
+      }}
       onCheckIn={() => {
         if (!selectedPark) {
           return;
         }
 
         if (!auth.user) {
+          featureCoach.recordAction();
           setIsAccountOpen(true);
           return;
         }
 
+        featureCoach.recordAction();
         void submitCheckIn(selectedPark.id, {
           parkId: selectedPark.id
         }).then(() => refreshSelectedPark(selectedPark));
@@ -134,20 +149,49 @@ export const App = () => {
         }
 
         if (!auth.user) {
+          featureCoach.recordAction();
           setIsAccountOpen(true);
           return;
         }
 
+        featureCoach.recordAction();
         void submitComment(selectedPark.id, {
           parkId: selectedPark.id,
           body
         }).then(() => refreshSelectedPark(selectedPark));
       }}
       onOpenMaps={openMaps}
+      featureCoach={{
+        activeTip: featureCoach.activeTip,
+        dismiss: featureCoach.dismissActiveTip
+      }}
+      openDialog={(dialog) => {
+        featureCoach.recordAction();
+        explorer.openDialog(dialog);
+      }}
+      openDrawer={() => {
+        featureCoach.recordAction();
+        explorer.openDrawer();
+      }}
+      openParkFromBrowser={(parkId) => {
+        featureCoach.recordAction();
+        explorer.openParkFromBrowser(parkId);
+      }}
+      openParkFromMap={(parkId) => {
+        featureCoach.recordAction();
+        explorer.openParkFromMap(parkId);
+      }}
+      openSidePanelTab={(tab) => {
+        featureCoach.recordAction();
+        explorer.openSidePanelTab(tab);
+      }}
       parks={parksWithLocation}
       reporting={{
         isOpen: isReportOpen,
-        open: () => setIsReportOpen(true),
+        open: () => {
+          featureCoach.recordAction();
+          setIsReportOpen(true);
+        },
         close: () => setIsReportOpen(false),
         submit: async (input) => {
           if (!selectedPark) {
@@ -155,17 +199,39 @@ export const App = () => {
           }
 
           if (!auth.user) {
+            featureCoach.recordAction();
             setIsAccountOpen(true);
             return;
           }
 
+          featureCoach.recordAction();
           await submitReport(selectedPark.id, input);
           await refreshSelectedPark(selectedPark);
           setIsReportOpen(false);
         }
       }}
+      recenterMap={() => {
+        featureCoach.recordAction();
+        explorer.recenterMap();
+      }}
       selectedPark={selectedPark}
+      setActiveQuickFilter={(filter) => {
+        featureCoach.recordAction();
+        explorer.setActiveQuickFilter(filter);
+      }}
+      setSidePanelTab={(tab) => {
+        featureCoach.recordAction();
+        explorer.setSidePanelTab(tab);
+      }}
       userLocation={location.coords}
+      toggleAmenityFilter={(amenityKey) => {
+        featureCoach.recordAction();
+        explorer.toggleAmenityFilter(amenityKey);
+      }}
+      toggleSidePanel={() => {
+        featureCoach.recordAction();
+        explorer.toggleSidePanel();
+      }}
     />
   );
 };

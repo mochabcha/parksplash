@@ -19,7 +19,7 @@ export const MapActionDock = ({
   themeMode
 }: MapActionDockProps) => (
   <div className={styles.dock}>
-    <IconButton label="Report on a park" onClick={onOpenReport}>
+    <IconButton data-feature-coach="reporting" label="Report on a park" onClick={onOpenReport}>
       <Flag size={18} />
     </IconButton>
     <IconButton label="Open parks and pools guide" onClick={onOpenGuide}>

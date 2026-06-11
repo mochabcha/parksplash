@@ -45,7 +45,8 @@ export default buildConfig({
     }
   },
   collections: [Users, Amenities, Media, Parks, ParkReports, ParkComments, ParkCheckIns, LoveOfferings],
-  cors: [cmsEnv.publicServerUrl, cmsEnv.publicWebUrl],
+  cors: cmsEnv.allowedOrigins,
+  csrf: cmsEnv.allowedOrigins,
   secret: cmsEnv.payloadSecret(),
   db: mongooseAdapter({
     url: cmsEnv.mongoUri()

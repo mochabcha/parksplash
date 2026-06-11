@@ -16,3 +16,4 @@ apps/cms/node_modules
 apps/web/node_modules
 packages/shared/node_modules
 data/bootstrap
+.env*.local

@@ -1,3 +1,5 @@
+import { parseOriginList, normalizeOrigin, resolveAuthCookieSettings } from './deployment';
+
 const required = (name: string) => {
   const value = process.env[name];
 
@@ -8,11 +10,17 @@ const required = (name: string) => {
   return value;
 };
 
+const publicServerUrl = normalizeOrigin(process.env.NEXT_PUBLIC_SERVER_URL ?? 'http://localhost:3001');
+const publicWebUrl = normalizeOrigin(process.env.NEXT_PUBLIC_WEB_URL ?? 'http://localhost:3000');
+const allowedOrigins = parseOriginList(publicServerUrl, publicWebUrl, process.env.CORS_ALLOWED_ORIGINS);
+
 export const cmsEnv = {
   mongoUri: () => required('DATABASE_URI'),
   payloadSecret: () => required('PAYLOAD_SECRET'),
-  publicServerUrl: process.env.NEXT_PUBLIC_SERVER_URL ?? 'http://localhost:3001',
-  publicWebUrl: process.env.NEXT_PUBLIC_WEB_URL ?? 'http://localhost:3000',
+  publicServerUrl,
+  publicWebUrl,
+  allowedOrigins,
+  authCookies: resolveAuthCookieSettings(publicServerUrl, publicWebUrl),
   assetBaseUrl: process.env.NEXT_PUBLIC_ASSET_BASE_URL ?? '',
   stripeSecretKey: process.env.STRIPE_SECRET_KEY,
   stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET,

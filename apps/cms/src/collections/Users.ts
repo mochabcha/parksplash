@@ -1,8 +1,10 @@
 import type { CollectionConfig } from 'payload';
+import { cmsEnv } from '../lib/env';
 
 export const Users: CollectionConfig = {
   slug: 'users',
   auth: {
+    cookies: cmsEnv.authCookies,
     verify: true,
     forgotPassword: {
       generateEmailHTML: (args) =>

@@ -6,7 +6,7 @@ import type { ParkViewModel } from '../../../domain/parks/park.types';
 import { OUTDOOR_POOL_CENTER } from '../../../domain/pools/poolSeason';
 import styles from './ParkMap.module.css';
 
-const FOCUSED_PARK_ZOOM = 15;
+const FOCUSED_PARK_ZOOM = 17;
 
 interface ParkMapProps {
   parks: ParkViewModel[];

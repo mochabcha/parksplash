@@ -2,10 +2,6 @@
   "name": "parksplash",
   "version": "0.2.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
     "dev": "bash -lc 'pnpm --filter @parksplash/web dev & pnpm --filter @parksplash/cms dev & wait'",
     "dev:web": "pnpm --filter @parksplash/web dev",
@@ -22,7 +18,9 @@
     "react-dom": "19.2.6"
   },
   "devDependencies": {
+    "next": "15.4.11",
     "react": "19.2.6",
     "react-dom": "19.2.6"
-  }
+  },
+  "packageManager": "pnpm@10.19.0"
 }

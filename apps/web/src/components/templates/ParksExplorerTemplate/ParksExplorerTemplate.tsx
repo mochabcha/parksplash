@@ -5,6 +5,7 @@ import { AppToast } from '../../organisms/AppToast/AppToast';
 import { ExplorerFrame } from '../../organisms/ExplorerFrame/ExplorerFrame';
 import { LoveOfferingDialog } from '../../organisms/LoveOfferingDialog/LoveOfferingDialog';
 import { DataNotice } from '../../organisms/DataNotice/DataNotice';
+import { FeatureCoach } from '../../organisms/FeatureCoach/FeatureCoach';
 import { MapActionDock } from '../../organisms/MapActionDock/MapActionDock';
 import { MapTopBar } from '../../organisms/MapTopBar/MapTopBar';
 import { ParkDrawer } from '../../organisms/ParkDrawer/ParkDrawer';
@@ -19,6 +20,7 @@ import type {
   ParkQuickFilter,
 } from '../../../features/park-explorer/useParkExplorer';
 import type { ThemeMode } from '../../../features/theme/useThemeMode';
+import type { ActiveFeatureCoachTip } from '../../../features/onboarding/useFeatureCoach';
 import styles from './ParksExplorerTemplate.module.css';
 
 interface ParksExplorerTemplateProps {
@@ -85,6 +87,10 @@ interface ParksExplorerTemplateProps {
     triggerSource: 'google-maps' | 'park-limit';
     submit: (input: { amount: number; email: string }) => Promise<void>;
   };
+  featureCoach: {
+    activeTip: ActiveFeatureCoachTip | null;
+    dismiss: () => void;
+  };
   dataState: {
     isLoading: boolean;
     errorMessage?: string;
@@ -128,6 +134,7 @@ export const ParksExplorerTemplate = ({
   auth,
   reporting,
   loveOffering,
+  featureCoach,
   dataState,
   onOpenMaps,
   onComment,
@@ -215,6 +222,7 @@ export const ParksExplorerTemplate = ({
         onSubmit={loveOffering.submit}
         source={loveOffering.triggerSource}
       />
+      <FeatureCoach onDismiss={featureCoach.dismiss} tip={featureCoach.activeTip} />
     </main>
   </ExplorerFrame>
 );

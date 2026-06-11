@@ -74,7 +74,7 @@ export const ParkDrawer = ({
   const mapsUrl = park ? buildGoogleMapsUrl(park.mapQuery || park.address) : '';
 
   return (
-    <section className={`${styles.drawer} ${isExpanded ? styles.expanded : ''}`}>
+    <section className={`${styles.drawer} ${isExpanded ? styles.expanded : ''}`} data-feature-coach="park-drawer">
       <div
         aria-label="Drag park drawer"
         className={styles.handleZone}
