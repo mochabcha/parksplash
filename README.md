@@ -5,13 +5,17 @@
 Deploy this monorepo as two separate Vercel projects:
 
 - `parksplash`
-  - Root Directory: `apps/web`
-  - Framework: Vite
+  - Root Directory: `.`
+  - Framework: Other
+  - Build Command: `pnpm --filter @parksplash/web build`
+  - Output Directory: `apps/web/dist`
 - `parksplash-api`
-  - Root Directory: `apps/cms`
+  - Root Directory: `.`
   - Framework: Next.js
+  - Build Command: `pnpm --filter @parksplash/cms build`
+  - Output Directory: `apps/cms/.next`
 
-Both apps use `pnpm` workspaces from the repo root. App-local `vercel.json` files define the correct install and build commands for each project.
+Both apps use `pnpm` workspaces from the repo root. App-local `vercel.json` files also define the correct install and build commands for direct CLI deploys.
 
 ## Local Development
 
